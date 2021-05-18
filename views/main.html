@@ -1,12 +1,36 @@
+<meta charset="utf-8"/>
+
 <script>
-  // 동적 스크립트 및 CSS
-  loadCSS("css/personal/style.main.css");
-  // const requireJS = [
-  //     "vendors/js/test.js",
-  // ];
-  loadJS([], "js/views/main.js");
+    // 동적 스크립트 및 CSS
+    loadCSS("css/personal/style.main.css");
+    loadJS([], "js/views/main.js");
+
+    $("#btn_auto").click(function() {
+        $(document).ready(function () {
+            $('html, body').animate({
+                scrollTop: $('#main_clock').offset().top
+            }, 1200);
+        });
+    });
+
+    $(document).ready(function(){
+        $('#countdown').Countdown({
+            rampung: new Date("Nov 08, 2045 19:42:52"),
+            theme: "flat-colors-wide"
+        });
+    });
 </script>
 
 <div>
-  <h1>메인화면</h1>
+    <div class="main_content">
+        <div class="main_text">
+            <p>현재 지구에 남아있는 시간</p>
+        </div>
+        <div>
+            <button type="button" id="btn_auto" class="btn btn-outline-success">▿</button>
+        </div>
+    </div>
+    <div class="main_content" id="main_clock">
+        <div id="countdown"></div>
+    </div>
 </div>
