@@ -118,7 +118,8 @@ body {
   font-weight: normal;
   line-height: 1.5;
   color: #151b1e;
-  background-color: #eff3f8;
+  background-color: #F0E8D1;
+  /*background-color: #eff3f8;*/
 }
 
 [tabindex="-1"]:focus {
@@ -11018,4 +11019,48 @@ hr.transparent {
   .email-app .message .header .date {
     flex: 0 0 100%;
   }
+}
+
+.main_content {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+}
+
+.main_content .main_text {
+  height: 80vh;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+
+  color: #296E64;
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+/*countdown css*/
+#main_clock {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.ClassyCountdown-wrapper > div {
+  display: inline-block;
+  position: relative;
+  width: calc(16% - 20px);
+  margin: 10px
+}
+
+.ClassyCountdown-wrapper .ClassyCountdown-value {
+  width: 100%;
+  line-height: 1em;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  left: 0;
+  display: block
 }
