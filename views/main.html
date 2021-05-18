@@ -1,12 +1,27 @@
 <script>
   // 동적 스크립트 및 CSS
-  loadCSS("css/personal/style.main.css");
-  // const requireJS = [
-  //     "vendors/js/test.js",
-  // ];
-  loadJS([], "js/views/main.js");
-</script>
+  // const requireCss = ["vendors/css/jquery.fullPage.css"];
+  // loadCSS(requireCss);
 
-<div>
-  <h1>메인화면</h1>
+  const requireJs = [
+    "js/views/scroll-main.js",
+    "vendors/js/matter.min.js",
+    //"js/views/main-matterScreen.js",
+    "js/views/main-matter.js",
+  ];
+  loadJS(requireJs);
+</script>
+<div id="fullPage">
+  <section class="main_section">
+    <div id="mtt_wrap"></div>
+  </section>
+  <section class="main_section">
+    <h2>section 2</h2>
+  </section>
+  <section class="main_section">
+    <h2>section 3</h2>
+  </section>
+  <section class="main_section">
+    <h2>section 4</h2>
+  </section>
 </div>
