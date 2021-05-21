@@ -1,10 +1,14 @@
-/*****
- * INDEX 관련 JS
- */
+"use strict";
+/*
+    Copyright © 2021 지구방위대.
+    ProjectName: saveEarthWebPJ
+    FilePath: js/common/app.js
+    Create by 지구방위대, 정윤아 on 2021-05-21 03:48:25.
+*/
+/* 지구방위대 2021-05-21 14:30:38, 정윤아 Front-end Dev */
 
 $.ajaxLoad = true;
-
-$.defaultPage = "main.html";
+$.defaultPage = "main/main.html";
 $.subPagesDirectory = "views/";
 $.page404 = "views/pages/404.html";
 $.mainContent = $("#ui-view");
@@ -27,74 +31,88 @@ $.grayLight = "#818a91";
 $.grayLighter = "#d1d4d7";
 $.grayLightest = "#f8f9fa";
 
-("use strict");
-
-/*****
- * 동적 스크립트 동적 CSS
- * ASYNC LOAD
- * Load JS files and CSS files asynchronously in ajax mode
- */
-function loadJS(jsFiles, pageScript) {
-  let i;
-  for (i = 0; i < jsFiles.length; i++) {
-    let body = document.getElementsByTagName("body")[0];
-    let script = document.createElement("script");
-    script.type = "text/javascript";
-    script.async = false;
-    script.src = jsFiles[i];
-    body.appendChild(script);
+// 동적 스크립트
+function loadJS(jsArray, pageScript) {
+  if (jsArray) {
+    for (let jsFile of jsArray) {
+      const getBodyEl = document.getElementsByTagName("body")[0];
+      const scriptEl = document.createElement("script");
+      scriptEl.type = "text/javascript";
+      scriptEl.async = false;
+      scriptEl.src = jsFile;
+      getBodyEl.appendChild(scriptEl);
+    }
   }
 
   if (pageScript) {
-    let body = document.getElementsByTagName("body")[0];
-    let script = document.createElement("script");
-    script.type = "text/javascript";
-    script.async = false;
-    script.src = pageScript;
-    body.appendChild(script);
+    const getBodyEl = document.getElementsByTagName("body")[0];
+    const scriptEl = document.createElement("script");
+    scriptEl.type = "text/javascript";
+    scriptEl.async = false;
+    scriptEl.src = pageScript;
+    getBodyEl.appendChild(scriptEl);
   }
 
   init();
 }
 
-function loadCSS(cssFile, end, callback) {
-  let cssArray = {};
-
-  if (!cssArray[cssFile]) {
-    cssArray[cssFile] = true;
-
-    if (end == 1) {
-      let head = document.getElementsByTagName("head")[0];
-      let s = document.createElement("link");
-      s.setAttribute("rel", "stylesheet");
-      s.setAttribute("type", "text/css");
-      s.setAttribute("href", cssFile);
-
-      s.onload = callback;
-      head.appendChild(s);
-    } else {
-      let head = document.getElementsByTagName("head")[0];
-      let style = document.getElementById("main-style");
-
-      let s = document.createElement("link");
-      s.setAttribute("rel", "stylesheet");
-      s.setAttribute("type", "text/css");
-      s.setAttribute("href", cssFile);
-
-      s.onload = callback;
-      head.insertBefore(s, style);
+// 동적 CSS
+function loadCSS(cssArray, pageCss, callback) {
+  const getHeadEl = document.getElementsByTagName("head")[0];
+  if (cssArray) {
+    for (let cssFile of cssArray) {
+      const linkEl = document.createElement("link");
+      linkEl.setAttribute("rel", "stylesheet");
+      linkEl.setAttribute("type", "text/css");
+      linkEl.setAttribute("href", cssFile);
+      linkEl.onload = callback;
+      getHeadEl.appendChild(linkEl);
     }
-  } else if (callback) {
-    callback();
+  }
+
+  if (pageCss) {
+    const linkEl = document.createElement("link");
+    linkEl.setAttribute("rel", "stylesheet");
+    linkEl.setAttribute("type", "text/css");
+    linkEl.setAttribute("href", pageCss);
+    linkEl.onload = callback;
+    getHeadEl.appendChild(linkEl);
   }
 }
+// function loadCSS(cssFile, end, callback) {
+//   let cssArray = {};
+//   let i;
+//
+//   if (!cssArray[cssFile]) {
+//     cssArray[cssFile] = true;
+//
+//     if (end === 1) {
+//       let head = document.getElementsByTagName("head")[0];
+//       let s = document.createElement("link");
+//       s.setAttribute("rel", "stylesheet");
+//       s.setAttribute("type", "text/css");
+//       s.setAttribute("href", cssFile);
+//
+//       s.onload = callback;
+//       head.appendChild(s);
+//     } else {
+//       let head = document.getElementsByTagName("head")[0];
+//       let style = document.getElementById("main-style");
+//
+//       let s = document.createElement("link");
+//       s.setAttribute("rel", "stylesheet");
+//       s.setAttribute("type", "text/css");
+//       s.setAttribute("href", cssFile);
+//
+//       s.onload = callback;
+//       head.insertBefore(s, style);
+//     }
+//   } else if (callback) {
+//     callback();
+//   }
+// }
 
-/****
- * 동적 페이지
- * AJAX LOAD
- * Load pages asynchronously in ajax mode
- */
-
+// 동적페이지 - AJAX LOAD
 if ($.ajaxLoad) {
   let paceOptions = {
     elements: false,
@@ -103,7 +121,7 @@ if ($.ajaxLoad) {
 
   let url = location.hash.replace(/^#/, "");
 
-  if (url != "") {
+  if (url !== "") {
     setUpUrl(url);
   } else {
     setUpUrl($.defaultPage);
@@ -170,11 +188,7 @@ function loadPage(url) {
   });
 }
 
-/****
- * 메인 네비게이션
- * MAIN NAVIGATION
- */
-
+// 메인 네비게이션
 $(document).ready(function ($) {
   $.navigation.find("a").each(function () {
     let cUrl = String(window.location).split("?")[0];
@@ -218,7 +232,7 @@ $(document).ready(function ($) {
     }, 62.5);
   }
 
-  /* ---------- Main Menu Open/Close, Min/Full ---------- */
+  // Main Menu Open/Close, Min/Full
   $(".sidebar-toggler").click(function () {
     $("body").toggleClass("sidebar-hidden");
     resizeBroadcast();
@@ -250,19 +264,19 @@ $(document).ready(function ($) {
       .toggleClass("sidebar-opened");
   });
 
-  /* ---------- Disable moving to top ---------- */
+  // Disable moving to top
   $('a[href="#"][data-top!=true]').click(function (e) {
     e.preventDefault();
   });
 });
 
 function init(url) {
-  /* ---------- Tooltip ---------- */
+  // Tooltip
   $('[rel="tooltip"],[data-rel="tooltip"]').tooltip({
     placement: "bottom",
     delay: { show: 400, hide: 200 },
   });
 
-  /* ---------- Popover ---------- */
+  // Popover
   $('[rel="popover"],[data-rel="popover"],[data-toggle="popover"]').popover();
 }
