@@ -1,13 +1,14 @@
-/*!
- * 짱유나UI - Bootstrap 4 짱유나 Template
- * @link https://github.com/rl3OuOr/rl3OuOr
- * Copyright (c) 2021 creativeLabs rl3OuOr
- * @license rl3OuOr
- */
-
-/*color, size 변수 정의*/
-:root{
-    /*
+@charset "utf-8";
+/*
+    Copyright © 2021 지구방위대.
+    ProjectName: saveEarthWebPJ
+    FileName: style.const.css
+    Date : 2021-05-21 03:18:38
+    Create by 지구방위대, 정윤아 on 2021-05-21 03:18:38.
+*/
+/* color, size 변수 정의 */
+:root {
+  /*
     --window-size:57rem;
     --main-color:red;
      */
