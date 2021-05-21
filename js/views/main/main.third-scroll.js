@@ -1,4 +1,10 @@
-console.log("main");
+"use strict";
+/*
+    Copyright © 2021 지구방위대.
+    ProjectName: saveEarthWebPJ
+    FilePath: js/views/main/main.third-scroll.js
+    Create by 지구방위대, 정윤아 on 2021-05-21 07:03:18.
+*/
 
 // 윈도우(브라우저)의 크기를 변수에 담습니다.
 // 991px <= 모바일 사이즈
@@ -18,14 +24,13 @@ let ground, leftGround, rightGround;
 let isWallCreated = false; //벽 생성 flag
 let isDropCreated = true; //떨어지는 객체 생성 flag
 
-let dropCircleTimer, dropRectangleTimer;
 let dropObjectTimer;
 let removeGroundTimer, reStartTimer;
 
 //윈도우 및 객체 사이즈 가져오기 함수
 const getWindowSize = () => {
   // 윈도우(브라우저)의 크기 변경
-  windowHeight = window.innerHeight - 55;
+  windowHeight = window.innerHeight;
   windowWidth = window.innerWidth; // Matter-js
 };
 
@@ -67,11 +72,14 @@ const createWall = () => {
   // 하단 바닥 생성
   ground = Bodies.rectangle(
     windowWidth / 2,
-    windowHeight - 50,
+    windowHeight - 100,
     windowWidth,
     1,
     {
       isStatic: true, // 고정된 위치의 객체
+      render: {
+        fillStyle: "#ffffff",
+      },
     }
   );
 
@@ -264,7 +272,6 @@ window.addEventListener("resize", function () {
   //Auto Drop reStart
   isDropCreated = true;
 });
-
 getWindowSize();
 initMatter();
 initScreen();

@@ -1,0 +1,63 @@
+<!--
+    Copyright © 2021 지구방위대.
+    ProjectName: saveEarthWebPJ
+    FilePath: views/main.html
+    Create by 지구방위대, 정윤아 and 송예지 on 2021-05-21 06:34:21.
+-->
+
+<script>
+  (function () {
+    // 동적 CSS 저의 - 라이브러리 및 개발자 별 CSS
+    const requireCss = [
+      //라이브러리 CSS
+      "vendors/css/jquery.fullPage.css",
+      // 개인별 CSS
+      "css/personal/style.zzang.css",
+      "css/personal/style.song.css",
+    ];
+
+    // 동적 스크립트 정의 - 라이브러리 및 화면별 JS
+    const requireJs = [
+      //라이브러리 JS
+      "vendors/js/jquery.fullPage.js",
+      "vendors/js/matter.min.js",
+      "vendors/js/jquery.ba-throttle-debounce.min.js",
+      "vendors/js/jquery.knob.min.js",
+      "vendors/js/jquery.countdown.js",
+      // 화면 별 JS
+      "js/views/main/main.common.js",
+      "js/views/main/main.first-scroll.js",
+      "js/views/main/main.second-scroll.js",
+      "js/views/main/main.third-scroll.js",
+      "js/views/main/main.last-scroll.js",
+    ];
+
+    loadCSS(requireCss);
+    loadJS(requireJs);
+  })();
+</script>
+<div id="fullPage">
+  <section class="main_section">
+    <div class="main_content">
+      <div class="main_text">
+        <p>현재 지구에 남아있는 시간</p>
+      </div>
+      <div>
+        <button type="button" id="btn_auto" class="btn btn-outline-success">
+          ▿
+        </button>
+      </div>
+    </div>
+  </section>
+  <section class="main_section">
+    <div class="main_content" id="main_clock">
+      <div id="countdown"></div>
+    </div>
+  </section>
+  <section class="main_section">
+    <div id="mtt_wrap"></div>
+  </section>
+  <section class="main_section">
+    <h2>section 4</h2>
+  </section>
+</div>
