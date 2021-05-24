@@ -37,8 +37,9 @@ function loadJS(jsArray, pageScript) {
     for (let jsFile of jsArray) {
       const getBodyEl = document.getElementsByTagName("body")[0];
       const scriptEl = document.createElement("script");
+      scriptEl.className = "addDynamic";
       scriptEl.type = "text/javascript";
-      scriptEl.async = false;
+      scriptEl.defer = true;
       scriptEl.src = jsFile;
       getBodyEl.appendChild(scriptEl);
     }
@@ -49,11 +50,16 @@ function loadJS(jsArray, pageScript) {
     const scriptEl = document.createElement("script");
     scriptEl.type = "text/javascript";
     scriptEl.async = false;
+    scriptEl.className = "addDynamic";
     scriptEl.src = pageScript;
     getBodyEl.appendChild(scriptEl);
   }
 
   init();
+}
+
+function removeDynamic() {
+  $(".addDynamic").remove();
 }
 
 // 동적 CSS
@@ -65,6 +71,7 @@ function loadCSS(cssArray, pageCss, callback) {
       linkEl.setAttribute("rel", "stylesheet");
       linkEl.setAttribute("type", "text/css");
       linkEl.setAttribute("href", cssFile);
+      linkEl.setAttribute("class", "addDynamic");
       linkEl.onload = callback;
       getHeadEl.appendChild(linkEl);
     }
@@ -79,38 +86,6 @@ function loadCSS(cssArray, pageCss, callback) {
     getHeadEl.appendChild(linkEl);
   }
 }
-// function loadCSS(cssFile, end, callback) {
-//   let cssArray = {};
-//   let i;
-//
-//   if (!cssArray[cssFile]) {
-//     cssArray[cssFile] = true;
-//
-//     if (end === 1) {
-//       let head = document.getElementsByTagName("head")[0];
-//       let s = document.createElement("link");
-//       s.setAttribute("rel", "stylesheet");
-//       s.setAttribute("type", "text/css");
-//       s.setAttribute("href", cssFile);
-//
-//       s.onload = callback;
-//       head.appendChild(s);
-//     } else {
-//       let head = document.getElementsByTagName("head")[0];
-//       let style = document.getElementById("main-style");
-//
-//       let s = document.createElement("link");
-//       s.setAttribute("rel", "stylesheet");
-//       s.setAttribute("type", "text/css");
-//       s.setAttribute("href", cssFile);
-//
-//       s.onload = callback;
-//       head.insertBefore(s, style);
-//     }
-//   } else if (callback) {
-//     callback();
-//   }
-// }
 
 // 동적페이지 - AJAX LOAD
 if ($.ajaxLoad) {
@@ -128,24 +103,11 @@ if ($.ajaxLoad) {
   }
 
   $(document).on("click", '.nav a[href!="#"]', function (e) {
-    if (
-      $(this).parent().parent().hasClass("nav-tabs") ||
-      $(this).parent().parent().hasClass("nav-pills")
-    ) {
-      e.preventDefault();
-    } else if ($(this).attr("target") == "_top") {
-      e.preventDefault();
-      let target = $(e.currentTarget);
-      window.location = target.attr("href");
-    } else if ($(this).attr("target") == "_blank") {
-      e.preventDefault();
-      let target = $(e.currentTarget);
-      window.open(target.attr("href"));
-    } else {
-      e.preventDefault();
-      let target = $(e.currentTarget);
-      setUpUrl(target.attr("href"));
-    }
+    $(".ui-view").fullpage.destroy("all");
+    removeDynamic();
+    e.preventDefault();
+    let target = $(e.currentTarget);
+    setUpUrl(target.attr("href"));
   });
 
   $(document).on("click", 'a[href="#"]', function (e) {
@@ -193,11 +155,11 @@ $(document).ready(function ($) {
   $.navigation.find("a").each(function () {
     let cUrl = String(window.location).split("?")[0];
 
-    if (cUrl.substr(cUrl.length - 1) == "#") {
+    if (cUrl.substr(cUrl.length - 1) === "#") {
       cUrl = cUrl.slice(0, -1);
     }
 
-    if ($($(this))[0].href == cUrl) {
+    if ($($(this))[0].href === cUrl) {
       $(this).addClass("active");
 
       $(this)

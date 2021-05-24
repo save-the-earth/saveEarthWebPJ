@@ -10520,6 +10520,9 @@ app-root {
 .app-footer {
   flex: 0 0 50px;
 }
+.app-footer a {
+  height: 50px;
+}
 
 .app-body {
   display: flex;
