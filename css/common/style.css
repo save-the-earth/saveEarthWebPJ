@@ -1,24 +1,22 @@
-/*!
- * 짱유나UI - Bootstrap 4 짱유나 Template
- * @link https://github.com/rl3OuOr/rl3OuOr
- * Copyright (c) 2021 creativeLabs rl3OuOr
- * @license rl3OuOr
- */
-/*!
- * Bootstrap v4.0.0-beta (https://getbootstrap.com)
- * Copyright 2011-2017 The Bootstrap Authors
- * Copyright 2011-2017 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
+@charset "utf-8";
+/*
+    Copyright (c) 2021.
+    ProjectName: SaveEarthWebPJ
+    FileName: style.css
+    Date : 2021-05-21 02:00:03
+    Create by 지구방위대, 정윤아 Front-end Dev.
+*/
 
+/* 지구방위대 대표폰트 */
 @font-face {
-  /*지구방위대 대표폰트*/
-  font-family: 'UhBeeKeongKeong';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeKeongKeong.woff') format('woff');
+  font-family: "UhBeeKeongKeong";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeKeongKeong.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
+/* Bootstrap v4.0.0-beta Style 적용*/
 @media print {
   *,
   *::before,
@@ -118,7 +116,7 @@ body {
   font-weight: normal;
   line-height: 1.5;
   color: #151b1e;
-  background-color: #F0E8D1;
+  background-color: #f0e8d1;
   /*background-color: #eff3f8;*/
 }
 
@@ -2411,7 +2409,7 @@ input[type="button"].btn-block {
 
 .collapse {
   display: none;
-  float: right;/*syj*/
+  float: right; /*syj*/
 }
 .collapse.show {
   display: block;
@@ -2470,7 +2468,7 @@ tbody.collapse.show {
   z-index: 1000;
   display: none;
   float: left;
-  min-width: 8rem;/*syj::10rem*/
+  min-width: 8rem; /*syj::10rem*/
   padding: 0 0;
   margin: 0.125rem 0 0;
   font-size: 0.875rem;
@@ -2496,7 +2494,7 @@ tbody.collapse.show {
   clear: both;
   font-weight: normal;
   color: #151b1e;
-  text-align: center;/*syj::inherit*/
+  text-align: center; /*syj::inherit*/
   white-space: nowrap;
   background: none;
   border: 0;
@@ -2931,8 +2929,8 @@ tbody.collapse.show {
 .navbar .dropdown-toggle {
   display: block;
   padding: 0.5rem 1rem;
-  text-align: center;/*syj*/
-  min-width: 8rem;/*syj*/
+  text-align: center; /*syj*/
+  min-width: 8rem; /*syj*/
 }
 .nav-link:focus,
 .navbar .dropdown-toggle:focus,
@@ -2959,7 +2957,7 @@ tbody.collapse.show {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 10%;/*syj::0.5rem 1rem;*/
+  padding: 0.5rem 10%; /*syj::0.5rem 1rem;*/
 }
 .navbar > .container,
 .navbar > .container-fluid {
@@ -2974,7 +2972,7 @@ tbody.collapse.show {
   padding-top: 0.21875rem;
   padding-bottom: 0.21875rem;
   margin-right: 1rem;
-  font-family: 'UhBeeKeongKeong';/*syj*/
+  font-family: "UhBeeKeongKeong"; /*syj*/
   font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap;
@@ -3005,7 +3003,7 @@ tbody.collapse.show {
 .navbar-collapse {
   flex-basis: 100%;
   align-items: center;
-  justify-content: flex-end;/*syj*/
+  justify-content: flex-end; /*syj*/
 }
 
 .navbar-toggler {
@@ -3028,7 +3026,7 @@ tbody.collapse.show {
   content: "";
   background: no-repeat center center;
   background-size: 100% 100%;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");/*syj*/
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /*syj*/
 }
 
 @media (max-width: 575px) {
@@ -3127,7 +3125,7 @@ tbody.collapse.show {
   .navbar-expand-lg {
     flex-direction: row;
     flex-wrap: nowrap;
-    /*justify-content: flex-start;*//*syj*/
+    /*justify-content: flex-start;*/ /*syj*/
   }
   .navbar-expand-lg .navbar-nav {
     flex-direction: row;
@@ -4714,8 +4712,8 @@ a.bg-danger:hover {
 }
 
 .bg-light {
-  /*background-color: #f1f3f8 !important;*//*syj*/
-  background-color: white !important;/*syj*/
+  /*background-color: #f1f3f8 !important;*/ /*syj*/
+  background-color: white !important; /*syj*/
 }
 
 a.bg-light:focus,
@@ -9161,7 +9159,7 @@ base-chart.chart {
 
 .app-footer {
   display: flex;
-  padding: 0 10%;/*syj::0 1rem;*/
+  padding: 0 10%; /*syj::0 1rem;*/
   color: #151b1e;
   background: #f1f3f8;
   flex-wrap: wrap;
@@ -10522,6 +10520,9 @@ app-root {
 .app-footer {
   flex: 0 0 50px;
 }
+.app-footer a {
+  height: 50px;
+}
 
 .app-body {
   display: flex;
@@ -10540,8 +10541,9 @@ app-root {
   width: 100%;
 }
 
+/* header 높이수정 */
 .header-fixed .app-body {
-  margin-top: 60px;/*syj::60px;*/
+  margin-top: 53px; /*syj::60px;*/
 }
 
 .breadcrumb-fixed .main {
@@ -10569,7 +10571,6 @@ app-root {
 .breadcrumb-fixed .main:last-child .breadcrumb {
   right: 0;
 }
-
 
 .footer-fixed .app-footer {
   position: fixed;
@@ -10609,8 +10610,9 @@ app-root {
     left: 50%;
     margin-left: -110px;
   }
+  /* header 높이수정 */
   .app-body {
-    margin-top: 60px;
+    margin-top: 55px;
   }
   .main,
   .app-footer {
@@ -11023,19 +11025,18 @@ hr.transparent {
 
 .main_content {
   width: 100vw;
-  height: 100vh;
+  height: -moz-calc(100vh - 105px); /* Firefox */
+  height: -webkit-calc(100vh - 105px); /* Chrome, Safari */
+  height: calc(100vh - 105px);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .main_content .main_text {
-  height: 80vh;
-
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   text-align: center;
-
-  color: #296E64;
+  color: #296e64;
   font-size: 5rem;
   font-weight: bold;
 }
@@ -11052,7 +11053,7 @@ hr.transparent {
   display: inline-block;
   position: relative;
   width: calc(16% - 20px);
-  margin: 10px
+  margin: 10px;
 }
 
 .ClassyCountdown-wrapper .ClassyCountdown-value {
@@ -11062,5 +11063,5 @@ hr.transparent {
   top: 50%;
   text-align: center;
   left: 0;
-  display: block
+  display: block;
 }

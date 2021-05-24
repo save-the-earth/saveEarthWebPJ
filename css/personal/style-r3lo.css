@@ -1,9 +1,0 @@
-.main {
-  display: flex;
-  align-items: stretch;
-}
-.container-fluid,
-.container-fluid div {
-  display: flex;
-  flex: 1;
-}

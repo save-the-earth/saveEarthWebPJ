@@ -1,4 +1,10 @@
-console.log("main");
+"use strict";
+/*
+    Copyright © 2021 지구방위대.
+    ProjectName: saveEarthWebPJ
+    FilePath: js/views/main/matter.module.js
+    Create by 지구방위대, 정윤아 on 2021-05-24 13:30:55.
+*/
 
 // 윈도우(브라우저)의 크기를 변수에 담습니다.
 // 991px <= 모바일 사이즈
@@ -18,14 +24,13 @@ let ground, leftGround, rightGround;
 let isWallCreated = false; //벽 생성 flag
 let isDropCreated = true; //떨어지는 객체 생성 flag
 
-let dropCircleTimer, dropRectangleTimer;
 let dropObjectTimer;
 let removeGroundTimer, reStartTimer;
 
 //윈도우 및 객체 사이즈 가져오기 함수
 const getWindowSize = () => {
   // 윈도우(브라우저)의 크기 변경
-  windowHeight = window.innerHeight - 55;
+  windowHeight = window.innerHeight - 105;
   windowWidth = window.innerWidth; // Matter-js
 };
 
@@ -65,15 +70,12 @@ const createWall = () => {
   if (isWallCreated) return false; //이미 벽 생성 완료
 
   // 하단 바닥 생성
-  ground = Bodies.rectangle(
-    windowWidth / 2,
-    windowHeight - 50,
-    windowWidth,
-    1,
-    {
-      isStatic: true, // 고정된 위치의 객체
-    }
-  );
+  ground = Bodies.rectangle(windowWidth / 2, windowHeight, windowWidth, 1, {
+    isStatic: true, // 고정된 위치의 객체
+    render: {
+      fillStyle: "#ffffff",
+    },
+  });
 
   // 왼쪽 벽 생성
   leftGround = Bodies.rectangle(
@@ -230,41 +232,48 @@ const reStartMatter = () => {
   isDropCreated = true; //떨어지는 객체 중단.
 };
 
-window.addEventListener("resize", function () {
+const clearTimeoutAll = () => {
+  clearTimeout(dropObjectTimer);
+  clearTimeout(removeGroundTimer);
+  clearTimeout(reStartTimer);
+};
+
+const startMatter = () => {
+  getWindowSize();
+  initMatter();
+  initScreen();
+};
+const reSizeWindow = () => {
   //브라우저 리사이즈 시
   console.log("resize");
 
   const delCanvas = document.querySelector("#mtt_wrap canvas");
 
-  delCanvas.remove();
+  if (delCanvas) {
+    console.log("delCanvas");
+    delCanvas.remove();
+    //Auto Drop Stop
+    isDropCreated = false;
 
-  //Auto Drop Stop
-  isDropCreated = false;
+    //반복 실행 모두 클리어
+    clearTimeoutAll();
 
-  //반복 실행 모두 클리어
-  clearTimeout(dropObjectTimer);
-  clearTimeout(removeGroundTimer);
-  clearTimeout(reStartTimer);
+    //월드 클리어
+    World.clear(engine.world);
+    //클릭 이벤트 제거
+    render.canvas.removeEventListener("click", clickRandomEvent, false);
 
-  //월드 클리어
-  World.clear(engine.world);
-  //클릭 이벤트 제거
-  render.canvas.removeEventListener("click", clickRandomEvent, false);
+    //변수 초기화
+    engine = null;
+    render = null;
 
-  //변수 초기화
-  engine = null;
-  render = null;
+    //window 사이즈 재설정
+    getWindowSize();
 
-  //window 사이즈 재설정
-  getWindowSize();
-
-  //초기화 다시 실행
-  initMatter();
-  initScreen();
-  //Auto Drop reStart
-  isDropCreated = true;
-});
-
-getWindowSize();
-initMatter();
-initScreen();
+    //초기화 다시 실행
+    initMatter();
+    initScreen();
+    //Auto Drop reStart
+    isDropCreated = true;
+  }
+};

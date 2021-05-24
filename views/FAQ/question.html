@@ -1,0 +1,76 @@
+<!--
+    Copyright © 2021 지구방위대.
+    ProjectName: saveEarthWebPJ
+    FilePath: views/FAQ/question.html
+    Create by 지구방위대, 홍예지 on 2021-05-21 19:29:49.
+-->
+<script>
+  (function () {
+    // 동적 CSS 정의 - 라이브러리 및 개발자 별 CSS
+    const requireCss = [
+      // 개인별 CSS
+      "css/personal/style.hong.css",
+    ];
+
+    loadCSS(requireCss);
+  })();
+</script>
+<section class="container bg-white">
+  <p class="font_big_size mt-5 text-center font-weight-bold">문의하기</p>
+  <form>
+    <fieldset>
+      <div class="font-weight-bold mx-auto form-group col-md-6">
+        <label for="question_type">문의유형</label>
+        <select class=":focus box mx-auto form-control" id="question_type">
+          <option>문의하기1</option>
+          <option>문의하기2</option>
+          <option>문의하기3</option>
+          <option>문의하기4</option>
+          <option>문의하기5</option>
+        </select>
+      </div>
+
+      <div class="font-weight-bold mx-auto form-group col-md-6">
+        <label for="question_type">이름</label>
+        <input
+          class="box mx-auto form-control"
+          type="text"
+          placeholder="이름"
+        />
+      </div>
+
+      <div class="font-weight-bold mx-auto form-group col-md-6">
+        <label for="exampleFormControlInput1">이메일주소</label>
+        <input
+          type="email"
+          class="box mx-auto form-control"
+          id="exampleFormControlInput1"
+          placeholder="name@example.com"
+        />
+      </div>
+
+      <div class="font-weight-bold mx-auto form-group col-md-6">
+        <label for="exampleFormControlInput1">전화번호</label>
+        <input
+          type="number"
+          class="box mx-auto form-control"
+          id="exampleFormControlInput1"
+          placeholder="010-xxxx-xxxx"
+        />
+      </div>
+
+      <div class="font-weight-bold mx-auto form-group col-md-6">
+        <label for="exampleFormControlTextarea1">내용입력</label>
+        <textarea
+          class="box mx-auto form-control"
+          id="exampleFormControlTextarea1"
+          rows="3"
+        ></textarea>
+      </div>
+
+      <div class="font-weight-bold mx-auto form-group col-md-6">
+        <button type="submit" class="box mx-auto btn btn-info">보내기</button>
+      </div>
+    </fieldset>
+  </form>
+</section>

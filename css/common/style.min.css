@@ -1,15 +1,21 @@
-/*!
- * 짱유나UI - Bootstrap 4 짱유나 Template
- * @link https://github.com/rl3OuOr/rl3OuOr
- * Copyright (c) 2021 creativeLabs rl3OuOr
- * @license rl3OuOr
- */
-/*!
- * Bootstrap v4.0.0-beta (https://getbootstrap.com)
- * Copyright 2011-2017 The Bootstrap Authors
- * Copyright 2011-2017 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
+@charset "utf-8";
+/*
+    Copyright © 2021 지구방위대.
+    ProjectName: saveEarthWebPJ
+    FileName: style.min.css
+    Create by 지구방위대, 정윤아 on 2021-05-21 03:46:42.
+*/
+
+/* 지구방위대 대표폰트 */
+@font-face {
+  font-family: "UhBeeKeongKeong";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeKeongKeong.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Bootstrap v4.0.0-beta Style 적용*/
 @media print {
   *,
   *::before,
