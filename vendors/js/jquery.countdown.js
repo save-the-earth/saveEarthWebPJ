@@ -303,7 +303,7 @@
                                 gauge: {
                                     thickness: 0.03,
                                     bgColor: "rgba(0,0,0,0.05)",
-                                    fgColor: "#1abc9c"
+                                    fgColor: "#63946b"
                                 },
                                 textCSS: 'font-family:\'Open Sans\';font-weight:300;color:#34495e;'
                             },
@@ -311,7 +311,7 @@
                                 gauge: {
                                     thickness: 0.03,
                                     bgColor: "rgba(0,0,0,0.05)",
-                                    fgColor: "#1abc9c"
+                                    fgColor: "#63946B"
                                 },
                                 textCSS: 'font-family:\'Open Sans\';font-weight:300;color:#34495e;'
                             },
@@ -319,7 +319,7 @@
                                 gauge: {
                                     thickness: 0.03,
                                     bgColor: "rgba(0,0,0,0.05)",
-                                    fgColor: "#1abc9c"
+                                    fgColor: "#63946B"
                                 },
                                 textCSS: 'font-family:\'Open Sans\';font-weight:300;color:#34495e;'
                             },
@@ -327,7 +327,7 @@
                                 gauge: {
                                     thickness: 0.03,
                                     bgColor: "rgba(0,0,0,0.05)",
-                                    fgColor: "#1abc9c"
+                                    fgColor: "#63946B"
                                 },
                                 textCSS: 'font-family:\'Open Sans\';font-weight:300;color:#34495e;'
                             },
@@ -335,7 +335,7 @@
                                 gauge: {
                                     thickness: 0.03,
                                     bgColor: "rgba(0,0,0,0.05)",
-                                    fgColor: "#1abc9c"
+                                    fgColor: "#63946B"
                                 },
                                 textCSS: 'font-family:\'Open Sans\';font-weight:300;color:#34495e;'
                             },
@@ -343,7 +343,7 @@
                                 gauge: {
                                     thickness: 0.03,
                                     bgColor: "rgba(0,0,0,0.05)",
-                                    fgColor: "#1abc9c"
+                                    fgColor: "#63946B"
                                 },
                                 textCSS: 'font-family:\'Open Sans\';font-weight:300;color:#34495e;'
                             }

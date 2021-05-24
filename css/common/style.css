@@ -15,6 +15,8 @@
   font-weight: normal;
   font-style: normal;
 }
+/*나눔스퀘어*/
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
 
 /* Bootstrap v4.0.0-beta Style 적용*/
 @media print {
@@ -1505,7 +1507,8 @@ pre code {
 .form-control:focus {
   color: #3e515b;
   background-color: #fff;
-  border-color: #8ad4ee;
+  border-color: #6a9b72;
+  /*border-color: #8ad4ee;*/
   outline: none;
 }
 .form-control::placeholder {
@@ -1952,13 +1955,13 @@ fieldset[disabled] a.btn {
 
 .btn-success {
   color: #fff;
-  background-color: #4dbd74;
-  border-color: #4dbd74;
+  background-color: #6a9b72;
+  border-color: #6a9b72;
 }
 .btn-success:hover {
   color: #fff;
-  background-color: #3ea662;
-  border-color: #3a9d5d;
+  background-color: #80b388;
+  border-color: #80b388;
 }
 .btn-success:focus,
 .btn-success.focus {
@@ -1966,15 +1969,15 @@ fieldset[disabled] a.btn {
 }
 .btn-success.disabled,
 .btn-success:disabled {
-  background-color: #4dbd74;
-  border-color: #4dbd74;
+  background-color: #6a9b72;
+  border-color: #6a9b72;
 }
 .btn-success:active,
 .btn-success.active,
 .show > .btn-success.dropdown-toggle {
-  background-color: #3ea662;
+  background-color: #80b388;
   background-image: none;
-  border-color: #3a9d5d;
+  border-color: #80b388;
 }
 
 .btn-info {
@@ -2169,15 +2172,15 @@ fieldset[disabled] a.btn {
 }
 
 .btn-outline-success {
-  color: #4dbd74;
+  color: #6a9b72;
   background-color: transparent;
   background-image: none;
-  border-color: #4dbd74;
+  border-color: #6a9b72;
 }
 .btn-outline-success:hover {
   color: #fff;
-  background-color: #4dbd74;
-  border-color: #4dbd74;
+  background-color: #6a9b72;
+  border-color: #6a9b72;
 }
 .btn-outline-success:focus,
 .btn-outline-success.focus {
@@ -2185,15 +2188,15 @@ fieldset[disabled] a.btn {
 }
 .btn-outline-success.disabled,
 .btn-outline-success:disabled {
-  color: #4dbd74;
+  color: #6a9b72;
   background-color: transparent;
 }
 .btn-outline-success:active,
 .btn-outline-success.active,
 .show > .btn-outline-success.dropdown-toggle {
   color: #fff;
-  background-color: #4dbd74;
-  border-color: #4dbd74;
+  background-color: #6a9b72;
+  border-color: #6a9b72;
 }
 
 .btn-outline-info {
@@ -2406,7 +2409,6 @@ input[type="button"].btn-block {
 .fade.show {
   opacity: 1;
 }
-
 .collapse {
   display: none;
   float: right; /*syj*/
@@ -2509,7 +2511,7 @@ tbody.collapse.show {
 .dropdown-item:active {
   color: #fff;
   text-decoration: none;
-  background-color: #20a8d8;
+  background-color: #6a9b72;
 }
 .dropdown-item.disabled,
 .dropdown-item:disabled {
@@ -4064,7 +4066,7 @@ button.close {
 
 .modal {
   position: fixed;
-  top: 0;
+  top: 10%;
   right: 0;
   bottom: 0;
   left: 0;
@@ -11041,6 +11043,19 @@ hr.transparent {
   font-weight: bold;
 }
 
+.main_title {
+  text-align: center;
+  margin: 1.5rem 0;
+
+  color: #46674b;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.main_title p {
+  margin: 0;
+}
+
 /*countdown css*/
 #main_clock {
   display: flex;
@@ -11064,4 +11079,302 @@ hr.transparent {
   text-align: center;
   left: 0;
   display: block;
+}
+.main_pledge {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: auto;
+}
+
+.main_pledge p {
+  margin: 0;
+}
+
+.pledge_content {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pledge_img {
+  max-width: 31.25rem;
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.2),
+    0 8px 16px -8px rgba(0, 0, 0, 0.1), 0 -6px 16px -6px rgba(0, 0, 0, 0.02);
+}
+
+.pledge_title {
+  color: #4f6d54;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.pledge_input {
+  font-family: "NanumSquare";
+  text-align: right;
+  font-size: 1rem;
+  color: #282e34;
+
+  background: transparent;
+  width: 10rem;
+
+  margin: 1rem 0 1rem 14rem;
+  padding: 0.2rem 0.5rem;
+
+  border: 0;
+  border-bottom: 1px solid #e3e8ec;
+}
+
+.pledge_input:focus {
+  border-color: #4f6d54;
+  outline: none;
+}
+
+.pledge_text {
+  font-family: "NanumSquare";
+  font-size: 0.9rem;
+}
+
+.pledge_text p {
+  margin: 1.5rem 0 !important;
+}
+
+.pledge_text ol {
+  text-align: left;
+}
+
+.pledge_text ol li {
+  margin: 0.3rem 0;
+}
+
+.pledge_footer {
+  margin: 2rem 0;
+}
+
+.pledge_date {
+  font-family: "NanumSquare";
+  margin: 0;
+}
+
+.pledge_logo {
+  color: #4f6d54;
+  font-size: 1.6rem;
+  font-family: "UhBeeKeongKeong";
+}
+
+.certify_header {
+  margin: 3rem 0;
+}
+.certify_title {
+  text-align: center;
+  margin: 1.5rem 0;
+
+  color: #4e7948;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 0.3rem;
+}
+.certify_text {
+  margin: 2rem 0;
+}
+.certify_text p {
+  margin: 0.3rem 0;
+
+  font-family: "NanumSquare";
+  font-size: 1.1rem;
+  color: #635040;
+  letter-spacing: 0.1rem;
+}
+.certify_text_mobile {
+  display: none;
+}
+.certify_content {
+  padding: 0 25%;
+  text-align: center;
+}
+.certify_content p {
+  margin: 1rem 0;
+
+  text-align: center;
+  color: #6d6155;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.certify_footer {
+  padding: 2rem 0;
+}
+
+.card-body_badge {
+  flex: 1 1 auto;
+  padding: 1.5rem 20%;
+  background: #d8c9ad !important;
+  border: 0 !important;
+  color: #635040;
+}
+.card-body_badge p {
+  text-align: left;
+  margin: 0;
+}
+
+.card-body_badge .badge_area {
+  margin: 1rem 0 0.5rem 0;
+}
+
+.card-body_badge .badge_title {
+  font-family: "NanumSquare";
+  font-size: 1.4rem;
+  letter-spacing: 0.05rem;
+  font-weight: 850;
+}
+
+.card-body_badge .badge_subtitle {
+  font-family: "NanumSquare";
+  font-size: 1.3rem;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+}
+
+.card-body_badge .badge_text {
+  margin: 0.2rem 0;
+}
+
+.card-body_badge .badge_text p {
+  text-align: left;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.badge_level {
+  margin: 0.6rem 0 0.8rem 0;
+}
+.badge_level p {
+  text-align: center;
+  margin: 0.1rem 0;
+  letter-spacing: 0.1rem;
+}
+.badge_all {
+  border-radius: 50%;
+  width: 100%;
+}
+.opacity_1 {
+  opacity: 16.6%;
+}
+.opacity_2 {
+  opacity: 33.3%;
+}
+.opacity_3 {
+  opacity: 49.8%;
+}
+.opacity_4 {
+  opacity: 66.4%;
+}
+.opacity_5 {
+  opacity: 83%;
+}
+.badge_round {
+  margin: auto;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 0 0.5rem 0rem rgba(50, 50, 50, 0.1);
+  max-width: 15rem;
+}
+.badge_get {
+  border: 0.2rem solid #635040;
+}
+.badge_active {
+  border: 0.4rem solid #635040;
+}
+
+.modal_certify_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 1rem 0 0 0;
+}
+.modal_certify_body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: 1rem;
+  margin: 0 2rem;
+
+  border-radius: 2rem;
+  border: none !important;
+}
+.modal_certify-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  background-clip: padding-box;
+  outline: 0;
+
+  border-radius: 2rem;
+  border: none !important;
+}
+.modal_certify-title {
+  margin-bottom: 0;
+  line-height: 1.5;
+  font-size: 2.4rem;
+}
+.modal_certify-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1rem;
+  margin: 0 0 3rem 0;
+}
+.modal_photo_footer,
+.modal_photo_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: auto;
+  margin-bottom: 1rem !important;
+}
+.modal_photo_body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: 1rem;
+  margin: 0 2rem;
+
+  border-radius: 2rem;
+  border: none !important;
+}
+.modal_photo_content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  background-clip: padding-box;
+  outline: 0;
+
+  border-radius: 2rem;
+  border: none !important;
+}
+@media (max-width: 768px) {
+  .sub_detail {
+    display: none;
+  }
+  .certify_text_mobile {
+    display: block;
+  }
+}
+.hashtag_photo {
+  width: 100%;
+  padding: 1rem 0;
+}
+.hashtag_more {
+  display: none;
+}
+#btn_hide {
+  display: none;
+}
+#modal_iframe {
+  width: 100%;
+  height: 35rem;
+  margin: auto;
 }
