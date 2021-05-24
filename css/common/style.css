@@ -10538,8 +10538,9 @@ app-root {
   width: 100%;
 }
 
+/* header 높이수정 */
 .header-fixed .app-body {
-  margin-top: 60px; /*syj::60px;*/
+  margin-top: 53px; /*syj::60px;*/
 }
 
 .breadcrumb-fixed .main {
@@ -10606,8 +10607,9 @@ app-root {
     left: 50%;
     margin-left: -110px;
   }
+  /* header 높이수정 */
   .app-body {
-    margin-top: 60px;
+    margin-top: 55px;
   }
   .main,
   .app-footer {
@@ -11020,18 +11022,17 @@ hr.transparent {
 
 .main_content {
   width: 100vw;
-  height: 100vh;
+  height: -moz-calc(100vh - 105px); /* Firefox */
+  height: -webkit-calc(100vh - 105px); /* Chrome, Safari */
+  height: calc(100vh - 105px);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .main_content .main_text {
-  height: 80vh;
-
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   text-align: center;
-
   color: #296e64;
   font-size: 5rem;
   font-weight: bold;
