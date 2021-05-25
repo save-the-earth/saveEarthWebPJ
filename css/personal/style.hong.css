@@ -113,3 +113,37 @@
 [id$="-toggle"] {
   margin-right: 0.938rem;
 }
+
+.answer {
+  display: none;
+  padding-bottom: 1.875rem;
+  border: none;
+}
+#faq-title {
+  font-size: 1.563rem;
+  width: 62.5rem;
+  text-align: center;
+  margin: 6.25rem;
+  border: none;
+}
+
+.faq-content {
+  border-bottom: 1rem solid #e0e0e0;
+}
+.question {
+  font-size: 1.188rem;
+  padding: 1.875rem 0;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+}
+.question:hover {
+  color: #2962ff;
+  border: none;
+}
+[id$="-toggle"] {
+  margin-right: 0.938rem;
+}
