@@ -2,13 +2,6 @@
 /*
     Copyright © 2021 지구방위대.
     ProjectName: saveEarthWebPJ
-    FilePath: js/views/introduce/introduce.js
-    Create by 지구방위대, 정윤아 on 2021-05-25 17:31:04.
-*/
-"use strict";
-/*
-    Copyright © 2021 지구방위대.
-    ProjectName: saveEarthWebPJ
     FilePath: js/views/main/main.common.js
     Create by 지구방위대, 정윤아 on 2021-05-21 07:02:50.
 */
@@ -25,30 +18,16 @@
   $fullPageEl.fullpage({
     // sectionsColor: ["#4BBFC3", "#7BAABE", "whitesmoke", "#000"],
     sectionSelector: ".section",
-    anchors: [
-      "first",
-      "second",
-      "third",
-      "forth",
-      "fifth",
-      "sixth",
-      "seventh",
-      "last",
-    ],
+    anchors: ["first", "second", "third"],
     navigationTooltips: [
-      "",
-      "지구의시간",
-      "쓰레기처리",
-      "자원의순환",
-      "늘어나는폐기물",
-      "환경파괴는빠르게",
-      "일회용품Out",
-      "서약서",
+      "제로웨이스트란",
+      "제로웨이스트챌린지",
+      "제로웨이스트실천방법",
     ],
     navigation: true,
     navigationPosition: "right",
     lockAnchors: true,
-    verticalCentered: false,
+    verticalCentered: true,
     //Scrolling
     css3: true,
     scrollBar: true,
@@ -59,16 +38,7 @@
       AOS.init(); // AOS initiation
       $(".aos-init").removeClass("aos-animate");
 
-      const a_table = [
-        "first",
-        "second",
-        "third",
-        "forth",
-        "fifth",
-        "sixth",
-        "seventh",
-        "last",
-      ]; // duplicated table of anchors name
+      const a_table = ["first", "second", "third"]; // duplicated table of anchors name
 
       for (let i = 0; i < a_table.length; i++) {
         $(".section-" + a_table[i] + ".active .aos-init").addClass(
@@ -79,21 +49,11 @@
 
     afterRender: function (index, anchorIndex) {
       AOS.init(); // AOS initiation
-      $(".aos-init").removeClass("aos-animate");
     },
     afterLoad: function (index, anchorIndex) {
       $(".aos-init").removeClass("aos-animate");
 
-      const a_table = [
-        "first",
-        "second",
-        "third",
-        "forth",
-        "fifth",
-        "sixth",
-        "seventh",
-        "last",
-      ];
+      const a_table = ["first", "second", "third"];
 
       for (let i = 0; i < a_table.length; i++) {
         $(".section-" + a_table[i] + ".active .aos-init").addClass(

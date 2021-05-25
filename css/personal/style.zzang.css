@@ -37,7 +37,7 @@
 }
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
-  background: #fff;
+  background: var(--main-geen);
 }
 #fp-nav ul li a span {
   text-indent: -9999px;
@@ -1130,11 +1130,14 @@
     padding: 0 50px;
   }
 
-  .intro_main {
+  .intro-main {
     width: 100%;
     padding: 0 30px;
   }
 
+  .intro .main_content {
+    padding: 0 30px;
+  }
   .recycle-info1-1 .label-year {
     font-size: 13px;
     height: 26px;
@@ -1941,5 +1944,11 @@
 @media screen and (max-width: 1023px) {
   .recycle-info1-1 .recycle-info-inner {
     padding: 20px 20px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .intro-main,
+  .intro .main_content {
+    padding: 0 15px;
   }
 }
