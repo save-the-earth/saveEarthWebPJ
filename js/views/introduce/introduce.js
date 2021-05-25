@@ -31,7 +31,7 @@
     //Scrolling
     css3: true,
     scrollBar: true,
-    autoScrolling: true,
+    autoScrolling: false,
     normalScrollElements: ".app-header",
     fixedElements: ".app-header, .app-footer",
     afterResize: function () {

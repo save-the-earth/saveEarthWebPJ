@@ -18,15 +18,16 @@
   // 스크롤 설정
   $fullPageEl.fullpage({
     // sectionsColor: ["#4BBFC3", "#7BAABE", "whitesmoke", "#000"],
+    sectionSelector: ".section",
     anchors: [
       "first",
       "second",
       "third",
-      "last",
       "forth",
       "fifth",
       "sixth",
       "seventh",
+      "last",
     ],
     navigationTooltips: [
       "",
@@ -36,14 +37,17 @@
       "늘어나는폐기물",
       "환경파괴는빠르게",
       "일회용품Out",
+      "서약서",
     ],
     navigation: true,
     navigationPosition: "right",
     lockAnchors: true,
+    verticalCentered: false,
     //Scrolling
     css3: true,
-    autoScrolling: true,
     scrollBar: true,
+    autoScrolling: false,
+    normalScrollElements: ".app-header",
     fixedElements: ".app-header, .app-footer",
     afterResize: function () {
       AOS.init(); // AOS initiation
@@ -53,11 +57,11 @@
         "first",
         "second",
         "third",
-        "last",
         "forth",
         "fifth",
         "sixth",
         "seventh",
+        "last",
       ]; // duplicated table of anchors name
 
       for (let i = 0; i < a_table.length; i++) {
@@ -78,11 +82,11 @@
         "first",
         "second",
         "third",
-        "last",
         "forth",
         "fifth",
         "sixth",
         "seventh",
+        "last",
       ];
 
       for (let i = 0; i < a_table.length; i++) {

@@ -1,57 +1,221 @@
 <!--
     Copyright © 2021 지구방위대.
     ProjectName: saveEarthWebPJ
-    FilePath: views/introduce/introduce.html
-    Create by 지구방위대, 홍예지 on 2021-05-21 17:42:59.
+    FilePath: views/main.html
+    Create by 지구방위대, 정윤아,홍예지 on 2021-05-21 06:34:21.
 -->
+
 <script>
   (function () {
-    removeDynamic();
-    // 동적 CSS 정의 - 라이브러리 및 개발자 별 CSS
+    // 동적 CSS 저의 - 라이브러리 및 개발자 별 CSS
     const requireCss = [
       // 개인별 CSS
       "css/personal/style.hong.css",
+      "css/personal/style.zzang.css",
+    ];
+
+    // 동적 스크립트 정의 - 라이브러리 및 화면별 JS
+    const requireJs = [
+      // 화면 별 JS
+      "js/views/introduce/introduce.js",
     ];
 
     loadCSS(requireCss);
+    loadJS(requireJs);
   })();
 </script>
 
-<section class="container bg-white">
-  <img
-    id="big_logo"
-    src="zerowaste.png"
-    class="rounded mx-auto d-block"
-    alt="..."
-  />
-  <p class="box_size gray text-center text-monospace">
-    제로 웨이스트(Zero Waste)란?<br />
-    일상생활에서 사용되는 모든 자원과 제품을 재활용할 수 있도록 디자인해
-    궁극적으로는 그 어떤 쓰레기도 매립되거나 바다에 버려지지 않도록 하는 원칙을
-    말합니다.
-    <br /><span class="font-weight-bold"
-      >"한마디로 생활 속에서 배출되는 쓰레기를 최소화하자는 사회적
-      운동이죠."</span
-    >
-  </p>
-  <p class="font-weight-bold size red text-center">
-    ✔ 코로나19로 인한 배달 및 포장 서비스의 급증
-  </p>
-  <p class="font-weight-bold size red text-center">
-    ✔ 바이러스를 차단하기 위한 마스크와 위생장갑 폐기물 증가
-  </p>
-  <p class="font-weight-bold size_2 text-center">제로웨이스트챌린지</p>
-  <p class="box_size gray text-center text-monospace">
-    이렇듯 일상생활 속에서 배출되는 폐기물로 인하여 처리과정의 어려움과 환경
-    문제의 심각성이 점점 부각되면서 쓰레기 발생을 줄이는 사례를 공유하는
-    캠페인이 활성화되기 시작했습니다. 이 같은 제로 웨이스트 챌린지는
-    사회관계망서비스(SNS) 등에 개개인이 실제로 쓰레기를 줄인 사례를 게시한 뒤
-    #제로웨이스트챌린지, #ZeroWasteChallenge 등의 해시태그를 붙이면 누구나
-    참여할 수 있습니다.
-  </p>
-  <p class="font-weight-bold size_2 box_size_1 gray text-center text-monospace">
-    <span class="green font-weight-bold">5R</span> : 제로웨이스트를 실천하는
-    방법
-  </p>
-  <!--도움요청..-->
-</section>
+<div id="fullPage">
+  <!-- 소개하기 -->
+  <section id="section1" class="section section-first" data-anchor="first">
+    <div class="intro mx-auto h-100">
+      <div class="intro-main h-100 text-center bg-white">
+        <!-- 소개글 -->
+        <div
+          class="recycle-define aos-init"
+          data-aos="fade-up"
+          data-aos-duration="700"
+        >
+          <h2 class="pt-5"><strong>제로 웨이스트</strong>(Zero Waste)?</h2>
+          <p class="pt-3 mb-0">
+            일상생활에서 사용되는 모든 자원과 제품을 재활용할 수 있도록 디자인해
+            궁극적으로는 그 어떤 쓰레기도 매립되거나 바다에 버려지지 않도록 하는
+            원칙을 말합니다.
+          </p>
+          <p>
+            폐기물(wastes) 발생을 최대한 줄이고 사용한 폐기물에 대해서는
+            재사용(reuse) 또는 재생이용(recovery)하며,<br />
+            불가피하게 남은 폐기물은 환경에 미치는 영향을 최소화하여 처리하는 것
+          </p>
+          <h3
+            class="pt-3 font-weight-bold aos-init"
+            data-aos="fade-up"
+            data-aos-duration="700"
+          >
+            "한마디로 생활 속에서 배출되는 쓰레기를 최소화하자는 사회적
+            운동이죠."
+          </h3>
+        </div>
+        <!-- 인포그래픽 -->
+        <img
+          id="big_logo"
+          src="././img/favicon.png"
+          class="rounded mx-auto d-block"
+          alt="..."
+        />
+      </div>
+    </div>
+  </section>
+  <section id="section2" class="section section-second" data-anchor="second">
+    <div class="intro mx-auto h-100">
+      <div class="intro-main h-100 text-center bg-white">
+        <div class="aos-init" data-aos="fade-up" data-aos-duration="700">
+          <h3 class="pt-5 mb-2 font-weight-bold text-center">
+            <i class="fas fa-check"></i> 코로나19로 인한 배달 및 포장 서비스의
+            급증
+          </h3>
+          <h3 class="font-weight-bold text-center">
+            <i class="fas fa-check"></i> 코로나바이러스를 차단하기 위한 마스크와
+            위생장갑 폐기물 증가
+          </h3>
+        </div>
+        <!-- 소개글 -->
+        <div
+          class="recycle-define aos-init"
+          data-aos="fade-up"
+          data-aos-duration="700"
+        >
+          <h2 class="pt-5"><strong>제로웨이스트챌린지</strong>(Zero Waste)?</h2>
+          <p class="pt-3">
+            이렇듯 일상생활 속에서 배출되는 폐기물로 인하여 처리과정의 어려움과
+            환경 문제의 심각성이 점점 부각되면서
+          </p>
+          <p>
+            쓰레기 발생을 줄이는사례를 공유하는 캠페인이 활성화되기
+            시작했습니다.
+          </p>
+          <p>
+            이 같은 제로 웨이스트 챌린지는 사회관계망서비스(SNS) 등에 개개인이
+            실제로 쓰레기를 줄인 사례를 게시한 뒤
+          </p>
+          <p>
+            #제로웨이스트챌린지, #ZeroWasteChallenge 등의 해시태그를 붙이면
+            누구나 참여할 수 있습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="section3" class="section section-third" data-anchor="third">
+    <div class="intro h-100 mx-auto">
+      <div class="intro-main h-100 text-center bg-white">
+        <!-- 소개글 -->
+        <div
+          class="recycle-define aos-init"
+          data-aos="fade-up"
+          data-aos-duration="700"
+        >
+          <h2 class="pt-5">
+            <strong>5R</strong> : 제로웨이스트를 실천하는 방법
+          </h2>
+        </div>
+        <div
+          class="pt-3 col-12 aos-init"
+          data-aos="fade-up"
+          data-aos-duration="700"
+        >
+          <div class="card-group">
+            <div class="card p3">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-4">
+                    <img
+                      class="img-fluid"
+                      src="././img/favicon.png"
+                      alt="img"
+                    />
+                  </div>
+                  <div class="col-8">
+                    <p>
+                      This is a wider card with supporting text below as a
+                      natural lead-in to additional content. This content is a
+                      little bit longer.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card p3">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-4">
+                    <img
+                      class="img-fluid"
+                      src="././img/favicon.png"
+                      alt="img"
+                    />
+                  </div>
+                  <div class="col-8">
+                    <p>
+                      This is a wider card with supporting text below as a
+                      natural lead-in to additional content. This content is a
+                      little bit longer.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-group">
+            <div class="card p3">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-4">
+                    <img
+                      class="img-fluid"
+                      src="././img/favicon.png"
+                      alt="img"
+                    />
+                  </div>
+                  <div class="col-8">
+                    <p>
+                      This is a wider card with supporting text below as a
+                      natural lead-in to additional content. This content is a
+                      little bit longer.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card p3">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-4">
+                    <img
+                      class="img-fluid"
+                      src="././img/favicon.png"
+                      alt="img"
+                    />
+                  </div>
+                  <div class="col-8">
+                    <p>
+                      This is a wider card with supporting text below as a
+                      natural lead-in to additional content. This content is a
+                      little bit longer.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <span class="scroll-down">
+    <span class="scroll-txt">SCROLL</span>
+    <button class="btn btn-success mx-auto">
+      <i class="fas fa-angle-down"></i>
+    </button>
+  </span>
+</div>

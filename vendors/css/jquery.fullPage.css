@@ -157,6 +157,7 @@ html.fp-enabled,
   height: 100%;
   cursor: pointer;
   text-decoration: none;
+  /* background: var(--blue); */
 }
 #fp-nav ul li a.active span,
 .fp-slidesNav ul li a.active span,
@@ -194,7 +195,7 @@ html.fp-enabled,
 #fp-nav ul li .fp-tooltip {
   position: absolute;
   top: -2px;
-  color: #fff;
+  color: var(--blue);
   font-size: 16px;
   font-family: arial, helvetica, sans-serif;
   white-space: nowrap;
@@ -235,6 +236,6 @@ html.fp-enabled,
   content: "";
   width: 150px;
   height: 1px;
-  background: #fff;
+  background: var(--blue);
   margin-top: 3px;
 }

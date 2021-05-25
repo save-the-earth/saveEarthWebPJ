@@ -104,6 +104,9 @@ if ($.ajaxLoad) {
 
   $(document).on("click", '.nav a[href!="#"]', function (e) {
     $(".ui-view").fullpage.destroy("all");
+    const $appBodyEl = $(".app-body");
+    $appBodyEl.css("overflow-x", "hidden");
+    $appBodyEl.css("overflow-y", "auto");
     removeDynamic();
     e.preventDefault();
     let target = $(e.currentTarget);
