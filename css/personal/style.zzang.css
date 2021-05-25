@@ -22,7 +22,7 @@
   color: var(--main-geen);
   text-align: center;
   position: fixed;
-  bottom: 50px;
+  bottom: 52px;
   left: 50%;
   margin-left: -22px;
 }
@@ -37,7 +37,7 @@
 }
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
-  background: var(--main-geen);
+  background: var(--scroll-circle);
 }
 #fp-nav ul li a span {
   text-indent: -9999px;
@@ -215,7 +215,7 @@
 /* 화살표 */
 .recycle-step-inner1 .arr-area {
   padding: 0.5rem;
-  flex-basis: 88px;
+  flex-basis: 6rem;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -277,7 +277,7 @@
   border-radius: 50%;
   background-color: #fff;
   border: 5px solid var(--main-geen);
-  box-shadow: 0 10px 10px 0 rgb(0 0 0.1);
+  box-shadow: 0 5px 5px 0 rgba(50, 50, 50, 0.3);
   text-align: center;
   padding: 70px 0 0;
   position: absolute;

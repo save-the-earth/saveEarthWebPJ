@@ -1,65 +1,20 @@
 <script>
-  loadJS([], "js/views/introduce/define.js");
+  (function () {
+    // 동적 CSS 저의 - 라이브러리 및 개발자 별 CSS
+    const requireCss = [
+      // 개인별 CSS
+      "css/personal/style.song.css"
+    ];
 
-  $(function () {
-    let subCat = $("#subcategories");
-    let subCat02 = $("#subcategories02");
-    subCat.on("show.bs.collapse", ".collapse", function () {
-      subCat.find(".collapse").not(this).collapse("hide");
-      subCat02.find(".collapse").not(this).collapse("hide");
-    });
-    subCat02.on("show.bs.collapse", ".collapse", function () {
-      subCat.find(".collapse").not(this).collapse("hide");
-      subCat02.find(".collapse").not(this).collapse("hide");
-    });
+    // 동적 스크립트 정의 - 라이브러리 및 화면별 JS
+    const requireJs = [
+      // 화면 별 JS
+      "js/views/certify/certify_badge.js",
+    ];
 
-    $(".certify_badge").click(function () {
-      if ($(window).width() > 768) {
-        if ($(this).hasClass("badge_active")) {
-          $(this).removeClass("badge_active");
-        } else {
-          $(this).addClass("badge_active");
-          $(".certify_badge").not($(this)).removeClass("badge_active");
-        }
-      }
-    });
-
-    $("#upload_btn").click(function () {
-      $("#upload_item").removeAttr("disabled");
-      $("#upload_modal").modal();
-    });
-
-    $(".upload_active").click(function () {
-      let id = $(this).parents(".collapse").attr("id");
-      let num = id.substr(id.length - 1, 1) - 1;
-
-      $("#upload_item option:eq(" + num + ")").prop("selected", "selected");
-      $("#upload_item").attr("disabled", "true");
-      $("#upload_modal").modal();
-    });
-
-    $(".photo_modal").click(function () {
-      let id = $(this).parents(".collapse").attr("id");
-      let num = id.substr(id.length - 1, 1) - 1;
-
-      $("#photo_item option:eq(" + num + ")").prop("selected", "selected");
-      $("#photo_modal .modal_photo_body img").attr("src", $(this).attr("src"));
-      $("#photo_modal").modal();
-    });
-
-    $(window).resize(function () {
-      if ($(window).width() < 768) {
-        $(".certify_text_mobile").show();
-
-        $(".certify_badge").removeClass("badge_active");
-
-        subCat.find(".collapse").collapse("hide");
-        subCat02.find(".collapse").collapse("hide");
-      } else {
-        $(".certify_text_mobile").hide();
-      }
-    });
-  });
+    loadCSS(requireCss);
+    loadJS(requireJs);
+  })();
 </script>
 
 <div class="container">
@@ -639,12 +594,10 @@
           <div class="badge_text">
             <p>육류의 탄소발자국을 아시나요?</p>
             <p>
-              1kg당 소고기는 60kgCO2-eq. 돼지고기는 7kgCO2-eq. 닭고기는
-              6kgCO2-eq이나 된다고 해요.
+              1kg당 소고기 60kgCO2-eq. 돼지고기 7kgCO2-eq. 닭고기 6kgCO2-eq라고 해요.
             </p>
             <p>
-              토마토가 1.4kgCO2-eq, 두부가 3kgCO2-eq인 것에 비해 현저히 높은
-              수치에요.
+              토마토가 1.4kgCO2-eq, 두부가 3kgCO2-eq인 것에 비해 현저히 높은 수치에요.
             </p>
             <p>
               지구방위대와 함께 일주일에 1번씩 채식을 도전해보는 것은 어떨까요?
@@ -752,6 +705,7 @@
         </div>
       </div>
     </div>
+
     <div class="collapse" id="badge_detail06">
       <div class="card card-body_badge">
         <div class="badge_area">

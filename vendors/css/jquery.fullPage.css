@@ -195,7 +195,7 @@ html.fp-enabled,
 #fp-nav ul li .fp-tooltip {
   position: absolute;
   top: -2px;
-  color: var(--blue);
+  color: var(--scroll-text);
   font-size: 16px;
   font-family: arial, helvetica, sans-serif;
   white-space: nowrap;
@@ -236,6 +236,6 @@ html.fp-enabled,
   content: "";
   width: 150px;
   height: 1px;
-  background: var(--blue);
+  background: var(--scroll-text);
   margin-top: 3px;
 }
