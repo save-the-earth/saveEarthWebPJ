@@ -1,48 +1,20 @@
 <script>
-  loadJS([], "js/views/introduce/define.js");
+  (function () {
+    // 동적 CSS 저의 - 라이브러리 및 개발자 별 CSS
+    const requireCss = [
+      // 개인별 CSS
+      "css/personal/style.song.css"
+    ];
 
-  $(function () {
-    $("#btn_more").click(function () {
-      $(".hashtag_more").css("display", "flex");
-      $("#btn_more").css("display", "none");
-      $("#btn_hide").css("display", "inline-block");
-    });
-    $("#btn_hide").click(function () {
-      $(".hashtag_more").css("display", "none");
-      $("#btn_more").css("display", "inline-block");
-      $("#btn_hide").css("display", "none");
-    });
+    // 동적 스크립트 정의 - 라이브러리 및 화면별 JS
+    const requireJs = [
+      // 화면 별 JS
+      "js/views/certify/hashtag.js",
+    ];
 
-    $(".hashtag_photo").click(function () {
-      let insta = [
-        "https://www.instagram.com/p/CPOF4BLhxgB/",
-        "https://www.instagram.com/p/CPOF6soJQa0/",
-        "https://www.instagram.com/p/CPOHIi3Jywe/",
-        "https://www.instagram.com/p/CPOIgYNHGjn/",
-        "https://www.instagram.com/p/CPOKkxFJiTy/",
-        "https://www.instagram.com/p/CPOL_exl9A4/",
-        "https://www.instagram.com/p/CPOQw1eBVLU/",
-        "https://www.instagram.com/p/CPOWqXQFpbL/",
-        "https://www.instagram.com/p/CPFYiCppm-_/",
-        "https://www.instagram.com/p/CO7eMywHSKm/",
-        "https://www.instagram.com/p/CO-ujxenT0J/",
-        "https://www.instagram.com/p/CPGNu_bNNcs/",
-        "https://www.instagram.com/p/CPFo8U7BxKV/",
-        "https://www.instagram.com/p/CPIKwmGHot-/",
-        "https://www.instagram.com/p/CO2YjAkJQTB/",
-        "https://www.instagram.com/p/CPICCmgDOMy/",
-        "https://www.instagram.com/p/CCNd8gcJC6O/",
-        "https://www.instagram.com/p/CMPFpRdMtG3/",
-        "https://www.instagram.com/p/CL_wHqQnGPI/",
-        "https://www.instagram.com/p/CPODcjEFZNc/",
-      ];
-      let id = $(this).attr("src");
-      let num = parseInt(id.substr(id.length - 6, 2)) - 1;
-
-      $("#insta_modal iframe").attr("src", insta[num] + "embed");
-      $("#insta_modal").modal();
-    });
-  });
+    loadCSS(requireCss);
+    loadJS(requireJs);
+  })();
 </script>
 
 <div class="container">

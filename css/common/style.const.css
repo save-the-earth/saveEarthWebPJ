@@ -12,9 +12,13 @@
     --window-size:57rem;
     --main-color:red;
      */
-  --main-geen: #4dbd74;
+  --main-geen: #3A7A34;
   --main-geen1: #c7ef8e;
   --main-geen2: #9deebb;
   --main-geen3: #90ecdc;
+  --text-general: #686154;
+  --text-highlight: #46674b;
+  --scroll-circle: #D8BC8B; /*4D8C44;*/
+  --scroll-text: #947954; /*4D8C44;*/
   --blue: #71d2ff;
 }

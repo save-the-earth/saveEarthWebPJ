@@ -12,6 +12,6 @@
 
   $clickEl.Countdown({
     rampung: new Date("Nov 08, 2045 19:42:52"),
-    theme: "flat-colors-wide",
+    theme: "flat-colors",
   });
 })(jQuery);

@@ -4,7 +4,6 @@
     FilePath: views/main.html
     Create by 지구방위대, 정윤아 and 송예지 on 2021-05-21 06:34:21.
 -->
-
 <script>
   (function () {
     // 동적 CSS 저의 - 라이브러리 및 개발자 별 CSS
@@ -20,6 +19,7 @@
       "vendors/js/jquery.ba-throttle-debounce.min.js",
       "vendors/js/jquery.knob.min.js",
       "vendors/js/jquery.countdown.js",
+      "vendors/js/html2canvas.js",
       // 화면 별 JS
       "js/views/main/main.common.js",
     ];
@@ -33,7 +33,7 @@
   <section class="section section-first" data-anchor="first">
     <div class="main_content">
       <div class="main_text">
-        <p>현재 지구에 남아있는 시간</p>
+        <p>지구에게는</p><p>얼마의 시간이 남아있을까요?</p>
       </div>
     </div>
   </section>
@@ -56,12 +56,18 @@
           data-aos="fade-up"
           data-aos-duration="700"
         >
-          <h2 class="pt-5">"<strong>자원순환</strong>"</h2>
-          <p class="pt-3">
+          <div
+                  class="main_title pt-5 aos-init"
+                  data-aos="fade-up"
+                  data-aos-duration="700"
+          >
+          <p><span class="highlight">자원순환</span>이란?</p>
+          </div>
+          <p class="pt-2 pb-4 content_text">
             폐기물(wastes) 발생을 최대한 줄이고<br />
             사용한 폐기물에 대해서는 재사용(reuse) 또는 재생이용(recovery)하며,
             <br />
-            불가피하게 남은 폐기물은 환경에 미치는 영향을 최소화하여 처리하는 것
+            불가피하게 남은 폐기물은 환경에 미치는 영향을 최소화하여 처리하는 것을 말합니다.
           </p>
         </div>
         <!-- 인포그래픽 -->
@@ -148,10 +154,16 @@
           data-aos="fade-up"
           data-aos-duration="700"
         >
-          <h2 class="pt-5">늘어나는 <strong>폐기물</strong></h2>
-          <p class="pt-3">
+          <div
+                  class="main_title pt-5 aos-init"
+                  data-aos="fade-up"
+                  data-aos-duration="700"
+          >
+            <p class="pt-5">늘어나는 <span class="highlight">폐기물</span></p>
+          </div>
+          <p class="pt-2 pb-4 content_text">
             우리가 버리는 쓰레기는 갈수록 늘어나고<br />
-            쓰레기산으로 만들어졌습니다.
+            쓰레기산이 만들어지고 있습니다.
           </p>
           <span
             class="label-year aos-init aos-animate"
@@ -268,12 +280,17 @@
           data-aos="fade-up"
           data-aos-duration="700"
         >
-          <h2 class="pt-5">빠르고 간편한 <strong>일회용품</strong></h2>
-          <h2><strong>환경파괴</strong>도 빠르게</h2>
-          <p class="pt-3">
-            물건을 배달로 받는 것이 당연해지고, 식사 후 커피 한 잔이 일상이 된
-            요즘<br />
-            일회용품 사용량은 기하급수적으로 증가하고 있습니다
+          <div
+                  class="main_title pt-5 aos-init"
+                  data-aos="fade-up"
+                  data-aos-duration="700"
+          >
+          <p class="pt-5">빠르고 간편한 <span class="highlight">일회용품</span></p>
+          <p><span class="highlight">환경파괴</span>도 빠르게</p>
+          </div>
+          <p class="pt-2 pb-4 content_text">
+            물건을 배달로 받는 것이 당연해지고, 식사 후 커피 한 잔이 일상이 된 요즘<br />
+            일회용품 사용량은 기하급수적으로 증가하고 있습니다.
           </p>
         </div>
         <!-- 인포그래픽 -->
@@ -375,11 +392,17 @@
           data-aos="fade-up"
           data-aos-duration="700"
         >
-          <h2 class="pt-5">일회용품 <strong>OUT</strong></h2>
-          <h2>변화를 위한 실천 계획</h2>
-          <p class="pt-3">
-            환경부는 일회용품 사용을 줄이기 위해<br />
-            중장기적 계획(로드맵)을 마련하고, 추진하고 있습니다
+          <div
+                  class="main_title pt-5 aos-init"
+                  data-aos="fade-up"
+                  data-aos-duration="700"
+          >
+            <p class="pt-5">일회용품 <span class="highlight">OUT!</span></p>
+            <p>변화를 위한 실천 계획</p>
+          </div>
+          <p class="pt-2 pb-4 content_text">
+            대한민국 환경부는 일회용품 사용을 줄이기 위해<br />
+            중장기적 계획(로드맵)을 마련하고, 추진하고 있습니다.
           </p>
         </div>
         <!-- 인포그래픽 -->
@@ -529,8 +552,8 @@
           data-aos="fade-up"
           data-aos-duration="700"
         >
-          <p>변화를 위한 작은 실천,</p>
-          <p>함께 하실래요?</p>
+          <p class="highlight">변화를 위한 작은 실천,</p>
+          <p class="highlight">함께 하실래요?</p>
         </div>
         <div
           class="main_pledge aos-init aos-animate"
@@ -566,8 +589,6 @@
                   <li>음식을 남기지 않겠습니다.</li>
                   <li>일주일에 1회 비건식을 섭취하겠습니다.</li>
                 </ol>
-
-                <p>추가할 글 같이 고민해주세용,,,,</p>
               </div>
               <div class="pledge_footer">
                 <p class="pledge_date">0000년 00월 00일</p>
