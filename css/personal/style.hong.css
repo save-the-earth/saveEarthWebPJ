@@ -7,6 +7,7 @@
 */
 
 /* 지구방위대 2021-05-21 17:59:49, 정윤아 Front-end Dev */
+/* 지구방위대 2021-05-27 04:43:00, 송예지 Design */
 
 /* 소개하기 */
 #big_logo {
@@ -94,21 +95,7 @@
 }
 
 .faq-content {
-  border-bottom: 1rem solid #e0e0e0;
-}
-.question {
-  font-size: 1.188rem;
-  padding: 1.875rem 0;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  background: none;
-  width: 100%;
-  text-align: left;
-}
-.question:hover {
-  color: #2962ff;
-  border: none;
+  border-bottom: 0.1rem solid #d0bba2;
 }
 [id$="-toggle"] {
   margin-right: 0.938rem;
@@ -116,8 +103,12 @@
 
 .answer {
   display: none;
-  padding-bottom: 1.875rem;
+  padding: 1.875rem;
   border: none;
+  font-size: 1.1rem;
+  color: var(--text-general);
+  line-height: 2rem;
+  background-color: var(--sub-background);
 }
 #faq-title {
   font-size: 1.563rem;
@@ -126,19 +117,17 @@
   margin: 6.25rem;
   border: none;
 }
-
-.faq-content {
-  border-bottom: 1rem solid #e0e0e0;
-}
 .question {
   font-size: 1.188rem;
-  padding: 1.875rem 0;
+  font-weight: 600;
+  padding: 1.5rem 0;
   cursor: pointer;
   border: none;
   outline: none;
   background: none;
   width: 100%;
   text-align: left;
+  color: var(--text-bold);
 }
 .question:hover {
   color: #2962ff;
@@ -146,4 +135,15 @@
 }
 [id$="-toggle"] {
   margin-right: 0.938rem;
+}
+
+.backimg {
+  min-height: -moz-calc(100vh - 105px); /* Firefox */
+  min-height: -webkit-calc(100vh - 105px); /* Chrome, Safari */
+  min-height: calc(100vh - 105px);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom;
+  background-image:url('../../img/background/faq.png');
 }
