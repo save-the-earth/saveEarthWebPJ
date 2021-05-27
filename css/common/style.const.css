@@ -4,7 +4,7 @@
     ProjectName: saveEarthWebPJ
     FileName: style.const.css
     Date : 2021-05-21 03:18:38
-    Create by 지구방위대, 정윤아 on 2021-05-21 03:18:38.
+    Create by 지구방위대, 정윤아 and 송예지 on 2021-05-21 03:18:38.
 */
 /* color, size 변수 정의 */
 :root {
@@ -12,13 +12,23 @@
     --window-size:57rem;
     --main-color:red;
      */
+  --body: #f7f2e6;
   --main-geen: #3A7A34;
-  --main-geen1: #c7ef8e;
-  --main-geen2: #9deebb;
-  --main-geen3: #90ecdc;
+
+  --main-recycle1: #E1EADA;
+  --main-recycle2: #ABC6AC;
+  --main-recycle3: #7EAFA7;
+  --main-recycle4: #4D8493;
+
   --text-general: #686154;
   --text-highlight: #46674b;
+  --text-main: #4f8158; /*#3A7A34;*/
+  --text-bold: #635040;
+
   --scroll-circle: #D8BC8B; /*4D8C44;*/
   --scroll-text: #947954; /*4D8C44;*/
+
   --blue: #71d2ff;
+
+  --sub-background: #e4d9c0;
 }

@@ -118,7 +118,7 @@ body {
   font-weight: normal;
   line-height: 1.5;
   color: #151b1e;
-  background-color: #f7f2e6;
+  background-color: var(--body);
   /*background-color: #eff3f8;*/
 }
 
@@ -4715,7 +4715,8 @@ a.bg-danger:hover {
 .bg-light {
   /*background-color: #f1f3f8 !important;*/ /*syj*/
   /*background-color: #f7f2e6 !important; !*syj*!*/
-  background-color: rgba(247, 242, 230, 0.5);
+  /*background-color: rgba(247, 242, 230, 0.5);*/
+  background-color: rgb(247, 242, 230);
   /*background-color: transparent;*/
 }
 
@@ -6012,7 +6013,7 @@ a.bg-dark:hover {
 }
 
 .pt-5 {
-  padding-top: 1rem !important;
+  padding-top: 3rem !important;
 }
 
 .pr-5 {
@@ -6035,6 +6036,10 @@ a.bg-dark:hover {
 .py-5 {
   padding-top: 3rem !important;
   padding-bottom: 3rem !important;
+}
+
+.pt-6 {
+  padding-top: 5rem !important;
 }
 
 .m-auto {
@@ -9347,7 +9352,7 @@ base-chart.chart {
   z-index: 2000;
   width: 100%;
   height: 2px;
-  background: #20a8d8;
+  background: #7aa053;
 }
 
 .modal-primary .modal-content {
@@ -10587,7 +10592,7 @@ app-root {
 }
 
 .footer-fixed .app-body {
-  margin-bottom: 50px;
+  /*margin-bottom: 50px;*/
 }
 
 .app-header,

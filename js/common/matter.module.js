@@ -52,7 +52,7 @@ const initScreen = () => {
       width: windowWidth,
       height: windowHeight,
       wireframes: false,
-      background: "#F1F3F5",
+      background: "var(--body)"
     },
   });
 
@@ -117,7 +117,7 @@ const createWall = () => {
 const clickRandomEvent = (e) => {
   const newCircle = Bodies.circle(e.offsetX, e.offsetY, windowHeight * 0.05, {
     render: {
-      fillStyle: ["#F4FA58", "#A9F5F2", "#F6CEF5"][
+      fillStyle: ["#a2ce97", "#9ec5dd", "#babfbf"][
         Math.round(Math.random() * 2)
       ],
     },
@@ -150,7 +150,7 @@ const createTypeCircle = () => {
     windowHeight * 0.05,
     {
       render: {
-        fillStyle: ["#F4FA58", "#A9F5F2", "#F6CEF5"][
+        fillStyle: ["#a2ce97", "#9ec5dd", "#babfbf"][
           Math.round(Math.random() * 2)
         ],
       },
@@ -170,7 +170,7 @@ const createTypeRectangle = () => {
     windowHeight * 0.09,
     {
       render: {
-        fillStyle: ["#F4FA58", "#A9F5F2", "#F6CEF5"][
+        fillStyle: ["#a2ce97", "#9ec5dd", "#babfbf"][
           Math.round(Math.random() * 2)
         ],
       },
@@ -191,7 +191,7 @@ const createTypePolygon = () => {
     windowHeight * 0.05,
     {
       render: {
-        fillStyle: ["#F4FA58", "#A9F5F2", "#F6CEF5"][
+        fillStyle: ["#a2ce97", "#9ec5dd", "#babfbf"][
           Math.round(Math.random() * 2)
         ],
       },
