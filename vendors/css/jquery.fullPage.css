@@ -196,7 +196,7 @@ html.fp-enabled,
   position: absolute;
   top: -2px;
   color: var(--scroll-text);
-  font-size: 16px;
+  font-size: 1.3rem;
   font-family: arial, helvetica, sans-serif;
   white-space: nowrap;
   max-width: 220px;
@@ -214,7 +214,7 @@ html.fp-enabled,
   opacity: 1;
 }
 #fp-nav ul li .fp-tooltip.right {
-  right: -120px; /*defalt : 20px*/
+  left: -2rem; /*defalt : 20px*/
 }
 #fp-nav ul li .fp-tooltip.left {
   left: 20px;

@@ -30,114 +30,173 @@
 </script>
 
 <div id="fullPage">
-  <section class="section section-first" data-anchor="first">
-    <div class="main_content">
-      <div class="main_text">
-        <p>지구의 온도가 2도 상승하기까지</p>
-        <p>얼마의 시간이 남아있을까요?</p>
+  <!-- section1 -->
+  <!-- 지구 온도 2도 상승 -->
+  <section id="section1" class="section section-first" data-anchor="first">
+    <div class="main-fixed">
+      <div class="intro-main">
+        <div class="intro-title">
+          <p>지구의 온도가 2도 상승하기까지</p>
+          <p>얼마의 시간이 남아있을까요?</p>
+        </div>
       </div>
     </div>
   </section>
-  <section class="section section-second" data-anchor="second">
-    <div class="main_content" id="main_clock">
-      <div id="countdown"></div>
+
+  <!-- section2 -->
+  <!-- 지구 탄소 시간 -->
+  <section id="section2" class="section section-second" data-anchor="second">
+    <div class="main-fixed" id="main_clock">
+      <div class="intro-main">
+        <div id="countdown"></div>
+      </div>
     </div>
   </section>
-  <section id="section3" class="section section-third" data-anchor="third" style="background-color: #e5d591">
-    <div id="mtt_wrap" class="main_content"></div>
+
+  <!-- section3 -->
+  <!-- 시각화 -->
+  <section
+    id="section3"
+    class="section section-third"
+    data-anchor="third"
+    style="background-color: #e5d591"
+  >
+    <div id="mtt_wrap" class="main-fixed">
+      <div class="earth-main">
+        <div class="earth"></div>
+      </div>
+    </div>
   </section>
 
-  <!-- 자원의 순환 -->
-  <section id="section4" class="section section-forth" data-anchor="forth">
-    <div class="intro">
-      <div class="intro-main text-center">
-        <!-- 소개글 -->
-        <div
-          class="recycle-define aos-init row"
-          data-aos="fade-up"
-          data-aos-duration="700"
-        >
+  <!-- section4 -->
+  <!-- 자원의 순환이란 -->
+  <section
+    id="section4"
+    class="section section-forth fp-auto-height-responsive"
+    data-anchor="forth"
+  >
+    <div class="main-auto">
+      <div class="intro-main">
+        <div class="animation-intro">
+          <!-- 제목 -->
           <div
-                  class="main_title pt-5 aos-init"
-                  data-aos="fade-up"
-                  data-aos-duration="700"
+            class="animation-title aos-init"
+            data-aos="fade-up"
+            data-aos-duration="700"
           >
-          <p><span class="highlight">자원순환</span>이란?</p>
-          </div>
-          <p class="pt-2 pb-5 content_text">
-            폐기물(wastes) 발생을 최대한 줄이고<br />
-            사용한 폐기물에 대해서는 재사용(reuse) 또는 재생이용(recovery)하며,
-            <br />
-            불가피하게 남은 폐기물은 환경에 미치는 영향을 최소화하여 처리하는 것을 말합니다.
-          </p>
-        </div>
-        <!-- 인포그래픽 -->
-        <div class="recycle-step1 row">
-          <div
-            class="recycle-step-inner1 aos-init"
-            data-aos="fade-right"
-            data-aos-duration="800"
-            data-aos-easing="ease-out-back"
-            data-aos-delay="300"
-          >
-            <div class="recycle-step-box">
-              <span class="tit"
-                >올바른 분리배출로 소각, <strong>매립양을 줄이기</strong></span
-              >
-              <ul class="recycle-step-list">
-                <li>
-                  <span class="ico"></span>
-                  <span class="ico-txt">채취</span>
-                </li>
-                <li>
-                  <span class="ico"></span>
-                  <span class="ico-txt">생산</span>
-                </li>
-                <li>
-                  <span class="ico fas"></span>
-                  <span class="ico-txt">소비</span>
-                </li>
-                <li>
-                  <span class="ico fas"></span>
-                  <span class="ico-txt">폐기</span>
-                </li>
-              </ul>
+            <div
+              class="main-title pt-5 aos-init"
+              data-aos="fade-up"
+              data-aos-duration="700"
+            >
+              <h1><span class="highlight">자원순환</span>이란?</h1>
             </div>
-            <div class="arr-area">
+            <p class="pt-2 pb-5 main-content">
+              폐기물(wastes) 발생을 최대한 줄이고<br />
+              사용한 폐기물에 대해서는 재사용(reuse) 또는
+              재생이용(recovery)하며,
+              <br />
+              불가피하게 남은 폐기물은 환경에 미치는 영향을 최소화하여 처리하는
+              것을 말합니다.
+            </p>
+          </div>
+          <!-- 인포그래픽 -->
+          <div class="animation-content">
+            <!-- 그래픽1 -->
+            <div
+              class="animation-content-inner aos-init"
+              data-aos="fade-right"
+              data-aos-duration="800"
+              data-aos-easing="ease-out-back"
+              data-aos-delay="300"
+            >
+              <div class="recycle-step-box1">
+                <span class="tit"
+                  >올바른 분리배출로 소각,
+                  <strong>매립양을 줄이기</strong></span
+                >
+                <ul class="recycle-step-list m-0">
+                  <li>
+                    <div class="list-content">
+                      <span class="ico"></span>
+                      <p class="ico-txt m-0">채취</p>
+                    </div>
+                    <div class="recycle-arrow">
+                      <span class="arrow-ico"></span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="list-content">
+                      <span class="ico"></span>
+                      <p class="ico-txt m-0">생산</p>
+                    </div>
+                    <div class="recycle-arrow">
+                      <span class="arrow-ico"></span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="list-content">
+                      <span class="ico"></span>
+                      <p class="ico-txt m-0">소비</p>
+                    </div>
+                    <div class="recycle-arrow">
+                      <span class="arrow-ico"></span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="list-content">
+                      <span class="ico"></span>
+                      <p class="ico-txt m-0">폐기</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- 화살표 -->
+            <div
+              class="arr-area aos-init"
+              data-aos="fade-right"
+              data-aos-duration="800"
+              data-aos-easing="ease-out-back"
+              data-aos-delay="300"
+            >
               <span class="arr arr1"></span>
               <span class="arr arr2"></span>
               <span class="arr arr3"></span>
             </div>
-          </div>
-          <div
-            class="recycle-step-inner2 aos-init"
-            data-aos="fade-left"
-            data-aos-duration="800"
-            data-aos-easing="ease-out-back"
-            data-aos-delay="300"
-          >
-            <div class="recycle-step-box">
-              <div class="recycle-arr"></div>
-              <ul class="recycle-step-list">
-                <li>
-                  <span class="ico-txt">생산</span>
-                </li>
-                <li>
-                  <span class="ico-txt">소비</span>
-                </li>
-                <li>
-                  <span class="ico-txt">관리</span>
-                </li>
-                <li>
-                  <span class="ico-txt">재생</span>
-                </li>
-              </ul>
-              <div class="txt-area">
-                <span class="txt">
-                  <strong>순환자원을 최대한 활용</strong>
-                  폐기물 발생 자체를 줄이기 위한<br />
-                  자원순환
-                </span>
+            <!-- 그래픽2 -->
+            <div
+              class="animation-content-inner aos-init"
+              data-aos="fade-left"
+              data-aos-duration="800"
+              data-aos-easing="ease-out-back"
+              data-aos-delay="300"
+            >
+              <div class="recycle-step-box2">
+                <div class="recycle-arr"></div>
+                <ul class="recycle-step-list">
+                  <li>
+                    <span class="ico-txt">생산</span>
+                  </li>
+                  <li>
+                    <span class="ico-txt">소비</span>
+                  </li>
+                  <li>
+                    <span class="ico-txt">관리</span>
+                  </li>
+                  <li>
+                    <span class="ico-txt">재생</span>
+                  </li>
+                </ul>
+                <div class="txt-area">
+                  <div class="txt">
+                    <p><strong> 순환자원을 최대한 활용</strong></p>
+                    <p>
+                      폐기물 발생 자체를<br />
+                      줄이기 위한 자원순환
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -146,126 +205,174 @@
     </div>
   </section>
 
-  <section id="section5" class="section section-fifth" data-anchor="forth">
-    <div class="intro">
-      <div class="intro-main text-center">
-        <!-- 소개글 -->
-        <div
-          class="recycle-define aos-init row"
-          data-aos="fade-up"
-          data-aos-duration="700"
-        >
+  <!-- section5 -->
+  <!-- 늘어나는 폐기물 -->
+  <section
+    id="section5"
+    class="section section-fifth fp-auto-height-responsive"
+    data-anchor="forth"
+  >
+    <div class="main-auto">
+      <div class="intro-main">
+        <div class="animation-intro">
+          <!-- 제목 -->
           <div
-                  class="main_title pt-5 aos-init"
-                  data-aos="fade-up"
-                  data-aos-duration="700"
+            class="animation-title aos-init"
+            data-aos="fade-up"
+            data-aos-duration="700"
           >
-            <p>늘어나는 <span class="highlight">폐기물</span></p>
-            <p>쌓여가는 <span class="highlight">쓰레기산</span></p>
+            <div
+              class="main-title pt-5 aos-init"
+              data-aos="fade-up"
+              data-aos-duration="700"
+            >
+              <h1>늘어나는 <span class="highlight">폐기물</span></h1>
+              <h1>쌓여가는 <span class="highlight">쓰레기산</span></h1>
+            </div>
+            <p class="pt-2 pb-5 main-content">
+              우리가 버리는 쓰레기는 갈수록 늘어나고<br />
+              쓰레기산이 만들어지고 있습니다.
+            </p>
           </div>
-          <p class="pt-2 pb-5 content_text">
-            우리가 버리는 쓰레기는 갈수록 늘어나고<br />
-            쓰레기산이 만들어지고 있습니다.
-          </p>
-          <span
-            class="highlight font-lg label-year aos-init aos-animate"
+          <!-- 차트 단위 -->
+          <div
+            class="label-year aos-init aos-animate"
             data-aos="fade-up"
             data-aos-duration="800"
             data-aos-easing="ease-out-back"
             data-aos-delay="300"
-            >2019년 기준</span
           >
-        </div>
-        <!-- 인포그래픽 -->
-        <div class="recycle-info1-1">
-          <div class="recycle-info-inner d-flex justify-content-center">
+            <span>2019년 기준</span>
+          </div>
+          <!-- 인포그래픽 -->
+          <div class="animation-content">
+            <!-- 그래픽1 -->
             <div
-              class="graph-area aos-init aos-animate"
+              class="animation-content-inner aos-init"
               data-aos="fade-right"
               data-aos-duration="800"
               data-aos-easing="ease-out-back"
               data-aos-delay="500"
             >
-              <div class="graph-box">
-                <span class="graph-line">
-                  <svg
-                    id="graph-line"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    x="0px"
-                    y="0px"
-                    viewBox="0 0 370 265"
-                    xml:space="preserve"
-                  >
-                    <line
-                      class="st1 line1"
-                      x1="10"
-                      y1="155"
-                      x2="70"
-                      y2="130"
-                    ></line>
-                    <line
-                      class="st1 line2"
-                      x1="70"
-                      y1="130"
-                      x2="130"
-                      y2="108"
-                    ></line>
-                    <line
-                      class="st1 line3"
-                      x1="130"
-                      y1="108"
-                      x2="200"
-                      y2="84"
-                    ></line>
-                    <line
-                      class="st1 line4"
-                      x1="200"
-                      y1="84"
-                      x2="270"
-                      y2="85"
-                    ></line>
-                    <line
-                      class="st1 line5"
-                      x1="270"
-                      y1="85"
-                      x2="340"
-                      y2="38"
-                    ></line>
-                    <circle class="st0 cir1" cx="10" cy="155" r="8"></circle>
-                    <circle class="st0 cir2" cx="70" cy="130" r="8"></circle>
-                    <circle class="st0 cir3" cx="130" cy="108" r="8"></circle>
-                    <circle class="st0 cir4" cx="200" cy="84" r="8"></circle>
-                    <circle class="st0 cir5" cx="270" cy="85" r="8"></circle>
-                    <circle class="st0 cir6" cx="340" cy="38" r="8"></circle>
-                  </svg>
-                </span>
+              <div class="recycle-step-box3">
+                <div class="graph-area">
+                  <div class="graph-box">
+                    <span class="graph-line">
+                      <svg
+                        id="graph-line"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px"
+                        y="0px"
+                        viewBox="0 0 370 265"
+                        xml:space="preserve"
+                      >
+                        <line
+                          class="st1 line1"
+                          x1="10"
+                          y1="155"
+                          x2="70"
+                          y2="130"
+                        ></line>
+                        <line
+                          class="st1 line2"
+                          x1="70"
+                          y1="130"
+                          x2="130"
+                          y2="108"
+                        ></line>
+                        <line
+                          class="st1 line3"
+                          x1="130"
+                          y1="108"
+                          x2="200"
+                          y2="84"
+                        ></line>
+                        <line
+                          class="st1 line4"
+                          x1="200"
+                          y1="84"
+                          x2="270"
+                          y2="85"
+                        ></line>
+                        <line
+                          class="st1 line5"
+                          x1="270"
+                          y1="85"
+                          x2="340"
+                          y2="38"
+                        ></line>
+                        <circle
+                          class="st0 cir1"
+                          cx="10"
+                          cy="155"
+                          r="8"
+                        ></circle>
+                        <circle
+                          class="st0 cir2"
+                          cx="70"
+                          cy="130"
+                          r="8"
+                        ></circle>
+                        <circle
+                          class="st0 cir3"
+                          cx="130"
+                          cy="108"
+                          r="8"
+                        ></circle>
+                        <circle
+                          class="st0 cir4"
+                          cx="200"
+                          cy="84"
+                          r="8"
+                        ></circle>
+                        <circle
+                          class="st0 cir5"
+                          cx="270"
+                          cy="85"
+                          r="8"
+                        ></circle>
+                        <circle
+                          class="st0 cir6"
+                          cx="340"
+                          cy="38"
+                          r="8"
+                        ></circle>
+                      </svg>
+                    </span>
+                  </div>
+                  <span class="txt">폐기물 처리현황</span>
+                </div>
               </div>
-              <span class="txt">폐기물 처리현황</span>
             </div>
+            <!-- 그래픽2 -->
             <div
-              class="obj-area aos-init aos-animate"
+              class="animation-content-inner aos-init"
               data-aos="fade-left"
               data-aos-duration="800"
               data-aos-easing="ease-out-back"
               data-aos-delay="500"
             >
-              <div class="total-num-box">
-                <span class="label">전국쓰레기산</span>
-                <span class="num">
-                  <strong>235</strong>
-                  <span class="txt">곳</span>
-                </span>
-              </div>
-              <div class="total-num-box box2">
-                <span class="label">불법폐기물</span>
-                <span class="num">
-                  <strong>120</strong>
-                  <span class="txt">만톤</span>
-                </span>
-              </div>
-              <div class="obj-box">
-                <span class="obj"></span>
-                <span class="txt">25톤 화물트럭 48,000대</span>
+              <div class="recycle-step-box4">
+                <div class="obj-area">
+                  <div class="total-num-box">
+                    <span class="label">전국쓰레기산</span>
+                    <span class="num">
+                      <strong>235</strong>
+                      <span class="txt">곳</span>
+                    </span>
+                  </div>
+                  <div class="total-num-box box2">
+                    <span class="label">불법폐기물</span>
+                    <span class="num">
+                      <strong>120</strong>
+                      <span class="txt">만톤</span>
+                    </span>
+                  </div>
+                  <div class="obj-box">
+                    <span class="obj"></span>
+                    <span class="txt">25톤 화물트럭 48,000대</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -273,112 +380,126 @@
       </div>
     </div>
   </section>
-  <section id="section6" class="section section-sixth" data-anchor="sixth">
-    <div class="intro">
-      <div class="intro-main text-center">
-        <!-- 소개글 -->
-        <div
-          class="recycle-define aos-init row"
-          data-aos="fade-up"
-          data-aos-duration="700"
-        >
+
+  <!-- section6 -->
+  <!-- 빠르고 간편한 일회용품 -->
+  <section
+    id="section6"
+    class="section section-sixth fp-auto-height-responsive"
+    data-anchor="sixth"
+  >
+    <div class="main-auto">
+      <div class="intro-main">
+        <div class="animation-intro">
+          <!-- 제목 -->
           <div
-                  class="main_title pt-6 aos-init"
-                  data-aos="fade-up"
-                  data-aos-duration="700"
+            class="animation-title aos-init"
+            data-aos="fade-up"
+            data-aos-duration="700"
           >
-          <p>빠르고 간편한 <span class="highlight">일회용품</span></p>
-          <p><span class="highlight">환경파괴</span>도 빠르게</p>
-          </div>
-          <p class="pt-4 pb-5 content_text">
-            물건을 배달로 받는 것이 당연해지고, 식사 후 커피 한 잔이 일상이 된 요즘<br />
-            일회용품 사용량은 기하급수적으로 증가하고 있습니다.<br />
-            10년 만에 일회용컵의 사용량은 100억개, 일회용봉투는 80억개가 증가하였습니다.
-          </p>
-        </div>
-        <!-- 인포그래픽 -->
-        <div class="recycle-info2-1">
-          <div class="recycle-info-inner">
             <div
-              class="graph-obj-area aos-init aos-animate"
+              class="main-title pt-5 aos-init"
+              data-aos="fade-up"
+              data-aos-duration="700"
+            >
+              <h1>빠르고 간편한 <span class="highlight">일회용품</span></h1>
+              <h1><span class="highlight">환경파괴</span>도 빠르게</h1>
+            </div>
+            <p class="pt-2 pb-5 main-content">
+              물건을 배달로 받는 것이 당연해지고, 식사 후 커피 한 잔이 일상이 된
+              요즘<br />
+              일회용품 사용량은 기하급수적으로 증가하고 있습니다.<br />
+              10년 만에 일회용컵의 사용량은 100억개, 일회용봉투는 80억개가
+              증가하였습니다.
+            </p>
+          </div>
+          <!-- 인포그래픽 -->
+          <div class="animation-content">
+            <!-- 그래픽1 -->
+            <div
+              class="animation-content-inner aos-init"
               data-aos="fade-up"
               data-aos-duration="800"
               data-aos-easing="ease-out-back"
               data-aos-delay="300"
             >
-              <div class="graph-obj-box">
-                <span
-                  class="graph-line-set aos-init aos-animate"
-                  data-aos="fade-up"
-                  data-aos-duration="800"
-                  data-aos-easing="ease-out-back"
-                  data-aos-delay="500"
-                >
-                  <span class="graph-line"
-                    ><span class="txt-year">2009</span></span
-                  >
-                  <span class="num">
-                    <strong>191</strong>
-                    <span class="txt">억개</span>
-                  </span>
-                </span>
-                <span class="graph-obj">
-                  <span class="graph-obj-txt"
-                    ><strong>일회용컵</strong>사용량</span
-                  >
-                </span>
-                <span
-                  class="graph-line-set set2 aos-init aos-animate"
-                  data-aos="fade-up"
-                  data-aos-duration="800"
-                  data-aos-easing="ease-out-back"
-                  data-aos-delay="500"
-                >
-                  <span class="graph-line"
-                    ><span class="txt-year">2018</span></span
-                  >
-                  <span class="num">
-                    <strong>294</strong>
-                    <span class="txt">억개</span>
-                  </span>
-                </span>
-              </div>
-              <div class="graph-obj-box box2">
-                <span
-                  class="graph-line-set aos-init aos-animate"
-                  data-aos="fade-up"
-                  data-aos-duration="800"
-                  data-aos-easing="ease-out-back"
-                  data-aos-delay="500"
-                >
-                  <span class="graph-line"
-                    ><span class="txt-year">2009</span></span
-                  >
-                  <span class="num">
-                    <strong>176</strong>
-                    <span class="txt">억개</span>
-                  </span>
-                </span>
-                <span class="graph-obj">
-                  <span class="graph-obj-txt"
-                    ><strong>비닐봉투</strong>사용량</span
-                  >
-                </span>
-                <span
-                  class="graph-line-set set2 aos-init aos-animate"
-                  data-aos="fade-up"
-                  data-aos-duration="800"
-                  data-aos-easing="ease-out-back"
-                  data-aos-delay="500"
-                >
-                  <span class="graph-line"
-                    ><span class="txt-year">2018</span></span
-                  >
-                  <span class="num">
-                    <strong>255</strong>
-                    <span class="txt">억개</span>
-                  </span>
-                </span>
+              <div class="recycle-step-box5">
+                <div class="graph-obj-area">
+                  <div class="graph-obj-box">
+                    <span
+                      class="graph-line-set aos-init aos-animate"
+                      data-aos="fade-up"
+                      data-aos-duration="800"
+                      data-aos-easing="ease-out-back"
+                      data-aos-delay="500"
+                    >
+                      <span class="num">
+                        <strong>191</strong>
+                        <span class="txt">억개</span>
+                      </span>
+                      <span class="graph-line"
+                        ><span class="txt-year">2009</span></span
+                      >
+                    </span>
+                    <span class="graph-obj">
+                      <span class="graph-obj-txt"
+                        ><strong>일회용컵</strong>사용량</span
+                      >
+                    </span>
+                    <span
+                      class="graph-line-set set2 aos-init aos-animate"
+                      data-aos="fade-up"
+                      data-aos-duration="800"
+                      data-aos-easing="ease-out-back"
+                      data-aos-delay="500"
+                    >
+                      <span class="num">
+                        <strong>294</strong>
+                        <span class="txt">억개</span>
+                      </span>
+                      <span class="graph-line"
+                        ><span class="txt-year">2018</span></span
+                      >
+                    </span>
+                  </div>
+                  <div class="graph-obj-box box2">
+                    <span
+                      class="graph-line-set aos-init aos-animate"
+                      data-aos="fade-up"
+                      data-aos-duration="800"
+                      data-aos-easing="ease-out-back"
+                      data-aos-delay="500"
+                    >
+                      <span class="num">
+                        <strong>176</strong>
+                        <span class="txt">억개</span>
+                      </span>
+                      <span class="graph-line"
+                        ><span class="txt-year">2009</span></span
+                      >
+                    </span>
+                    <span class="graph-obj">
+                      <span class="graph-obj-txt"
+                        ><strong>비닐봉투</strong>사용량</span
+                      >
+                    </span>
+                    <span
+                      class="graph-line-set set2 aos-init aos-animate"
+                      data-aos="fade-up"
+                      data-aos-duration="800"
+                      data-aos-easing="ease-out-back"
+                      data-aos-delay="500"
+                    >
+                      <span class="num">
+                        <strong>255</strong>
+                        <span class="txt">억개</span>
+                      </span>
+                      <span class="graph-line"
+                        ><span class="txt-year">2018</span></span
+                      >
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -386,228 +507,251 @@
       </div>
     </div>
   </section>
-  <section id="section7" class="section section-seventh" data-anchor="seventh">
-    <div class="intro">
-      <div class="intro-main text-center">
-        <!-- 소개글 -->
-        <div
-          class="recycle-define aos-init row"
-          data-aos="fade-up"
-          data-aos-duration="700"
-        >
+
+  <!-- section7 -->
+  <!-- 일회용품 OUT! -->
+  <section
+    id="section7"
+    class="section section-seventh fp-auto-height-responsive"
+    data-anchor="seventh"
+  >
+    <div class="main-auto">
+      <div class="intro-main">
+        <div class="animation-intro">
+          <!-- 제목 -->
           <div
-                  class="main_title pt-5 aos-init"
-                  data-aos="fade-up"
-                  data-aos-duration="700"
+            class="animation-title aos-init"
+            data-aos="fade-up"
+            data-aos-duration="700"
           >
-            <p>일회용품
-              <span class="highlight">OUT!</span></p>
-            <p>변화를 위한 실천 계획</p>
+            <div
+              class="main-title pt-5 aos-init"
+              data-aos="fade-up"
+              data-aos-duration="700"
+            >
+              <h1>일회용품 <span class="highlight">OUT!</span></h1>
+              <h1>변화를 위한 실천 계획</h1>
+            </div>
+            <p class="pt-2 pb-5 main-content">
+              대한민국 환경부는 일회용품 사용을 줄이기 위해<br />
+              중장기적 계획(로드맵)을 마련하고, 추진하고 있습니다.
+            </p>
           </div>
-          <p class="pt-2 pb-4 content_text">
-            대한민국 환경부는 일회용품 사용을 줄이기 위해<br />
-            중장기적 계획(로드맵)을 마련하고, 추진하고 있습니다.
-          </p>
+
+          <!-- 인포그래픽 -->
+          <div class="animation-content">
+            <!-- 그래픽1 -->
+            <div
+              class="animation-content-inner aos-init"
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-easing="ease-out-back"
+              data-aos-delay="300"
+            >
+              <div class="recycle-step-box6">
+                <div class="recycle-info-box">
+                  <div class="graph-top-set">
+                    <span class="num">
+                      <strong>29</strong>
+                      <span class="txt">억개 감소</span>
+                    </span>
+                    <span class="graph-line"></span>
+                  </div>
+                  <div class="graph-obj-box">
+                    <span
+                      class="graph-line-set aos-init aos-animate"
+                      data-aos="fade-up"
+                      data-aos-duration="800"
+                      data-aos-easing="ease-out-back"
+                      data-aos-delay="500"
+                    >
+                      <span class="graph-line"
+                        ><span class="txt-year">2018</span></span
+                      >
+                      <span class="num">
+                        <strong>84</strong>
+                        <span class="txt">억개</span>
+                      </span>
+                    </span>
+                    <span class="graph-obj">
+                      <span class="graph-obj-txt"
+                        ><span class="label">감소</span></span
+                      >
+                    </span>
+                    <span
+                      class="graph-line-set set2 aos-init aos-animate"
+                      data-aos="fade-up"
+                      data-aos-duration="800"
+                      data-aos-easing="ease-out-back"
+                      data-aos-delay="500"
+                    >
+                      <span class="graph-line"
+                        ><span class="txt-year">2022</span></span
+                      >
+                      <span class="num">
+                        <strong>55</strong>
+                        <span class="txt">억개</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="txt-box">
+                    <span class="txt">
+                      <strong>종이컵, 일회용컵</strong>
+                      <span class="label">사용량 목표</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="recycle-info-box box2">
+                  <div class="graph-top-set">
+                    <span class="num">
+                      <strong>200</strong>
+                      <span class="txt">억개 감소</span>
+                    </span>
+                    <span class="graph-line"></span>
+                  </div>
+                  <div class="graph-obj-box">
+                    <span
+                      class="graph-line-set aos-init aos-animate"
+                      data-aos="fade-up"
+                      data-aos-duration="800"
+                      data-aos-easing="ease-out-back"
+                      data-aos-delay="500"
+                    >
+                      <span class="graph-line"
+                        ><span class="txt-year">2018</span></span
+                      >
+                      <span class="num">
+                        <strong>255</strong>
+                        <span class="txt">억개</span>
+                      </span>
+                    </span>
+                    <span class="graph-obj">
+                      <span class="graph-obj-txt"
+                        ><span class="label">감소</span></span
+                      >
+                    </span>
+                    <span
+                      class="graph-line-set set2 aos-init aos-animate"
+                      data-aos="fade-up"
+                      data-aos-duration="800"
+                      data-aos-easing="ease-out-back"
+                      data-aos-delay="500"
+                    >
+                      <span class="graph-line"
+                        ><span class="txt-year">2030</span></span
+                      >
+                      <span class="num">
+                        <strong>55</strong>
+                        <span class="txt">억개</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="txt-box">
+                    <span class="txt">
+                      <strong>비닐봉투</strong>
+                      <span class="label">사용량 목표</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="recycle-info-box">
+                  <div class="txt-top-box">
+                    <span class="txt">2중/3중 포장된 박스에서</span>
+                    <span class="txt-em"><strong>깔끔한 박스</strong>로</span>
+                  </div>
+                  <div class="obj-box">
+                    <span class="obj">
+                      <span class="obj-txt"
+                        ><span class="label">감소</span></span
+                      >
+                    </span>
+                  </div>
+                  <div class="txt-box">
+                    <span class="txt">
+                      <strong>이중포장재 없는 상품 판매</strong>
+                      <span class="label">재포장 금지</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- 인포그래픽 -->
-        <div class="recycle-info2-2">
+      </div>
+    </div>
+  </section>
+
+  <!-- section8 -->
+  <!-- 제로웨스트 서약서 -->
+  <section id="section8" class="section section-last" data-anchor="last">
+    <div class="main-fixed">
+      <div class="intro-main">
+        <div class="animation-intro">
+          <!-- 제목 -->
           <div
-            class="recycle-info-inner aos-init aos-animate"
+            class="animation-title aos-init"
+            data-aos="fade-up"
+            data-aos-duration="700"
+          >
+            <div
+              class="main-title pt-5 aos-init"
+              data-aos="fade-up"
+              data-aos-duration="700"
+            >
+              <h1 class="highlight">변화를 위한 작은 실천,</h1>
+              <h1 class="highlight">함께 하실래요?</h1>
+            </div>
+          </div>
+          <!-- 인포그래픽 -->
+          <div
+            class="main_pledge aos-init aos-animate"
             data-aos="fade-up"
             data-aos-duration="800"
             data-aos-easing="ease-out-back"
             data-aos-delay="300"
           >
-            <div class="recycle-info-box">
-              <div class="graph-top-set">
-                <span class="graph-line"></span>
-                <span class="num">
-                  <strong>29</strong>
-                  <span class="txt">억개 감소</span>
-                </span>
-              </div>
-              <div class="graph-obj-box">
-                <span
-                  class="graph-line-set aos-init aos-animate"
-                  data-aos="fade-up"
-                  data-aos-duration="800"
-                  data-aos-easing="ease-out-back"
-                  data-aos-delay="500"
-                >
-                  <span class="graph-line"
-                    ><span class="txt-year">2018</span></span
-                  >
-                  <span class="num">
-                    <strong>84</strong>
-                    <span class="txt">억개</span>
-                  </span>
-                </span>
-                <span class="graph-obj">
-                  <span class="graph-obj-txt"
-                    ><span class="label">감소</span></span
-                  >
-                </span>
-                <span
-                  class="graph-line-set set2 aos-init aos-animate"
-                  data-aos="fade-up"
-                  data-aos-duration="800"
-                  data-aos-easing="ease-out-back"
-                  data-aos-delay="500"
-                >
-                  <span class="graph-line"
-                    ><span class="txt-year">2022</span></span
-                  >
-                  <span class="num">
-                    <strong>55</strong>
-                    <span class="txt">억개</span>
-                  </span>
-                </span>
-              </div>
-              <div class="txt-box">
-                <span class="txt">
-                  <strong>종이컵, 일회용컵</strong>
-                  <span class="label">사용량 목표</span>
-                </span>
-              </div>
-            </div>
-            <div class="recycle-info-box box2">
-              <div class="graph-top-set">
-                <span class="graph-line"></span>
-                <span class="num">
-                  <strong>200</strong>
-                  <span class="txt">억개 감소</span>
-                </span>
-              </div>
-              <div class="graph-obj-box">
-                <span
-                  class="graph-line-set aos-init aos-animate"
-                  data-aos="fade-up"
-                  data-aos-duration="800"
-                  data-aos-easing="ease-out-back"
-                  data-aos-delay="500"
-                >
-                  <span class="graph-line"
-                    ><span class="txt-year">2018</span></span
-                  >
-                  <span class="num">
-                    <strong>255</strong>
-                    <span class="txt">억개</span>
-                  </span>
-                </span>
-                <span class="graph-obj">
-                  <span class="graph-obj-txt"
-                    ><span class="label">감소</span></span
-                  >
-                </span>
-                <span
-                  class="graph-line-set set2 aos-init aos-animate"
-                  data-aos="fade-up"
-                  data-aos-duration="800"
-                  data-aos-easing="ease-out-back"
-                  data-aos-delay="500"
-                >
-                  <span class="graph-line"
-                    ><span class="txt-year">2030</span></span
-                  >
-                  <span class="num">
-                    <strong>55</strong>
-                    <span class="txt">억개</span>
-                  </span>
-                </span>
-              </div>
-              <div class="txt-box">
-                <span class="txt">
-                  <strong>비닐봉투</strong>
-                  <span class="label">사용량 목표</span>
-                </span>
-              </div>
-            </div>
-            <div class="recycle-info-box">
-              <div class="txt-top-box">
-                <span class="txt">2중/3중 포장된 박스에서</span>
-                <span class="txt-em"><strong>깔끔한 박스</strong>로</span>
-              </div>
-              <div class="obj-box">
-                <span class="obj">
-                  <span class="obj-txt"><span class="label">감소</span></span>
-                </span>
-              </div>
-              <div class="txt-box">
-                <span class="txt">
-                  <strong>이중포장재 없는 상품 판매</strong>
-                  <span class="label">재포장 금지</span>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section
-    id="section8"
-    class="section section-last fp-auto-height"
-    data-anchor="seventh"
-  >
-    <div class="intro">
-      <div class="intro-main text-center">
-        <div
-          class="main_title pt-5 aos-init"
-          data-aos="fade-up"
-          data-aos-duration="700"
-        >
-          <p class="highlight">변화를 위한 작은 실천,</p>
-          <p class="highlight">함께 하실래요?</p>
-        </div>
-        <div
-          class="main_pledge aos-init aos-animate"
-          data-aos="fade-up"
-          data-aos-duration="800"
-          data-aos-easing="ease-out-back"
-          data-aos-delay="300"
-        >
-          <div id="img_pledge">
-            <img
-              src="././img/pledge.png"
-              alt="이미지"
-              class="pledge_img img-fluid mx-auto"
-            />
-            <div class="pledge_content">
-              <p class="pledge_title">제로웨이스트 서약서</p>
-              <input
-                type="text"
-                class="pledge_input"
-                placeholder="이름을 입력하세요"
-                maxlength="20"
+            <div id="img_pledge">
+              <img
+                src="././img/pledge.png"
+                alt="이미지"
+                class="pledge_img img-fluid mx-auto"
               />
+              <div class="pledge_content">
+                <p class="pledge_title">제로웨이스트 서약서</p>
+                <input
+                  type="text"
+                  class="pledge_input"
+                  placeholder="이름을 입력하세요"
+                  maxlength="20"
+                />
 
-              <div class="pledge_text">
-                <p>
-                  위 사람은 다음과 같이 제로웨이스트를 실천할 것을 악속합니다.
-                </p>
+                <div class="pledge_text">
+                  <p>
+                    위 사람은 다음과 같이 제로웨이스트를 실천할 것을 악속합니다.
+                  </p>
 
-                <ol>
-                  <li>텀블러를 소지하여 일회용품 사용을 줄이겠습니다.</li>
-                  <li>장바구니 사용으로 일회용 비닐 사용을 줄이겠습니다.</li>
-                  <li>배달음식 주문 시 일회용 수저를 받지 않겠습니다.</li>
-                  <li>음식을 남기지 않겠습니다.</li>
-                  <li>일주일에 1회 비건식을 섭취하겠습니다.</li>
-                </ol>
-              </div>
-              <div class="pledge_footer">
-                <p class="pledge_date">0000년 00월 00일</p>
-                <p class="pledge_logo">지구방위대</p>
+                  <ol>
+                    <li>텀블러를 소지하여 일회용품 사용을 줄이겠습니다.</li>
+                    <li>장바구니 사용으로 일회용 비닐 사용을 줄이겠습니다.</li>
+                    <li>배달음식 주문 시 일회용 수저를 받지 않겠습니다.</li>
+                    <li>음식을 남기지 않겠습니다.</li>
+                    <li>일주일에 1회 비건식을 섭취하겠습니다.</li>
+                  </ol>
+                </div>
+                <div class="pledge_footer">
+                  <p class="pledge_date">0000년 00월 00일</p>
+                  <p class="pledge_logo">지구방위대</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div style="margin-top: 2rem">
-          <button type="button" id="kakao_btn" class="btn btn-light">
-            카카오톡 공유하기
-          </button>
-          <button type="button" id="pledge_btn" class="btn btn-success">
-            이미지 저장하기
-          </button>
+          <div style="margin-top: 2rem">
+            <button type="button" id="kakao_btn" class="btn btn-light">
+              카카오톡 공유하기
+            </button>
+            <button type="button" id="pledge_btn" class="btn btn-success">
+              이미지 저장하기
+            </button>
+          </div>
         </div>
       </div>
     </div>
