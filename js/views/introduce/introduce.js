@@ -16,7 +16,6 @@
 
   // 스크롤 설정
   $fullPageEl.fullpage({
-    // sectionsColor: ["#4BBFC3", "#7BAABE", "whitesmoke", "#000"],
     sectionSelector: ".section",
     anchors: ["first", "second", "third"],
     navigationTooltips: [
@@ -28,12 +27,14 @@
     navigationPosition: "right",
     lockAnchors: true,
     verticalCentered: true,
+    resize: false,
+    scrollOverflow: true,
+    responsive: 921,
     //Scrolling
     css3: true,
     scrollBar: true,
-    autoScrolling: false,
-    normalScrollElements: ".app-header",
-    fixedElements: ".app-header, .app-footer",
+    autoScrolling: true,
+    fixedElements: ".app-header",
     afterResize: function () {
       AOS.init(); // AOS initiation
       $(".aos-init").removeClass("aos-animate");
@@ -41,7 +42,7 @@
       const a_table = ["first", "second", "third"]; // duplicated table of anchors name
 
       for (let i = 0; i < a_table.length; i++) {
-        $(".section-" + a_table[i] + ".active .aos-init").addClass(
+        $(".section2-" + a_table[i] + ".active .aos-init").addClass(
           "aos-animate"
         ); // all magic goes here - when page is active, then all elements with AOS will start animate
       }
@@ -56,7 +57,7 @@
       const a_table = ["first", "second", "third"];
 
       for (let i = 0; i < a_table.length; i++) {
-        $(".section-" + a_table[i] + ".active .aos-init").addClass(
+        $(".section2-" + a_table[i] + ".active .aos-init").addClass(
           "aos-animate"
         );
       }

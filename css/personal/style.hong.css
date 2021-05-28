@@ -10,9 +10,10 @@
 /* 지구방위대 2021-05-27 04:43:00, 송예지 Design */
 
 /* 소개하기 */
+
 #big_logo {
-  width: 500px;
-  height: 500px;
+  width: 20rem;
+  height: 20rem;
 }
 /* 회색 박스 */
 .intro_gray_box {
@@ -40,6 +41,15 @@
 .size_2 {
   font-size: 3em;
   margin-bottom: 50px;
+}
+.intro-card .card-group {
+  width: 100%;
+  justify-content: space-around;
+  display: inline-flex;
+}
+
+.intro-card .card {
+  border-radius: 4rem;
 }
 
 .size_3 {
@@ -101,6 +111,14 @@
   margin-right: 0.938rem;
 }
 
+.section2-first .highlight,
+.section2-second .highlight {
+  color: var(--main-geen);
+}
+
+.intro-card p {
+  font-size: 1.5rem;
+}
 .answer {
   display: none;
   padding: 1.875rem;
@@ -145,5 +163,5 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: bottom;
-  background-image:url('../../img/background/faq.png');
+  background-image: url("../../img/background/faq.png");
 }

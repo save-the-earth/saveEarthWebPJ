@@ -214,7 +214,7 @@ html.fp-enabled,
   opacity: 1;
 }
 #fp-nav ul li .fp-tooltip.right {
-  left: -2rem; /*defalt : 20px*/
+  left: -3rem; /*defalt : 20px*/
 }
 #fp-nav ul li .fp-tooltip.left {
   left: 20px;

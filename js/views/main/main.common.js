@@ -45,7 +45,6 @@
     verticalCentered: false,
     resize: false,
     scrollOverflow: true,
-    menu: "#section_links",
     responsive: 921,
     //Scrolling
     css3: true,
