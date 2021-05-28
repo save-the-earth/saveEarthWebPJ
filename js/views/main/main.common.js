@@ -17,7 +17,7 @@
 
   // 스크롤 설정
   $fullPageEl.fullpage({
-    // sectionsColor: ["#4BBFC3", "#7BAABE", "whitesmoke", "#000"],
+    sectionsColor: ["#f7f2e6", "#f7f2e6", "#f7f2e6"],
     sectionSelector: ".section",
     anchors: [
       "first",
@@ -30,7 +30,7 @@
       "last",
     ],
     navigationTooltips: [
-      "",
+      "지구의온도",
       "지구의시간",
       "쓰레기처리",
       "자원의순환",
@@ -43,12 +43,16 @@
     navigationPosition: "right",
     lockAnchors: true,
     verticalCentered: false,
+    resize: false,
+    scrollOverflow: true,
+    menu: "#section_links",
+    responsive: 921,
     //Scrolling
     css3: true,
     scrollBar: true,
-    autoScrolling: false,
-    normalScrollElements: ".app-header",
-    fixedElements: ".app-header, .app-footer",
+    autoScrolling: true,
+    fixedElements: ".app-header",
+    afterResponsive: function (isResponsive) {},
     afterResize: function () {
       AOS.init(); // AOS initiation
       $(".aos-init").removeClass("aos-animate");
