@@ -56,13 +56,26 @@
           "aos-animate"
         );
       }
+      const numSections = document.querySelectorAll(".fp-section").length;
+      if (anchorIndex === numSections) {
+        $(".scroll-down-btn").addClass("d-none");
+        $(".scroll-up-btn").removeClass("d-none");
+      } else {
+        $(".scroll-down-btn").removeClass("d-none");
+        $(".scroll-up-btn").addClass("d-none");
+      }
     },
     onLeave: function (origin, destination, direction) {},
   });
 
   //스크롤 다운
-  $(".scroll-down").on("click", function () {
+  $(".scroll-down-btn").on("click", function () {
     $("#fullpage").fullpage.moveSectionDown();
+  });
+
+  //스트롤 업
+  $(".scroll-up-btn").on("click", function () {
+    $("#fullpage").fullpage.moveSectionUp();
   });
 
   $(document).on("click", '.nav a[href!="#"]', function (e) {
