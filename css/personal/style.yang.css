@@ -5,101 +5,68 @@
     FilePath: css/personal/style.yang.css
     Create by 지구방위대, 양송희 on 2021-05-21 05:56:56.
 */
-
-@media screen and (max-width: 600px) {
-  p.youtuber-content {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  img.contentimg {
-    width: 13.5rem;
-    height: 7.2rem;
-  }
-  div.intro {
-    overflow: hidden;
-    text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-}
-@media screen and (min-width: 600px) and (max-width: 960px) {
-  p.youtuber-content {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  img.contentimg {
-    width: 22.5rem;
-    height: 12rem;
-  }
-  div.intro {
-    overflow: hidden;
-    text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-  p.youtuber-content {
-    font-size: 0.9rem;
-  }
-}
-@media screen and (min-width: 960px) {
-  p.youtuber-content {
-    align-content: center;
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
-  img.contentimg {
-    width: 30rem;
-    height: 16rem;
-  }
-  div.intro {
-    overflow: hidden;
-    text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    margin-left: 3rem;
-  }
-  p.youtuber-content {
-    font-size: 1.2rem;
-  }
-}
 div.imgs {
-  margin: 1rem auto 1rem;
-  width: inherit;
+  margin: 2rem auto 2rem;
   text-align: center;
-}
-p.DoubleQ {
-  float: left;
+  width: 100%;
+  padding: 0 2rem 0 2rem;
+  overflow: hidden;
 }
 p.intro {
-  float: left;
   margin: 0 auto;
-}
-p.main {
-  float: left;
+  width: auto;
+  text-align: center;
+  height: 4rem;
+  display: block;
+  padding-top: 20rem;
+  padding-bottom: 20rem;
 }
 div.title {
   overflow: hidden;
-  float: right;
 }
 img.profile {
   width: 5.5rem;
   height: 5.5rem;
-}
-.youtuber_bg {
-  -webkit-text-size-adjust: none;
-  width: auto;
-  height: auto;
-  background-image: url(../../img/introduce/background_youtuberintro.png.png);
-  background-repeat: no-repeat;
+  float: left;
 }
 h3.youtuber-name {
-  margin: 0.5rem 0 1rem 1rem;
+  margin: 2rem 0 1rem 0;
+  padding: 0 0 0 1rem;
+  float: left;
 }
 div.separation {
-  background-color: #cde0ed;
   width: auto;
   height: auto;
   align-content: center;
   margin: 2rem 0 2rem 0;
   padding: 1rem;
+}
+
+.responsive-box {
+  padding: 17% 0 0 0;
+  position: relative;
+  width: 33.33%;
+  float: left;
+}
+
+.target {
+  border: 0;
+}
+p.youtuber-content {
+  align-content: center;
+  padding: 3rem 2rem 3rem 2rem;
+  text-align: center;
+  clear: both;
+  font-size: 1.5rem;
+}
+.wrap {
+  width: 100%;
+  padding: 0 2rem 0 2rem;
+  overflow: hidden;
+}
+
+img.contentimg {
+  position: relative;
+  width: 33.33%;
+  float: left;
 }

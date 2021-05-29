@@ -702,55 +702,61 @@
             </div>
           </div>
           <!-- 인포그래픽 -->
-          <div
-            class="main_pledge aos-init aos-animate"
-            data-aos="fade-up"
-            data-aos-duration="800"
-            data-aos-easing="ease-out-back"
-            data-aos-delay="300"
-          >
-            <div id="img_pledge">
-              <img
-                src="././img/pledge.png"
-                alt="이미지"
-                class="pledge_img img-fluid mx-auto"
-              />
-              <div class="pledge_content">
-                <p class="pledge_title">제로웨이스트 서약서</p>
-                <input
-                  type="text"
-                  class="pledge_input"
-                  placeholder="이름을 입력하세요"
-                  maxlength="20"
+          <div class="animation-content flex-column">
+            <!-- 그래픽1 -->
+            <div
+              class="main_pledge aos-init"
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-easing="ease-out-back"
+              data-aos-delay="300"
+            >
+              <div id="img_pledge">
+                <img
+                  src="././img/pledge.png"
+                  alt="이미지"
+                  class="pledge_img img-fluid mx-auto"
                 />
+                <div class="pledge_content">
+                  <p class="pledge_title">제로웨이스트 서약서</p>
+                  <input
+                    type="text"
+                    class="pledge_input"
+                    placeholder="이름을 입력하세요"
+                    maxlength="20"
+                  />
 
-                <div class="pledge_text">
-                  <p>
-                    위 사람은 다음과 같이 제로웨이스트를 실천할 것을 악속합니다.
-                  </p>
+                  <div class="pledge_text">
+                    <p>
+                      위 사람은 다음과 같이 제로웨이스트를 실천할 것을
+                      악속합니다.
+                    </p>
 
-                  <ol>
-                    <li>텀블러를 소지하여 일회용품 사용을 줄이겠습니다.</li>
-                    <li>장바구니 사용으로 일회용 비닐 사용을 줄이겠습니다.</li>
-                    <li>배달음식 주문 시 일회용 수저를 받지 않겠습니다.</li>
-                    <li>음식을 남기지 않겠습니다.</li>
-                    <li>일주일에 1회 비건식을 섭취하겠습니다.</li>
-                  </ol>
-                </div>
-                <div class="pledge_footer">
-                  <p class="pledge_date">0000년 00월 00일</p>
-                  <p class="pledge_logo">지구방위대</p>
+                    <ol>
+                      <li>텀블러를 소지하여 일회용품 사용을 줄이겠습니다.</li>
+                      <li>
+                        장바구니 사용으로 일회용 비닐 사용을 줄이겠습니다.
+                      </li>
+                      <li>배달음식 주문 시 일회용 수저를 받지 않겠습니다.</li>
+                      <li>음식을 남기지 않겠습니다.</li>
+                      <li>일주일에 1회 비건식을 섭취하겠습니다.</li>
+                    </ol>
+                  </div>
+                  <div class="pledge_footer">
+                    <p class="pledge_date">0000년 00월 00일</p>
+                    <p class="pledge_logo">지구방위대</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div style="margin-top: 2rem">
-            <button type="button" id="kakao_btn" class="btn btn-light">
-              카카오톡 공유하기
-            </button>
-            <button type="button" id="pledge_btn" class="btn btn-success">
-              이미지 저장하기
-            </button>
+            <div style="margin-top: 2rem">
+              <button type="button" id="kakao_btn" class="btn btn-light">
+                카카오톡 공유하기
+              </button>
+              <button type="button" id="pledge_btn" class="btn btn-success">
+                이미지 저장하기
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -758,8 +764,11 @@
   </section>
   <span class="scroll-down">
     <span class="scroll-txt">SCROLL</span>
-    <button class="btn btn-success mx-auto">
+    <button class="scroll-down-btn btn btn-success mx-auto">
       <i class="fas fa-angle-down"></i>
+    </button>
+    <button class="scroll-up-btn btn btn-success mx-auto d-none">
+      <i class="fas fa-angle-up"></i>
     </button>
   </span>
 </div>

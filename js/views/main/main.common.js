@@ -45,7 +45,6 @@
     verticalCentered: false,
     resize: false,
     scrollOverflow: true,
-    menu: "#section_links",
     responsive: 921,
     //Scrolling
     css3: true,
@@ -98,13 +97,27 @@
           "aos-animate"
         );
       }
+
+      const numSections = document.querySelectorAll(".fp-section").length;
+      if (anchorIndex === numSections) {
+        $(".scroll-down-btn").addClass("d-none");
+        $(".scroll-up-btn").removeClass("d-none");
+      } else {
+        $(".scroll-down-btn").removeClass("d-none");
+        $(".scroll-up-btn").addClass("d-none");
+      }
     },
     onLeave: function (origin, destination, direction) {},
   });
 
   //스크롤 다운
-  $(".scroll-down").on("click", function () {
+  $(".scroll-down-btn").on("click", function () {
     $("#fullpage").fullpage.moveSectionDown();
+  });
+
+  //스트롤 업
+  $(".scroll-up-btn").on("click", function () {
+    $("#fullpage").fullpage.moveSectionUp();
   });
   // 동적 스크립트 정의 - 라이브러리 및 화면별 JS
   const requireJs = [

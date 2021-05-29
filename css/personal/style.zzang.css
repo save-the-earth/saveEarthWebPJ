@@ -2,7 +2,7 @@
 /*
     Copyright © 2021 지구방위대.
     ProjectName: saveEarthWebPJ
-    FilePath: css/personal/style.zzang2.css
+    FilePath: css/personal/style.zzang.css
     Create by 지구방위대, 정윤아 on 2021-05-21 05:58:30.
 */
 
@@ -206,6 +206,7 @@
   align-items: center;
   height: 100%;
 }
+
 .animation-content-inner {
   margin-top: 1rem;
 }
@@ -896,6 +897,74 @@
   line-height: 4rem;
   color: #fff;
 }
+
+/* 대체품 소개하기 */
+img.content-img {
+  flex: 0 0 66.66667%;
+  max-width: 66.66667%;
+  border-radius: 6rem;
+  overflow: hidden;
+}
+.replace-step-img1,
+.replace-step-img2 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.replace-step-img1 img {
+  border-radius: 20%;
+  overflow: hidden;
+  margin: 2rem;
+}
+
+.replace-step-img1 .replace-img-content {
+  font-size: 2rem;
+}
+
+.replace-step-img2 h1 {
+  color: var(--text-general);
+}
+
+.replace-step-img2 .col-md-8 img.content-img {
+  flex: 0 0 50%;
+  max-width: 50%;
+  border-radius: 6rem;
+  overflow: hidden;
+}
+
+/* 문의하기 */
+.question-card {
+  font-size: 1.2rem;
+  border-radius: 2rem;
+  border: none !important;
+}
+
+.question-card .card-title {
+  text-align: center;
+  margin: 1.5rem 0;
+  color: #4e7948;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 0.3rem;
+}
+.question-card .form-group {
+  justify-content: start;
+  display: flex;
+  flex-direction: column;
+}
+.question-card .form-group label {
+  text-align: left;
+}
+
+.question-card .card-title {
+  text-align: center;
+  margin: 1.5rem 0;
+  color: #4e7948;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 0.3rem;
+}
+
 /* resize */
 @media screen and (max-width: 991px) {
   .main-auto {
