@@ -18,13 +18,7 @@
   $fullPageEl.fullpage({
     sectionSelector: ".section",
     anchors: ["first", "second", "third"],
-    navigationTooltips: [
-      "제로웨이스트란",
-      "제로웨이스트챌린지",
-      "제로웨이스트실천방법",
-    ],
-    navigation: true,
-    navigationPosition: "right",
+    navigation: false,
     lockAnchors: true,
     verticalCentered: true,
     resize: false,
