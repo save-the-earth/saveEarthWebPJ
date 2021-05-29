@@ -1491,9 +1491,9 @@ pre code {
 .form-control {
   display: block;
   width: 100%;
-  padding: 0.5rem 0.75rem;
-  font-size: 0.875rem;
-  line-height: 1.25;
+  padding: 1rem;
+  font-size: 1.2rem;
+  line-height: 2;
   color: #3e515b;
   background-color: #fff;
   background-image: none;
@@ -1524,7 +1524,7 @@ pre code {
 }
 
 select.form-control:not([size]):not([multiple]) {
-  height: calc(2.09375rem + 2px);
+  height: calc(4rem + 2px);
 }
 
 select.form-control:focus::-ms-value {

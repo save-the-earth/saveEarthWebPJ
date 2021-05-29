@@ -32,12 +32,13 @@
     lockAnchors: true,
     verticalCentered: false,
     resize: false,
-    scrollOverflow: true,
+    scrollOverflow: false,
     responsive: 921,
     //Scrolling
     css3: true,
     scrollBar: true,
     autoScrolling: true,
+    normalScrollElements: "#section4",
     fixedElements: ".app-header",
     afterResize: function () {
       AOS.init(); // AOS initiation

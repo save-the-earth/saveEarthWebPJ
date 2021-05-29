@@ -22,7 +22,7 @@
     lockAnchors: true,
     verticalCentered: false,
     resize: false,
-    scrollOverflow: true,
+    scrollOverflow: false,
     responsive: 921,
     //Scrolling
     css3: true,

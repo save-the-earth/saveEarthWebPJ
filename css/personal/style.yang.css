@@ -35,11 +35,14 @@ h3.youtuber-name {
   float: left;
 }
 div.separation {
+  color: #fff;
   width: auto;
   height: auto;
   align-content: center;
   margin: 2rem 0 2rem 0;
-  padding: 1rem;
+  padding: 3rem;
+  background-color: var(--scroll-circle);
+  border-radius: 2rem;
 }
 
 .responsive-box {
