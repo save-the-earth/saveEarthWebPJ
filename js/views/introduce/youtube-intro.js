@@ -20,7 +20,7 @@
     anchors: ["first", "second", "third", "forth"],
     navigation: false,
     lockAnchors: true,
-    verticalCentered: true,
+    verticalCentered: false,
     resize: false,
     scrollOverflow: true,
     responsive: 921,
