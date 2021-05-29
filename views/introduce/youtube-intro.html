@@ -10,93 +10,339 @@
     const requireCss = [
       // 개인별 CSS
       "css/personal/style.yang.css",
+      "css/personal/style.zzang.css",
+    ];
+
+    // 동적 스크립트 정의 - 라이브러리 및 화면별 JS
+    const requireJs = [
+      // 화면 별 JS
+      "js/views/introduce/youtube-intro.js",
     ];
 
     loadCSS(requireCss);
+    loadJS(requireJs);
   })();
 </script>
 
-<section class="container bg-white youtuber_bg">
-  <div class="intro">
-    <p class="DoubleQ" style="font-size: xx-large"><b>"</b></p>
-    <p class="intro">
-      <b>환경보호</b>와 <b>편리함</b>을 모두 잡은 <br /><br />
-      <b>제로웨이스트 실천 유튜버</b>를 소개합니다!
-    </p>
-    <p class="DoubleQ" style="font-size: xx-large"><b>"</b></p>
-  </div>
-  <div>
-    <div class="title">
-      <p class="main">제로웨이스트 라이프를 도와줄</p>
-      <p class="main" style="font-size: 2rem"><b>유튜버</b></p>
-    </div>
-    <div class="separation">
-      <a
-        target="_blank"
-        href="https://www.youtube.com/channel/UCYG3McqxiWPfWOvIoJYVy0w"
-        ><img
-          title="유튜브로 이동"
-          class="profile"
-          src="././img/introduce/regyoprofile.png"
-      /></a>
-      <h3 class="youtuber-name"><b>친절한 래교[zero-waste]</b></h3>
-      <p class="youtuber-content">
-        소비자가 빈 용기를 가지고 가서 세제, 향신료 등을 구입할 수 있는 일회용품
-        없는 가게, 친환경 제로웨이스트샵 '알맹상점'의 사장님이 운영하는 유튜브
-        채널. <br />하루 평균 2만톤 가량으로 추정되는 택배 포장 폐기물. 쓰레기를
-        줄이기 위해 알맹상점은 택배 운영을 하지 않습니다. 신문지를 재활용해 수납
-        상자를, 버리는 티셔츠로 장바구니를, 코코넛오일로 천연치약을 만드는 법을
-        소개합니다.
-      </p>
-      <div class="imgs">
-        <img class="contentimg" src="././img/introduce/regyo01.png" />
-        <img class="contentimg" src="././img/introduce/regyo02.png" />
+<div id="fullPage">
+  <!-- 소개하기 -->
+  <section id="section1" class="section section4-first" data-anchor="first">
+    <div class="main-auto">
+      <div class="intro-main">
+        <div class="animation-intro">
+          <!-- 소개글 -->
+          <div
+            class="animation-title aos-init"
+            data-aos="fade-up"
+            data-aos-duration="700"
+          >
+            <div
+              class="main-title pt-3 aos-init"
+              data-aos="fade-up"
+              data-aos-duration="700"
+            >
+              <h1 class="pt-5">환경보호와 편리함을 모두 잡은</h1>
+              <h1 class="pt-5">제로웨이스트 실천 유튜버를 소개합니다!</h1>
+              <h1 class="pt-5">
+                일상에서 자주 사용하는 것부터 일회용품이나 플라스틱이 아닌
+                것들로 하나씩 채워볼까요?
+              </h1>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="separation">
-      <a
-        target="_blank"
-        href="https://www.youtube.com/channel/UCBYi3U7cHXdTO2iY7FywWyw"
-        ><img
-          title="유튜브로 이동"
-          class="profile"
-          src="././img/introduce/braveuniprofile.png"
-      /></a>
-      <h3 class="youtuber-name"><b>용기낸 대학생1</b></h3>
-      <p class="youtuber-content">
-        담는 그릇을 칭하는 '용기', 당당하게 나설 수 있는 마음인 '용기'.
-        환경유튜버 용기낸 대학생1은 배달과 포장으로 인한 플라스틱 용기 과다 사용
-        문제를 해결하고자, 개인적으로 진행한 외부 식당 다회용기 포장에서 시작해
-        현재 성북구 안암동 참여 식당 13곳과 협의해 다회용기를 이용해 포장시
-        페이백을 진행하는 프로젝트를 진행중입니다. 모두 일주일에 한번쯤은
-        #용기내 보는것이 어떨까요?
-      </p>
-      <div class="imgs">
-        <img class="contentimg" src="././img/introduce/braveuni01.png" />
-        <img class="contentimg" src="././img/introduce/braveuni02.png" />
+  </section>
+  <section
+    id="section2"
+    class="section section4-second fp-auto-height-responsive"
+    data-anchor="second"
+  >
+    <div class="main-auto">
+      <div class="intro-main">
+        <div class="animation-intro">
+          <!-- 소개글 -->
+          <div
+            class="animation-title aos-init"
+            data-aos="fade-up"
+            data-aos-duration="700"
+          >
+            <div class="separation">
+              <a
+                target="_blank"
+                href="https://www.youtube.com/channel/UCYG3McqxiWPfWOvIoJYVy0w"
+                ><img
+                  title="유튜브로 이동"
+                  class="profile rounded-circle"
+                  src="././img/introduce/regyoprofile.png"
+              /></a>
+              <h3 class="youtuber-name"><b>친절한 래교[zero-waste]</b></h3>
+              <p class="youtuber-content">
+                소비자가 빈 용기를 가지고 가서 세제, 향신료 등을 구입할 수 있는
+                일회용품 없는 가게, 친환경 제로웨이스트샵 '알맹상점'의 사장님이
+                운영하는 유튜브 채널. <br />하루 평균 2만톤 가량으로 추정되는
+                택배 포장 폐기물. 쓰레기를 줄이기 위해 알맹상점은 택배 운영을
+                하지 않습니다. 신문지를 재활용해 수납 상자를, 버리는 티셔츠로
+                장바구니를, 코코넛오일로 천연치약을 만드는 법을 소개합니다.
+              </p>
+              <div class="replace-step-img1">
+                <div class="row col-12 justify-content-center">
+                  <div class="col-md-4 p-2">
+                    <iframe
+                            class="target col-10"
+                            src="https://www.youtube.com/embed/1fc_Ab5B8mo?controls=0"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                    ></iframe>
+                  </div>
+                  <div class="col-md-4 p-2">
+                    <iframe
+                            class="target col-10"
+                            src="https://www.youtube.com/embed/GjB9Sq2rptg?controls=0"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                    ></iframe>
+                  </div>
+                  <div class="col-md-4 p-2">
+                    <iframe
+                            class="target col-10"
+                            src="https://www.youtube.com/embed/GjB9Sq2rptg?controls=0"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+              <div class="replace-step-img1">
+                <div class="row col-12 justify-content-center">
+                  <div class="col-md-4 p-2">
+                    <img
+                            class="col-10" style="border-radius: 0"
+                            src="././img/introduce/regyo01.png"
+                            alt ="친절한 래교1"
+                    />
+                  </div>
+                  <div class="col-md-4 p-2">
+                    <img
+                            class="col-10" style="border-radius: 0"
+                            src="././img/introduce/regyo02.png"
+                            alt ="친절한 래교2"
+                    />
+                  </div>
+                  <div class="col-md-4 p-2">
+                    <img
+                            class="col-10" style="border-radius: 0"
+                            src="././img/introduce/regyo03.png"
+                            alt ="친절한 래교3"
+                    />
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="separation">
-      <a
-        target="_blank"
-        href="https://www.youtube.com/channel/UCiWHm_D8N5QR-5MTXcdTtEA"
-        ><img
-          title="유튜브로 이동"
-          class="profile"
-          src="././img/introduce/trashkingdomprofile.png"
-      /></a>
-      <h3 class="youtuber-name"><b>쓰레기왕국 Trash Kingdom</b></h3>
-      <p class="youtuber-content">
-        환경의 날을 맞아 한강에서 전단지를 백장씩 줍고, 수돗물을 그냥 마셔보기도
-        하고, 지구의 날을 맞아 전국 소등행사에 참여합니다. 거창한 일은 아니지만
-        환경을 위해 할 수 있는 작지만 의미있는 행동들을 소개하고, 나아가
-        시청자들의 행동을 이끌어내는 유튜버 쓰레기왕국. 함께 환경에 대한 정보도
-        알아가고, 작은 행동으로 실천하는 하루가 되어봅시다.
-      </p>
-      <div class="imgs">
-        <img class="contentimg" src="././img/introduce/trashkingdom01.png" />
-        <img class="contentimg" src="././img/introduce/trashkingdom02.png" />
+  </section>
+  <section
+    id="section3"
+    class="section section4-third fp-auto-height-responsive"
+    data-anchor="third"
+  >
+    <div class="main-auto">
+      <div class="intro-main">
+        <div class="animation-intro">
+          <!-- 소개글 -->
+          <div
+            class="animation-title aos-init"
+            data-aos="fade-up"
+            data-aos-duration="700"
+          >
+            <div class="separation">
+              <a
+                target="_blank"
+                href="https://www.youtube.com/channel/UCBYi3U7cHXdTO2iY7FywWyw"
+                ><img
+                  title="유튜브로 이동"
+                  class="profile rounded-circle"
+                  src="././img/introduce/braveuniprofile.png"
+              /></a>
+              <h3 class="youtuber-name"><b>용기낸 대학생1</b></h3>
+              <p class="youtuber-content">
+                담는 그릇을 칭하는 '용기', 당당하게 나설 수 있는 마음인
+                '용기'.<br />
+                환경유튜버 용기낸 대학생1은 배달과 포장으로 인한 플라스틱 용기
+                과다 사용 문제를 해결하고자 '용기내 포장하세요' 프로젝트를
+                진행하고 있습니다.<br />
+                이 프로젝트는 개인적으로 진행한 외부 식당 다회용기 포장에서
+                시작해 용기내 한달살기 프로젝트에 이르기까지 다양한 활동을
+                진행중입니다.<br />
+                모두 일주일에 한번쯤은 #용기내 보는것이 어떨까요?
+              </p>
+              <div class="replace-step-img1">
+                <div class="row col-12 justify-content-center">
+                  <div class="col-md-4 p-2">
+                    <iframe
+                            class="target col-10"
+                            src="https://www.youtube.com/embed/OGE8AHCMWy4?controls=0"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                    ></iframe>
+                  </div>
+                  <div class="col-md-4 p-2">
+                    <iframe
+                            class="target col-10"
+                            src="https://www.youtube.com/embed/mGQwlcZeLYc?controls=0"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                    ></iframe>
+                  </div>
+                  <div class="col-md-4 p-2">
+                    <iframe
+                            class="target col-10"
+                            src="https://www.youtube.com/embed/-GssDfQB1Rc?controls=0"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+              <div class="replace-step-img1">
+                <div class="row col-12 justify-content-center">
+                  <div class="col-md-4 p-2">
+                    <img
+                            class="col-10" style="border-radius: 0"
+                            src="././img/introduce/braveuni01.png"
+                            alt ="용기낸 대학생1"
+                    />
+                  </div>
+                  <div class="col-md-4 p-2">
+                    <img
+                            class="col-10" style="border-radius: 0"
+                            src="././img/introduce/braveuni02.png"
+                            alt ="용기낸 대학생2"
+                    />
+                  </div>
+                  <div class="col-md-4 p-2">
+                    <img
+                            class="col-10" style="border-radius: 0"
+                            src="././img/introduce/braveuni03.png"
+                            alt ="용기낸 대학생3"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+  <section
+          id="section4"
+          class="section section4-forth fp-auto-height-responsive"
+          data-anchor="forth"
+  >
+    <div class="main-auto">
+      <div class="intro-main">
+        <div class="animation-intro">
+          <!-- 소개글 -->
+          <div
+                  class="animation-title aos-init"
+                  data-aos="fade-up"
+                  data-aos-duration="700"
+          >
+            <div class="separation">
+              <a
+                      target="_blank"
+                      href="https://www.youtube.com/channel/UCiWHm_D8N5QR-5MTXcdTtEA"
+              ><img
+                      title="유튜브로 이동"
+                      class="profile rounded-circle"
+                      src="././img/introduce/trashkingdomprofile.png"
+              /></a>
+              <h3 class="youtuber-name"><b>쓰레기왕국 Trash Kingdom</b></h3></a>
+              <p class="youtuber-content">
+                환경의 날을 맞아 한강에서 전단지를 백장씩 줍고, 수돗물을 그냥 마셔보기도
+                하고, 지구의 날을 맞아 전국 소등행사에 참여합니다.<br> 거창한 일은 아니지만
+                환경을 위해 할 수 있는 작지만 의미있는 행동들을 소개하고, 나아가
+                시청자들의 행동을 이끌어내는 유튜버 쓰레기왕국.<br>함께 환경에 대한 정보도
+                알아가고, 작은 행동으로 실천하는 하루가 되어봅시다.
+              </p>
+              <div class="replace-step-img1">
+                <div class="row col-12 justify-content-center">
+                  <div class="col-md-4 p-2">
+                    <iframe
+                            class="target col-10"
+                            src="https://www.youtube.com/embed/9zA9wDmhTiM?controls=0"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                    ></iframe>
+                  </div>
+                  <div class="col-md-4 p-2">
+                    <iframe
+                            class="target col-10"
+                            src="https://www.youtube.com/embed/56C-9Nz35fE?controls=0"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                    ></iframe>
+                  </div>
+                  <div class="col-md-4 p-2">
+                    <iframe
+                            class="target col-10"
+                            src="https://www.youtube.com/embed/56C-9Nz35fE?controls=0"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+              <div class="replace-step-img1">
+                <div class="row col-12 justify-content-center">
+                  <div class="col-md-4 p-2">
+                    <img
+                            class="col-10" style="border-radius: 0"
+                            src="././img/introduce/trashkingdom01.png"
+                            alt ="쓰레기왕국1"
+                    />
+                  </div>
+                  <div class="col-md-4 p-2">
+                    <img
+                            class="col-10" style="border-radius: 0"
+                            src="././img/introduce/trashkingdom02.png"
+                            alt ="쓰레기왕국2"
+                    />
+                  </div>
+                  <div class="col-md-4 p-2">
+                    <img
+                            class="col-10" style="border-radius: 0"
+                            src="././img/introduce/trashkingdom03.png"
+                            alt ="쓰레기왕국3"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <span class="scroll-down">
+    <span class="scroll-txt">SCROLL</span>
+    <button class="btn btn-success mx-auto">
+      <i class="fas fa-angle-down"></i>
+    </button>
+  </span>
+</div>
