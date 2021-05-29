@@ -124,7 +124,7 @@
   display: none;
   padding: 1.875rem;
   border: none;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: var(--text-general);
   line-height: 2rem;
   background-color: var(--sub-background);
@@ -137,13 +137,13 @@
   border: none;
 }
 .question {
-  font-size: 1.188rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  padding: 1.5rem 0;
+  padding: 1.5rem 1rem;
   cursor: pointer;
   border: none;
   outline: none;
-  background: none;
+  background-color: var(--body);
   width: 100%;
   text-align: left;
   color: var(--text-bold);
@@ -156,10 +156,10 @@
   margin-right: 0.938rem;
 }
 
-.backimg {
-  min-height: -moz-calc(100vh - 105px); /* Firefox */
-  min-height: -webkit-calc(100vh - 105px); /* Chrome, Safari */
-  min-height: calc(100vh - 105px);
+.back-img {
+  min-height: -moz-calc(100vh - 4.5rem); /* Firefox */
+  min-height: -webkit-calc(100vh - 4.5rem); /* Chrome, Safari */
+  min-height: calc(100vh - 4.5rem);
   background-size: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
