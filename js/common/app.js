@@ -132,8 +132,8 @@ function loadPage(url) {
     type: "GET",
     url: $.subPagesDirectory + url,
     dataType: "html",
-    cache: false,
-    async: false,
+    cache: true,
+    async: true,
     beforeSend: function () {
       $.mainContent.css({ opacity: 0 });
     },
