@@ -29,6 +29,7 @@
       "fifth",
       "sixth",
       "seventh",
+      "eighth",
       "last",
     ],
     navigation: false,
@@ -36,6 +37,7 @@
     verticalCentered: false,
     resize: false,
     scrollOverflow: false,
+
     //Scrolling
     responsiveWidth: 991, // 반응형 전환 값
     topHeight: convertRemToPixels(4.5),
@@ -59,6 +61,7 @@
         "fifth",
         "sixth",
         "seventh",
+        "eighth",
         "last",
       ]; // duplicated table of anchors name
 
@@ -78,7 +81,7 @@
     afterLoad: function (index, anchorIndex) {
       AOS.init({
         easing: "ease-out-back",
-        duration: 1000,
+        duration: 1500,
       }); // AOS initiation
       $(".aos-init").removeClass("aos-animate");
 
@@ -90,6 +93,7 @@
         "fifth",
         "sixth",
         "seventh",
+        "eighth",
         "last",
       ];
 
@@ -123,5 +127,27 @@
   $(document).on("click", '.nav a[href!="#"]', function (e) {
     $(".ui-view").fullpage.destroy("all");
     clearTimeoutAll();
+  });
+
+  const swiper = new Swiper(".swiper-container", {
+    slidesPerView: 1,
+    spaceBetween: 10, //위 slidesPerview 여백
+    loop: true, // 슬라이드 반복 여부
+    loopAdditionalSlides: 1, // 슬라이드 반복 시 마지막 슬라이드에서 다음 슬라이드가 보여지지 않는 현상 수정
+    centeredSlides: true,
+    autoplay: {
+      delay: 5000, // 시간 설정
+      disableOnInteraction: false, // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
+    },
+    navigation: {
+      // 버튼 사용자 지정
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    mousewheel: false,
+    keyboard: false,
   });
 })(jQuery);

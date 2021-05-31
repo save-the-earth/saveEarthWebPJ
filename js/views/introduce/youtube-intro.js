@@ -9,7 +9,7 @@
 (function ($) {
   const $appBodyEl = $(".app-body");
   const $fullPageEl = $("#fullPage");
-  AOS.init();
+  AOS.init({ easing: "ease-out-back", duration: 1500 });
 
   $appBodyEl.css("overflow", "hidden");
 
@@ -32,7 +32,7 @@
     autoScrolling: true,
     fixedElements: ".app-header",
     afterResize: function () {
-      AOS.init(); // AOS initiation
+      AOS.init({ easing: "ease-out-back", duration: 1500 }); // AOS initiation
       $(".aos-init").removeClass("aos-animate");
 
       const a_table = ["first", "second", "third", "forth"]; // duplicated table of anchors name
@@ -45,10 +45,10 @@
     },
 
     afterRender: function (index, anchorIndex) {
-      AOS.init(); // AOS initiation
+      AOS.init({ easing: "ease-out-back", duration: 1500 }); // AOS initiation
     },
     afterLoad: function (index, anchorIndex) {
-      AOS.init(); // AOS initiation
+      AOS.init({ easing: "ease-out-back", duration: 1500 }); // AOS initiation
       $(".aos-init").removeClass("aos-animate");
 
       const a_table = ["first", "second", "third", "forth"];

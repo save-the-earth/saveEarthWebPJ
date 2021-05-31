@@ -470,16 +470,13 @@
         } //nothing to do if the plugin was destroyed
 
         isResizing = true;
-
-        windowsHeight = $window.height(); //updating global var
-
-        paddingTopMinus();
+        const widthLimit = options.responsive || options.responsiveWidth;
+        windowsHeight = $window.height(); //updating global
+        if (widthLimit) windowsHeight -= options.topHeight;
         $(SECTION_SEL).each(function () {
           var slidesWrap = $(this).find(SLIDES_WRAPPER_SEL);
           var slides = $(this).find(SLIDE_SEL);
-
           $(this).css("height", windowsHeight + "px");
-
           //adjusting the position fo the FULL WIDTH slides...
           if (slides.length > 1) {
             landscapeScroll(slidesWrap, slidesWrap.find(SLIDE_ACTIVE_SEL));
@@ -692,9 +689,10 @@
         $("html").addClass(ENABLED);
 
         //due to https://github.com/alvarotrigo/fullPage.js/issues/1502
-        windowsHeight = $window.height();
+        const widthLimit = options.responsive || options.responsiveWidth;
+        windowsHeight = $window.height(); //updating global
+        if (widthLimit) windowsHeight -= options.topHeight;
 
-        paddingTopMinus();
         container.removeClass(DESTROYED); //in case it was destroyed before initializing it again
 
         addInternalSelectors();
@@ -2398,12 +2396,7 @@
        * Checks if the site needs to get responsive and disables autoScrolling if so.
        * A class `fp-responsive` is added to the plugin's container in case the user wants to use it for his own responsive CSS.
        */
-      function paddingTopMinus() {
-        const widthLimit = options.responsive || options.responsiveWidth; //backwards compatiblity
-        if (widthLimit) {
-          windowsHeight -= options.topHeight;
-        }
-      }
+
       function responsive() {
         var widthLimit = options.responsive || options.responsiveWidth; //backwards compatiblity
         var heightLimit = options.responsiveHeight;

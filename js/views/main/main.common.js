@@ -12,7 +12,7 @@
   let currentIndex = 0;
   const $appBodyEl = $(".app-body");
   const $fullPageEl = $("#fullPage");
-  AOS.init();
+  AOS.init({ easing: "ease-out-back", duration: 1500 });
 
   $appBodyEl.css("overflow", "hidden");
 
@@ -57,7 +57,7 @@
     fixedElements: ".app-header",
     afterResponsive: function () {},
     afterResize: function (index, anchorIndex) {
-      AOS.init(); // AOS initiation
+      AOS.init({ easing: "ease-out-back", duration: 1500 }); // AOS initiation
       $(".aos-init").removeClass("aos-animate");
 
       const a_table = [
@@ -83,7 +83,7 @@
     },
 
     afterRender: function () {
-      AOS.init(); // AOS initiation
+      AOS.init({ easing: "ease-out-back", duration: 1500 }); // AOS initiation
       $(".aos-init").removeClass("aos-animate");
     },
     afterLoad: function (index, anchorIndex) {
