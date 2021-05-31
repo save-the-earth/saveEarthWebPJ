@@ -3,27 +3,81 @@
     Copyright © 2021 지구방위대.
     ProjectName: saveEarthWebPJ
     FilePath: css/personal/style.hong.css
-    Create by 지구방위대, 홍예지 and 정윤아 and 송예지 on 2021-05-21 05:56:26.
+    Create by 지구방위대, 홍예지 on 2021-05-21 05:56:26.
 */
 
-/* 지구방위대 2021-05-21 17:59:49, 정윤아 */
-/* 지구방위대 2021-05-27 04:43:00, 송예지 */
-/* 지구방위대 2021-05-29 15:42:03, 정윤아 */
+/* 지구방위대 2021-05-21 17:59:49, 정윤아 Front-end Dev */
+/* 지구방위대 2021-05-27 04:43:00, 송예지 Design */
 
 /* 소개하기 */
 #big_logo {
-  width: 20rem;
-  height: 20rem;
+  width: 500px;
+  height: 500px;
+}
+/* 회색 박스 */
+.intro_gray_box {
+  background: #e7e7e7;
+  padding: 3rem;
+  margin-bottom: 3rem;
+}
+.green {
+  color: #34a853;
 }
 
-.intro-card .card-group {
-  width: 100%;
-  justify-content: space-around;
-  display: inline-flex;
+.gray {
+  background-color: #e7e7e7;
 }
 
-.intro-card .card {
-  border-radius: 4rem;
+.red {
+  color: red;
+}
+
+.size {
+  font-size: 2.3em;
+  margin-bottom: 100px;
+}
+
+.size_2 {
+  font-size: 3em;
+  margin-bottom: 50px;
+}
+
+.size_3 {
+  font-size: 2.5em;
+}
+
+.box_size {
+  padding: 50px;
+  margin-bottom: 200px;
+}
+
+.box_size_1 {
+  padding: 50px;
+}
+
+.icon {
+  margin-top: 50px;
+  margin-left: 90px;
+  width: 200px;
+  height: 200px;
+}
+
+.icon_2 {
+  margin-top: 50px;
+  width: 200px;
+  height: 200px;
+}
+
+.icon_box {
+  margin-left: 100px;
+  margin-top: 50px;
+  width: 400px;
+  height: 400px;
+}
+
+.icon_box_2 {
+  width: 595.6px;
+  height: 450px;
 }
 
 /* 문의하기 */
@@ -47,43 +101,46 @@
   margin-right: 0.938rem;
 }
 
-.section2-first .highlight,
-.section2-second .highlight {
-  color: var(--main-geen);
-}
-
 .answer {
   display: none;
   padding: 1.875rem;
   border: none;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: var(--text-general);
   line-height: 2rem;
   background-color: var(--sub-background);
 }
-
+#faq-title {
+  font-size: 1.563rem;
+  width: 62.5rem;
+  text-align: center;
+  margin: 6.25rem;
+  border: none;
+}
 .question {
-  font-size: 1.5rem;
+  font-size: 1.188rem;
   font-weight: 600;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 0;
   cursor: pointer;
   border: none;
   outline: none;
-  background-color: var(--body);
+  background: none;
   width: 100%;
   text-align: left;
   color: var(--text-bold);
 }
-.question:hover,
-.question:active {
-  color: var(--main-geen);
+.question:hover {
+  color: #2962ff;
   border: none;
 }
+[id$="-toggle"] {
+  margin-right: 0.938rem;
+}
 
-.back-img {
-  min-height: -moz-calc(100vh - 4.5rem); /* Firefox */
-  min-height: -webkit-calc(100vh - 4.5rem); /* Chrome, Safari */
-  min-height: calc(100vh - 4.5rem);
+.backimg {
+  min-height: -moz-calc(100vh - 105px); /* Firefox */
+  min-height: -webkit-calc(100vh - 105px); /* Chrome, Safari */
+  min-height: calc(100vh - 105px);
   background-size: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -130,4 +187,5 @@
   font-size: 2.5rem;
   font-weight: bold;
   letter-spacing: 0.3rem;
+  background-image: url("../../img/background/faq.png");
 }
