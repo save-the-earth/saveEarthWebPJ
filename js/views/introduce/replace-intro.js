@@ -10,7 +10,10 @@
 (function ($) {
   const $appBodyEl = $(".app-body");
   const $fullPageEl = $("#fullPage");
-  AOS.init();
+  AOS.init({
+    easing: "ease-out-back",
+    duration: 1500,
+  });
 
   $appBodyEl.css("overflow", "hidden");
 
@@ -42,7 +45,10 @@
     autoScrolling: true,
     fixedElements: ".app-header",
     afterResize: function () {
-      AOS.init(); // AOS initiation
+      AOS.init({
+        easing: "ease-out-back",
+        duration: 1500,
+      });
       $(".aos-init").removeClass("aos-animate");
 
       const a_table = [
@@ -64,10 +70,16 @@
     },
 
     afterRender: function (index, anchorIndex) {
-      AOS.init(); // AOS initiation
+      AOS.init({
+        easing: "ease-out-back",
+        duration: 1500,
+      }); // AOS initiation
     },
     afterLoad: function (index, anchorIndex) {
-      AOS.init(); // AOS initiation
+      AOS.init({
+        easing: "ease-out-back",
+        duration: 1000,
+      }); // AOS initiation
       $(".aos-init").removeClass("aos-animate");
 
       const a_table = [
