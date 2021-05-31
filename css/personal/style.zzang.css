@@ -935,47 +935,6 @@
   color: #fff;
 }
 
-/* 문의하기 */
-.question-intro {
-  align-items: center;
-  justify-content: center;
-  display: inline-flex;
-}
-
-.question-card {
-  width: 70rem;
-  height: 70rem;
-  font-size: 1.2rem;
-  border-radius: 2rem;
-  border: none !important;
-}
-
-.question-card .card-title {
-  text-align: center;
-  margin: 1.5rem 0;
-  color: #4e7948;
-  font-size: 2.5rem;
-  font-weight: bold;
-  letter-spacing: 0.3rem;
-}
-.question-card .form-group {
-  justify-content: start;
-  display: flex;
-  flex-direction: column;
-}
-.question-card .form-group label {
-  text-align: left;
-}
-
-.question-card .card-title {
-  text-align: center;
-  margin: 1.5rem 0;
-  color: #4e7948;
-  font-size: 2.5rem;
-  font-weight: bold;
-  letter-spacing: 0.3rem;
-}
-
 /* resize */
 @media (min-width: 991px) and (max-width: 1070px) {
   /* 늘어나는 폐기물물*/
