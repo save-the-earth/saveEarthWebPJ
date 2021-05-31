@@ -7,6 +7,7 @@
 */
 
 /* fullPage */
+
 .scroll-down {
   display: flex;
   z-index: 300;
@@ -69,9 +70,9 @@
 
 .main-auto {
   width: 100vw;
-  height: -moz-calc(100vh - 4.5rem); /* Firefox */
-  height: -webkit-calc(100vh - 4.5rem); /* Chrome, Safari */
-  height: calc(100vh - 4.5rem);
+  min-height: -moz-calc(100vh - 4.5rem); /* Firefox */
+  min-height: -webkit-calc(100vh - 4.5rem); /* Chrome, Safari */
+  min-height: calc(100vh - 4.5rem);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -121,8 +122,13 @@
 }
 
 /* 쓰레기 처리 */
+.section-third .main-auto,
 .section-third .main-fixed {
   background: var(--water-color);
+}
+
+.no-wave {
+  background: var(--body) !important;
 }
 
 #mtt_wrap canvas {
@@ -132,7 +138,9 @@
   width: 100%;
   position: absolute;
   margin: 0;
-  height: calc(100% - 4rem);
+  height: -moz-calc(100vh - 4.5rem); /* Firefox */
+  height: -webkit-calc(100vh - 4.5rem); /* Chrome, Safari */
+  height: calc(100vh - 4.5rem);
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -152,7 +160,7 @@
   border-radius: 50%;
   z-index: 100;
 }
-.earth-main:before {
+.wave-animation {
   content: "";
   position: absolute;
   width: calc(100% + 100rem);
@@ -271,7 +279,7 @@
 
 .recycle-step-box1 .recycle-step-list .list-content {
   display: inline-flex;
-  width: 10rem;
+  width: 8rem;
   height: 10rem;
   justify-content: center;
   align-items: center;
@@ -286,14 +294,10 @@
   background-size: 5rem;
 }
 .recycle-arrow {
-  width: 8rem;
-  height: 8rem;
   display: inline-flex;
-  position: absolute;
   align-items: center;
   flex-direction: row;
   justify-content: flex-end;
-  margin-left: 3.5rem;
 }
 
 .recycle-arrow .arrow-ico {
@@ -737,9 +741,11 @@
 .recycle-info-box .graph-top-set .graph-line {
   display: inline-block;
   background: url(../../img/main/arrow.png) no-repeat 50% 50%;
-  background-size: 19rem 9.7rem;
+  background-size: 19rem 9rem;
   width: 19rem;
-  height: 9.7rem;
+  height: 8rem;
+  align-self: center;
+  justify-self: flex-start;
 }
 
 .recycle-info-box .graph-top-set .num strong {
@@ -765,12 +771,12 @@
   position: relative;
   overflow: hidden;
   justify-content: space-around;
+  align-items: flex-end;
 }
 
-.recycle-info-box .graph-line-set {
-  position: absolute;
-  bottom: -4px;
-  left: 17px;
+.recycle-info-box .graph-obj-box .graph-line-set {
+  display: flex;
+  flex-direction: column;
 }
 
 .recycle-info-box .graph-line-set .graph-line {
@@ -794,14 +800,14 @@
   margin-top: 0.5rem;
 }
 
-.recycle-info-box .graph-line-set .num {
-  display: block;
-  position: absolute;
-  top: -33px;
-  left: -20px;
-  min-width: 100px;
-  letter-spacing: -1px;
-}
+/*.recycle-info-box .graph-line-set .num {*/
+/*  display: block;*/
+/*  position: absolute;*/
+/*  top: -33px;*/
+/*  left: -20px;*/
+/*  min-width: 100px;*/
+/*  letter-spacing: -1px;*/
+/*}*/
 
 .recycle-info-box .graph-obj {
   display: inline-flex;
@@ -837,6 +843,12 @@
   left: auto;
   right: 17px;
 }
+.graph-line {
+  align-self: flex-start;
+}
+.set2 .graph-line {
+  align-self: flex-end;
+}
 
 .recycle-info-box .txt-box {
   padding: 0.8rem 0 0;
@@ -859,7 +871,7 @@
 }
 
 .recycle-info-box .graph-line-set.set2 .graph-line {
-  height: 90px;
+  height: 9rem;
   background-color: #00a0e9;
 }
 
@@ -977,7 +989,8 @@ img.content-img2 {
 }
 
 .question-card {
-  min-height: 70%;
+  width: 70rem;
+  height: 70rem;
   font-size: 1.2rem;
   border-radius: 2rem;
   border: none !important;
@@ -1010,9 +1023,145 @@ img.content-img2 {
 }
 
 /* resize */
+@media (min-width: 991px) and (max-width: 1070px) {
+  /* 늘어나는 폐기물물*/
+  .recycle-step-box3 {
+    width: 40rem;
+  }
+
+  .recycle-step-box4 .obj-area .total-num-box {
+    padding: 0 2rem;
+  }
+
+  .obj-area .obj {
+    background-size: 40rem 20rem;
+    width: 40rem;
+    height: 20rem;
+  }
+}
+@media screen and (max-width: 1070px) {
+  /* 일회용품 out */
+  .recycle-step-box6 .recycle-info-box {
+    width: 27rem;
+    height: 27rem;
+  }
+
+  .recycle-info-box .graph-obj-box {
+    width: 23rem;
+    height: 19rem;
+  }
+
+  .recycle-info-box .graph-line-set .graph-line {
+    height: 12rem;
+  }
+
+  .recycle-info-box .graph-line-set.set2 .graph-line {
+    height: 7rem;
+  }
+
+  .recycle-info-box .graph-obj {
+    width: 6rem;
+    height: 8rem;
+    background-size: 6rem 8rem;
+  }
+
+  .recycle-info-box .graph-top-set .num strong {
+    font-size: 3.2rem;
+    font-weight: 500;
+  }
+  .recycle-info-box .graph-top-set .num .txt {
+    font-size: 1.5rem;
+  }
+  .recycle-info-box .graph-top-set .graph-line {
+    background-size: 18rem 5.8rem;
+    width: 18rem;
+    height: 4rem;
+  }
+  .recycle-info-box .graph-line-set .num strong {
+    font-size: 2rem !important;
+    font-weight: 500 !important;
+  }
+  .recycle-info-box .obj-box {
+    height: 19rem;
+  }
+  .recycle-info-box .obj {
+    background-size: 20rem 13rem;
+    width: 20rem;
+    height: 13rem;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  /* 자원순환*/
+  .recycle-step-box2 {
+    width: 27rem;
+    height: 27rem;
+  }
+  .recycle-step-box2 .recycle-arr {
+    width: 27rem;
+    height: 27rem;
+    background-size: 25rem;
+  }
+  .recycle-step-box2 .recycle-step-list li {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .recycle-step-box2 .recycle-step-list li:nth-child(2) {
+    right: -15%;
+  }
+  .recycle-step-box2 .recycle-step-list li:nth-child(4) {
+    left: -15%;
+  }
+  .animation-content-inner .recycle-step-box1 {
+    width: 41rem;
+  }
+  .recycle-step-box1 .recycle-step-list .list-content {
+    height: 8rem;
+  }
+  .recycle-step-box1 .recycle-step-list .list-content .ico {
+    width: 6rem;
+    height: 6rem;
+  }
+  .recycle-step-box1 .recycle-step-list li:nth-child(1) .ico {
+    background-size: 4rem;
+  }
+  .recycle-step-box1 .recycle-step-list li:nth-child(2) .ico {
+    background-size: 4rem;
+  }
+  .recycle-step-box1 .recycle-step-list li:nth-child(3) .ico {
+    background-size: 4rem;
+  }
+  .recycle-step-box1 .recycle-step-list li:nth-child(4) .ico {
+    background-size: 4rem;
+  }
+  .recycle-arrow .arrow-ico {
+    background-size: 2rem 1rem;
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .main-auto {
     height: auto !important;
+  }
+}
+@media screen and (max-width: 979px) {
+  .animation-content {
+    flex-direction: column;
+  }
+  .arr-area {
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+
+  .arr-area .arr {
+    border-left: 2rem solid transparent;
+    border-top: 2rem solid #1ba767;
+    border-right: 2rem solid transparent;
+    border-bottom: none;
   }
 }
 
@@ -1036,6 +1185,11 @@ img.content-img2 {
     justify-content: center;
     align-items: center;
   }
+  .question-card {
+    width: 80vw !important;
+    min-height: 50% !important;
+  }
+
   .recycle-step-box1,
   .recycle-step-box3 {
     width: 80vw !important;
@@ -1049,22 +1203,19 @@ img.content-img2 {
     width: 6rem;
     height: 6rem;
   }
-  .recycle-arrow {
-    width: 6rem;
-    height: 6rem;
-  }
-  .arr-area {
-    flex-direction: column;
-    justify-content: center;
-    margin: 1rem 0;
-  }
 
-  .arr-area .arr {
-    border-left: 2rem solid transparent;
-    border-top: 2rem solid #1ba767;
-    border-right: 2rem solid transparent;
-    border-bottom: none;
-  }
+  /*.arr-area {*/
+  /*  flex-direction: column;*/
+  /*  justify-content: center;*/
+  /*  margin: 1rem 0;*/
+  /*}*/
+
+  /*.arr-area .arr {*/
+  /*  border-left: 2rem solid transparent;*/
+  /*  border-top: 2rem solid #1ba767;*/
+  /*  border-right: 2rem solid transparent;*/
+  /*  border-bottom: none;*/
+  /*}*/
 
   .recycle-step-box1 .recycle-step-list li:nth-child(1) .ico {
     background-size: 4rem;

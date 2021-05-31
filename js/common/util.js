@@ -40,7 +40,10 @@ function funRemoveMinus(str, isNum) {
     return str.replace(/-/g, "");
   }
 }
-
+//convert rem into pixels:
+function convertRemToPixels(rem) {
+  return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
+}
 // lt =>  < , gt -> > 변경
 function funRestore(text) {
   return text.replace(/&lt;/gi, "<").replace(/&gt;/gi, ">");

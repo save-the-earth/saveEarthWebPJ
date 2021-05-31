@@ -9,15 +9,17 @@
 /* 지구방위대 2021-05-21 14:46:42, 정윤아 Front-end Dev */
 
 (function ($) {
+  let currentIndex = 0;
   const $appBodyEl = $(".app-body");
   const $fullPageEl = $("#fullPage");
   AOS.init();
 
   $appBodyEl.css("overflow", "hidden");
 
+  // console.log($(window).height() - convertRemToPixels(4.4));
+
   // 스크롤 설정
   $fullPageEl.fullpage({
-    sectionsColor: ["#f7f2e6", "#f7f2e6", "#f7f2e6"],
     sectionSelector: ".section",
     anchors: [
       "first",
@@ -39,20 +41,22 @@
       "일회용품Out",
       "서약서",
     ],
+    topHeight: convertRemToPixels(4.5),
     navigation: true,
     navigationPosition: "right",
     lockAnchors: true,
     verticalCentered: false,
-    resize: false,
+    resize: true,
     scrollOverflow: false,
-    responsive: 921,
     //Scrolling
+    responsiveWidth: 991, // 반응형 전환 값
+    fitToSection: true,
     css3: true,
     scrollBar: true,
     autoScrolling: true,
     fixedElements: ".app-header",
-    afterResponsive: function (isResponsive) {},
-    afterResize: function () {
+    afterResponsive: function () {},
+    afterResize: function (index, anchorIndex) {
       AOS.init(); // AOS initiation
       $(".aos-init").removeClass("aos-animate");
 
@@ -67,6 +71,10 @@
         "last",
       ]; // duplicated table of anchors name
 
+      if (currentIndex === 3) {
+        reSizeWindow();
+      }
+
       for (let i = 0; i < a_table.length; i++) {
         $(".section-" + a_table[i] + ".active .aos-init").addClass(
           "aos-animate"
@@ -74,7 +82,7 @@
       }
     },
 
-    afterRender: function (index, anchorIndex) {
+    afterRender: function () {
       AOS.init(); // AOS initiation
       $(".aos-init").removeClass("aos-animate");
     },
@@ -107,7 +115,21 @@
         $(".scroll-up-btn").addClass("d-none");
       }
     },
-    onLeave: function (origin, destination, direction) {},
+    onLeave: function (leaveIndex, nextIndex, direction) {
+      //목적지가 세번째 구역인 경우 스크롤되지 않음
+
+      currentIndex = nextIndex;
+
+      if (nextIndex === 3) {
+        $("#mtt_wrap").removeClass("no-wave");
+        startMatter();
+      }
+
+      if (leaveIndex === 3) {
+        stopMatter();
+        $("#mtt_wrap").addClass("no-wave");
+      }
+    },
   });
 
   //스크롤 다운

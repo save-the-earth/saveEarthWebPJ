@@ -23,10 +23,11 @@
     verticalCentered: false,
     resize: false,
     scrollOverflow: false,
-    responsive: 921,
     //Scrolling
+    responsiveWidth: 991, // 반응형 전환 값
+    topHeight: convertRemToPixels(4.5),
+    fitToSection: true,
     css3: true,
-    normalScrollElements: "#section3",
     scrollBar: true,
     autoScrolling: true,
     fixedElements: ".app-header",

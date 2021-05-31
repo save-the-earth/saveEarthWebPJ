@@ -29,11 +29,10 @@ let removeGroundTimer, reStartTimer;
 
 //윈도우 및 객체 사이즈 가져오기 함수
 const getWindowSize = () => {
-  let $getHeaderEl = $(".app-header");
-  console.log($getHeaderEl.height());
-  console.log("windowHeight");
+  let $getHeaderEl = $("#mtt_wrap");
+
   // 윈도우(브라우저)의 크기 변경
-  windowHeight = window.innerHeight - $getHeaderEl.height();
+  windowHeight = $getHeaderEl.height();
   windowWidth = window.innerWidth; // Matter-js
 };
 
@@ -64,13 +63,16 @@ const initScreen = () => {
   Engine.run(engine); // 렌더 실행
   Render.run(render); // 이벤트 추가
 
+  //animation 실행
+  startAnimation();
+
   //Canvas 클릭 시 객체 생성 이벤트
   render.canvas.addEventListener("click", clickRandomEvent, false);
 };
 
 // 바닥과, 왼쪽, 오른쪽 벽을 생성하는 함수
 const createWall = () => {
-  console.log("createWall");
+  // console.log("createWall");
   if (isWallCreated) return false; //이미 벽 생성 완료
 
   // 하단 바닥 생성
@@ -206,10 +208,10 @@ const createTypePolygon = () => {
 
 // 바닥에 있는 개체 모두 제거
 const autoRemoveGround = () => {
-  console.log("autoRemoveGround");
+  // console.log("autoRemoveGround");
   clearTimeout(removeGroundTimer);
   removeGroundTimer = setTimeout(function () {
-    console.log("autoRemoveGround start");
+    // console.log("autoRemoveGround start");
     removeGroundOnObject();
     // 10초 뒤 삭제
   }, 10000);
@@ -217,7 +219,7 @@ const autoRemoveGround = () => {
 
 //바닥 제거 함수
 const removeGroundOnObject = () => {
-  console.log("removeGroundOnObject");
+  // console.log("removeGroundOnObject");
   isDropCreated = false; //떨어지는 객체 중단.
   World.remove(engine.world, ground); //바닥에 있는 객체 모두 clear
 
@@ -244,34 +246,48 @@ const startMatter = () => {
   getWindowSize();
   initMatter();
   initScreen();
+  //Auto Drop reStart
+  isDropCreated = true;
 };
-const reSizeWindow = () => {
-  //브라우저 리사이즈 시
-  console.log("resize");
 
+const startAnimation = () => {
+  const waveEl = $("#wave");
+  waveEl.addClass("wave-animation");
+};
+
+const stopAnimation = () => {
+  const waveEl = $("#wave");
+  waveEl.removeClass("wave-animation");
+};
+
+const stopMatter = () => {
   const delCanvas = document.querySelector("#mtt_wrap canvas");
-
   if (delCanvas) {
-    console.log("delCanvas");
+    stopAnimation();
     delCanvas.remove();
     //Auto Drop Stop
     isDropCreated = false;
-
     //반복 실행 모두 클리어
     clearTimeoutAll();
-
     //월드 클리어
     World.clear(engine.world);
     //클릭 이벤트 제거
     render.canvas.removeEventListener("click", clickRandomEvent, false);
-
     //변수 초기화
     engine = null;
     render = null;
+  }
+};
 
+const reSizeWindow = () => {
+  //브라우저 리사이즈 시
+
+  const delCanvas = document.querySelector("#mtt_wrap canvas");
+
+  if (delCanvas) {
+    stopMatter();
     //window 사이즈 재설정
     getWindowSize();
-
     //초기화 다시 실행
     initMatter();
     initScreen();
