@@ -3,46 +3,19 @@
     Copyright © 2021 지구방위대.
     ProjectName: saveEarthWebPJ
     FilePath: css/personal/style.hong.css
-    Create by 지구방위대, 홍예지 and 정윤아 on 2021-05-21 05:56:26.
+    Create by 지구방위대, 홍예지 and 정윤아 and 송예지 on 2021-05-21 05:56:26.
 */
 
-/* 지구방위대 2021-05-21 17:59:49, 정윤아 Front-end Dev */
-/* 지구방위대 2021-05-27 04:43:00, 송예지 Design */
-/* 지구방위대 2021-05-29 15:42:03, 정윤아 Front-end Dev */
+/* 지구방위대 2021-05-21 17:59:49, 정윤아 */
+/* 지구방위대 2021-05-27 04:43:00, 송예지 */
+/* 지구방위대 2021-05-29 15:42:03, 정윤아 */
 
 /* 소개하기 */
-
 #big_logo {
   width: 20rem;
   height: 20rem;
 }
-/* 회색 박스 */
-.intro_gray_box {
-  background: #e7e7e7;
-  padding: 3rem;
-  margin-bottom: 3rem;
-}
-.green {
-  color: #34a853;
-}
 
-.gray {
-  background-color: #e7e7e7;
-}
-
-.red {
-  color: red;
-}
-
-.size {
-  font-size: 2.3em;
-  margin-bottom: 100px;
-}
-
-.size_2 {
-  font-size: 3em;
-  margin-bottom: 50px;
-}
 .intro-card .card-group {
   width: 100%;
   justify-content: space-around;
@@ -51,44 +24,6 @@
 
 .intro-card .card {
   border-radius: 4rem;
-}
-
-.size_3 {
-  font-size: 2.5em;
-}
-
-.box_size {
-  padding: 50px;
-  margin-bottom: 200px;
-}
-
-.box_size_1 {
-  padding: 50px;
-}
-
-.icon {
-  margin-top: 50px;
-  margin-left: 90px;
-  width: 200px;
-  height: 200px;
-}
-
-.icon_2 {
-  margin-top: 50px;
-  width: 200px;
-  height: 200px;
-}
-
-.icon_box {
-  margin-left: 100px;
-  margin-top: 50px;
-  width: 400px;
-  height: 400px;
-}
-
-.icon_box_2 {
-  width: 595.6px;
-  height: 450px;
 }
 
 /* 문의하기 */
@@ -117,9 +52,6 @@
   color: var(--main-geen);
 }
 
-.intro-card p {
-  font-size: 1.5rem;
-}
 .answer {
   display: none;
   padding: 1.875rem;
@@ -129,13 +61,7 @@
   line-height: 2rem;
   background-color: var(--sub-background);
 }
-#faq-title {
-  font-size: 1.563rem;
-  width: 62.5rem;
-  text-align: center;
-  margin: 6.25rem;
-  border: none;
-}
+
 .question {
   font-size: 1.5rem;
   font-weight: 600;
@@ -152,9 +78,6 @@
 .question:active {
   color: var(--main-geen);
   border: none;
-}
-[id$="-toggle"] {
-  margin-right: 0.938rem;
 }
 
 .back-img {

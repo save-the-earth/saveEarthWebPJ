@@ -3,36 +3,64 @@
     Copyright © 2021 지구방위대.
     ProjectName: saveEarthWebPJ
     FilePath: css/personal/style.park.css
-    Create by 지구방위대, 박천송 and 정윤아 on 2021-05-21 05:56:37.
+    Create by 지구방위대, 박천송 and 정윤아 2021-05-21 05:56:37.
 */
 
-/* 지구방위대 2021-05-29 15:40:59, 정윤아 Front-end Dev */
+/* 지구방위대 2021-05-31 12:27:07, 정윤아 Front-end Dev */
 
 /* 대체품 소개하기 */
-.img-responsive {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-.center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+@media screen and (max-width: 680px) {
+  img.content-img {
+    width: 80vw !important;
+  }
+
+  img.content-img2 {
+    width: 80% !important;
+    height: 70% !important;
+  }
 }
 
-.replace-bak div {
-  height: 22rem;
+img.content-img {
+  width: 30%;
+  height: 20%;
+  flex: 0 0 83.33333%;
+  max-width: 83.33333%;
+  border-radius: 3rem;
+  min-width: 40%;
+  overflow: hidden;
+}
+img.content-img2 {
+  width: 80%;
+  height: 80%;
+  flex: 0 0 83.33333%;
+  max-width: 83.33333%;
+  border-radius: 3rem;
+  min-width: 40%;
+  overflow: hidden;
+}
+.replace-step-img1,
+.replace-step-img2 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.replace-step-img1 img {
+  border-radius: 20%;
+  overflow: hidden;
+  margin: 2rem;
 }
 
-.container {
-  text-align: center;
+.replace-step-img1 .replace-img-content {
+  font-size: 2rem;
 }
-.text-left {
-  text-align: left;
+
+.replace-step-img2 h1 {
+  color: var(--text-general);
 }
-.text-center {
-  text-align: center;
-}
-.text-right {
-  text-align: right;
+
+.replace-step-img2 .col-md-8 img.content-img {
+  flex: 0 0 50%;
+  max-width: 50%;
+  border-radius: 6rem;
+  overflow: hidden;
 }

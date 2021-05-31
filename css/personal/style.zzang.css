@@ -935,52 +935,6 @@
   color: #fff;
 }
 
-/* 대체품 소개하기 */
-img.content-img {
-  width: 30%;
-  height: 20%;
-  flex: 0 0 83.33333%;
-  max-width: 83.33333%;
-  border-radius: 3rem;
-  min-width: 40%;
-  overflow: hidden;
-}
-img.content-img2 {
-  width: 80%;
-  height: 80%;
-  flex: 0 0 83.33333%;
-  max-width: 83.33333%;
-  border-radius: 3rem;
-  min-width: 40%;
-  overflow: hidden;
-}
-.replace-step-img1,
-.replace-step-img2 {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-.replace-step-img1 img {
-  border-radius: 20%;
-  overflow: hidden;
-  margin: 2rem;
-}
-
-.replace-step-img1 .replace-img-content {
-  font-size: 2rem;
-}
-
-.replace-step-img2 h1 {
-  color: var(--text-general);
-}
-
-.replace-step-img2 .col-md-8 img.content-img {
-  flex: 0 0 50%;
-  max-width: 50%;
-  border-radius: 6rem;
-  overflow: hidden;
-}
-
 /* 문의하기 */
 .question-intro {
   align-items: center;

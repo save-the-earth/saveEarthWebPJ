@@ -100,6 +100,7 @@
 }
 
 .pledge_content {
+  max-width: 30rem;
   position: absolute;
 }
 
@@ -147,6 +148,9 @@
 
 .pledge_text ol {
   text-align: left;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .pledge_text ol li {
@@ -432,4 +436,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/*  resize */
+@media only screen and (min-width: 1824px) {
+  /* Styles */
+  .pledge_text {
+    font-size: 1rem;
+  }
+  .pledge_img {
+    max-width: 34rem;
+  }
+
+  .pledge_content {
+    max-width: 33rem;
+  }
 }

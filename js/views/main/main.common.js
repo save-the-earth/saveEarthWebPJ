@@ -146,7 +146,6 @@
     // 화면 별 JS
     "js/views/main/main.first-scroll.js",
     "js/views/main/main.second-scroll.js",
-    "js/views/main/main.third-scroll.js",
     "js/views/main/main.last-scroll.js",
   ];
 
