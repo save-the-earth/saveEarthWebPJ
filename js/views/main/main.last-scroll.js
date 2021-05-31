@@ -5,6 +5,7 @@
     FilePath: js/views/main/main.last-scroll.js
     Create by 지구방위대, 송예지 on 2021-05-21 07:03:12.
 */
+
 (function ($) {
   let date = new Date();
   let year = date.getFullYear();
@@ -21,45 +22,44 @@
   function downImg() {
     html2canvas($("#img_pledge")[0], {
       scrollX: 0,
-      scrollY: -window.scrollY
+      scrollY: -window.scrollY,
     }).then(function (canvas) {
-      var myImage = canvas.toDataURL();
-      downloadURI(myImage, "제로웨이스트 서약서.png")
+      let myImage = canvas.toDataURL();
+      downloadURI(myImage, "제로웨이스트 서약서.png");
     });
   }
 
   function downloadURI(uri, name) {
-    var link = document.createElement("a")
+    let link = document.createElement("a");
     link.download = name;
     link.href = uri;
     document.body.appendChild(link);
     link.click();
   }
 
-
   //<![CDATA[
   Kakao.init("d7e1e549f0dfd6fd3ce939221b6e4961");
   Kakao.Link.createDefaultButton({
-     container: "#kakao_btn",
-     objectType: "feed",
-     content: {
-       title: "지구방위대",
-       description: "제로웨이스트의 시작! 지구방위대와 함께해요🙂",
-       imageUrl: "", //"http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png",
-       link: {
-         webUrl: "http://earthguard.dothome.co.kr/",
-         mobileWebUrl: "http://earthguard.dothome.co.kr/",
-       },
-     },
-     buttons: [
-       {
-         title: "Open!",
-         link: {
-           webUrl: "http://earthguard.dothome.co.kr/",
-           mobileWebUrl: "http://earthguard.dothome.co.kr/",
-         },
-       },
-     ],
-   });
+    container: "#kakao_btn",
+    objectType: "feed",
+    content: {
+      title: "지구방위대",
+      description: "제로웨이스트의 시작! 지구방위대와 함께해요🙂",
+      imageUrl: "", //"http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png",
+      link: {
+        webUrl: "http://earthguard.dothome.co.kr/",
+        mobileWebUrl: "http://earthguard.dothome.co.kr/",
+      },
+    },
+    buttons: [
+      {
+        title: "Open!",
+        link: {
+          webUrl: "http://earthguard.dothome.co.kr/",
+          mobileWebUrl: "http://earthguard.dothome.co.kr/",
+        },
+      },
+    ],
+  });
   //]]>
 })(jQuery);

@@ -1,11 +1,4 @@
 @charset "utf-8";
-/*
-    Copyright (c) 2021.
-    ProjectName: SaveEarthWebPJ
-    FileName: style.css
-    Date : 2021-05-21 02:00:03
-    Create by 지구방위대, 정윤아 Front-end Dev.
-*/
 
 /* 지구방위대 대표폰트 */
 @font-face {
@@ -114,7 +107,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
-  font-size: 0.875rem;
+  font-size: 1.1rem;
   font-weight: normal;
   line-height: 1.5;
   color: #151b1e;
@@ -143,6 +136,7 @@ h6 {
 }
 
 p {
+  width: 100&;
   margin-top: 0;
   margin-bottom: 1rem;
 }
@@ -218,7 +212,7 @@ sup {
 }
 
 a {
-  color: #7AA062;
+  color: #7aa062;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
@@ -553,8 +547,9 @@ mark,
 }
 
 .img-fluid {
-  max-width: 100%;
-  height: auto;
+  width: 10rem;
+  height: 10rem;
+  background-size: 10rem;
 }
 
 .img-thumbnail {
@@ -1489,9 +1484,9 @@ pre code {
 .form-control {
   display: block;
   width: 100%;
-  padding: 0.5rem 0.75rem;
-  font-size: 0.875rem;
-  line-height: 1.25;
+  padding: 1rem;
+  font-size: 1.2rem;
+  line-height: 2;
   color: #3e515b;
   background-color: #fff;
   background-image: none;
@@ -1522,7 +1517,7 @@ pre code {
 }
 
 select.form-control:not([size]):not([multiple]) {
-  height: calc(2.09375rem + 2px);
+  height: calc(4rem + 2px);
 }
 
 select.form-control:focus::-ms-value {
@@ -2472,13 +2467,15 @@ tbody.collapse.show {
   min-width: 8rem; /*syj::10rem*/
   padding: 0 0;
   margin: 0.125rem 0 0;
-  font-size: 0.875rem;
-  color: #151b1e;
+  font-size: 1.3rem;
+  color: var(--text-bold);
   text-align: left;
   list-style: none;
-  background-color: #fff;
+  background-color: var(--sub-background);
   background-clip: padding-box;
-  border: 1px solid #e3e8ec;
+  border: 1px solid var(--scroll-text);
+  border-left: 0;
+  border-right: 0;
 }
 
 .dropdown-divider {
@@ -2494,7 +2491,7 @@ tbody.collapse.show {
   padding: 0.25rem 1.5rem;
   clear: both;
   font-weight: normal;
-  color: #151b1e;
+  color: var(--text-bold);
   text-align: center; /*syj::inherit*/
   white-space: nowrap;
   background: none;
@@ -2502,15 +2499,15 @@ tbody.collapse.show {
 }
 .dropdown-item:focus,
 .dropdown-item:hover {
-  color: #0b0e0f;
+  color: #fff;
   text-decoration: none;
-  background-color: #f1f3f8;
+  background-color: var(--scroll-text);
 }
 .dropdown-item.active,
 .dropdown-item:active {
   color: #fff;
   text-decoration: none;
-  background-color: #6a9b72;
+  background-color: var(--scroll-text);
 }
 .dropdown-item.disabled,
 .dropdown-item:disabled {
@@ -2932,6 +2929,7 @@ tbody.collapse.show {
   padding: 0.5rem 1rem;
   text-align: center; /*syj*/
   min-width: 8rem; /*syj*/
+  font-size: 1.5rem;
 }
 .nav-link:focus,
 .navbar .dropdown-toggle:focus,
@@ -2974,7 +2972,7 @@ tbody.collapse.show {
   padding-bottom: 0.21875rem;
   margin-right: 1rem;
   font-family: "UhBeeKeongKeong"; /*syj*/
-  font-size: 1.25rem;
+  font-size: 2rem;
   line-height: inherit;
   white-space: nowrap;
 }
@@ -9112,8 +9110,8 @@ base-chart.chart {
 
 .dropdown-item {
   position: relative;
-  padding: 10px 20px;
-  border-bottom: 1px solid #e3e8ec;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--scroll-text);
 }
 .dropdown-item:last-child {
   border-bottom: 0;
@@ -9167,15 +9165,16 @@ base-chart.chart {
 }
 
 .app-footer {
+  width: 100%;
   display: flex;
   padding: 0 10%; /*syj::0 1rem;*/
   color: #151b1e;
   /*background: #f1f3f8;*/
-
   background-color: rgba(247, 242, 230, 0.5);
   flex-wrap: wrap;
   align-items: center;
-  border-top: 1px solid #E5DFD6;
+  justify-content: center;
+  border-top: 1px solid #e5dfd6;
 }
 
 .row.row-equal {
@@ -9518,7 +9517,7 @@ base-chart.chart {
 .navbar-nav .nav-link,
 .navbar-nav .navbar .dropdown-toggle,
 .navbar .navbar-nav .dropdown-toggle {
-  color: #72806b;
+  color: var(--scroll-text);
 }
 .navbar-nav .nav-link:focus,
 .navbar-nav .navbar .dropdown-toggle:focus,
@@ -9526,7 +9525,7 @@ base-chart.chart {
 .navbar-nav .nav-link:hover,
 .navbar-nav .navbar .dropdown-toggle:hover,
 .navbar .navbar-nav .dropdown-toggle:hover {
-  color: #475342;
+  color: var(--text-bold);
 }
 
 .navbar-nav .open > .nav-link,
@@ -10525,12 +10524,12 @@ app-root {
 }
 
 .app-header {
-  flex: 0 0 60px;
+  flex: 0 0 3rem;
 }
 
 .app-footer {
   margin: auto;
-  flex: 0 0 50px;
+  flex: 0 0 4rem;
 }
 .app-footer a {
   height: 50px;
@@ -10555,7 +10554,7 @@ app-root {
 
 /* header 높이수정 */
 .header-fixed .app-body {
-  margin-top: 53px; /*syj::60px;*/
+  margin-top: 4.4rem; /*syj::60px;*/
 }
 
 .breadcrumb-fixed .main {
@@ -10585,7 +10584,7 @@ app-root {
 }
 
 .footer-fixed .app-footer {
-  /*position: fixed;*/
+  position: fixed;
   bottom: 0;
   z-index: 1020;
   width: 100%;

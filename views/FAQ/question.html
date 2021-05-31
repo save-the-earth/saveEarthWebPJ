@@ -2,7 +2,7 @@
     Copyright © 2021 지구방위대.
     ProjectName: saveEarthWebPJ
     FilePath: views/FAQ/question.html
-    Create by 지구방위대, 정윤아 on 2021-05-21 18:06:40.
+    Create by 지구방위대, 홍예지 and 정윤아 on 2021-05-21 18:06:40.
 -->
 <script>
   (function () {
@@ -10,71 +10,82 @@
     const requireCss = [
       // 개인별 CSS
       "css/personal/style.hong.css",
+      "css/personal/style.zzang.css",
     ];
 
     loadCSS(requireCss);
   })();
 </script>
-<section class="container p-5">
-  <!-- 부트스크랩에 .card 클래스를 사용하면 깔끔함! -->
-  <div class="card mx-auto col-md-8">
-    <div class="card-body">
-      <!-- 제목은 p태그보다는 h2 태그가 적합함. p태그는 내용입력. -->
-      <h2 class="card-title font-weight-bold text-center mb-4">문의하기</h2>
-      <form>
-        <!-- 부트스크랩 form은 .form-group으로 감싸줘서 하는게 좋음-->
-        <div class="form-group">
-          <!-- font-weight-bold은 타이틀에다가만 넣어주는게 좋음.-->
-          <!-- label태그의 for와 label과 연관된 태그의 id 값이 동일해야함. -->
-          <label for="question_type" class="font-weight-bold">문의선택</label>
-          <!-- id 이름을 정할때 개인별로 다른지만 나는 단어_단어 로 소문자로 짓고 있음-->
-          <!-- id는 고유한 값으로 겹치지 말아야함" -->
-          <select class="form-control" id="question_type">
-            <!-- select태그는 항상 초기값을 설정해주어야함 -> selected -->
-            <option value="" selected>문의하기1</option>
-            <option value="">문의하기2</option>
-            <option value="">문의하기3</option>
-            <option value="">문의하기4</option>
-            <option value="">문의하기5</option>
-          </select>
+<section class="section">
+  <div class="main-fixed pt-5 justify-content-start">
+    <div class="intro-main question-intro">
+      <!-- 부트스크랩에 .card 클래스를 사용하면 깔끔함! -->
+      <div class="card question-card">
+        <div class="card-body">
+          <!-- 제목은 p태그보다는 h2 태그가 적합함. p태그는 내용입력. -->
+          <h2 class="card-title mb-4">문의하기</h2>
+          <form>
+            <!-- 부트스크랩 form은 .form-group으로 감싸줘서 하는게 좋음-->
+            <div class="form-group">
+              <!-- font-weight-bold은 타이틀에다가만 넣어주는게 좋음.-->
+              <!-- label태그의 for와 label과 연관된 태그의 id 값이 동일해야함. -->
+              <label for="question_type" class="font-weight-bold"
+                >문의선택</label
+              >
+              <!-- id 이름을 정할때 개인별로 다른지만 나는 단어_단어 로 소문자로 짓고 있음-->
+              <!-- id는 고유한 값으로 겹치지 말아야함" -->
+              <select class="form-control" id="question_type">
+                <!-- select태그는 항상 초기값을 설정해주어야함 -> selected -->
+                <option value="" selected>문의하기1</option>
+                <option value="">문의하기2</option>
+                <option value="">문의하기3</option>
+                <option value="">문의하기4</option>
+                <option value="">문의하기5</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="font-weight-bold" for="user_name">이름</label>
+              <input
+                type="text"
+                id="user_name"
+                title="사용자 이름"
+                class="form-control"
+                placeholder="이름"
+              />
+            </div>
+            <div class="form-group">
+              <label class="font-weight-bold" for="user_email"
+                >이메일주소</label
+              >
+              <input
+                type="email"
+                id="user_email"
+                title="사용자 이메일"
+                class="form-control"
+                placeholder="name@example.com"
+              />
+            </div>
+            <div class="form-group">
+              <label class="font-weight-bold" for="input_number"
+                >전화번호</label
+              >
+              <input
+                type="number"
+                id="input_number"
+                class="form-control"
+                placeholder="010-xxxx-xxxx"
+              />
+            </div>
+            <div class="form-group">
+              <label for="content" class="font-weight-bold">내용입력</label>
+              <textarea class="form-control" id="content" rows="4"></textarea>
+            </div>
+            <div class="row justify-content-center">
+              <button type="submit" class="btn btn-success">보내기</button>
+            </div>
+          </form>
         </div>
-        <div class="form-group">
-          <label class="font-weight-bold" for="user_name">이름</label>
-          <input
-            type="text"
-            id="user_name"
-            title="사용자 이름"
-            class="form-control"
-            placeholder="이름"
-          />
-        </div>
-        <div class="form-group">
-          <label class="font-weight-bold" for="user_email">이메일주소</label>
-          <input
-            type="email"
-            id="user_email"
-            title="사용자 이메일"
-            class="form-control"
-            placeholder="name@example.com"
-          />
-        </div>
-        <div class="form-group">
-          <label class="font-weight-bold" for="input_number">전화번호</label>
-          <input
-            type="number"
-            id="input_number"
-            class="form-control"
-            placeholder="010-xxxx-xxxx"
-          />
-        </div>
-        <div class="form-group">
-          <label for="content" class="font-weight-bold">내용입력</label>
-          <textarea class="form-control" id="content" rows="16"></textarea>
-        </div>
-        <div class="row justify-content-center">
-          <button type="submit" class="btn btn-primary">보내기</button>
-        </div>
-      </form>
+      </div>
     </div>
   </div>
 </section>

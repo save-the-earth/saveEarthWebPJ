@@ -137,7 +137,7 @@
   margin-right: 0.938rem;
 }
 
-.faq_bg {
+.backimg {
   min-height: -moz-calc(100vh - 105px); /* Firefox */
   min-height: -webkit-calc(100vh - 105px); /* Chrome, Safari */
   min-height: calc(100vh - 105px);
@@ -146,41 +146,4 @@
   background-attachment: fixed;
   background-position: bottom;
   background-image:url('../../img/background/faq.png');
-}
-
-
-.card {
-  border: none;
-  margin-bottom: 0 !important;
-}
-.card .card-body {
-  background-color: var(--sub-background);
-  color: var(--text-bold);
-  padding: 1.25rem 2rem !important;
-}
-.card_faq {
-  background-color: var(--body) !important;
-}
-.card_faq {
-  color: #fff !important;
-}
-.card_faq_header {
-  margin-bottom: 0;
-  border-bottom: 1px solid var(--sub-background);
-}
-.btn-link {
-  color: var(--text-general);
-  font-size: 1.1rem;
-}
-.btn-link:focus,
-.btn-link:hover {
-  color: var(--text-highlight);
-}
-.faq_title {
-  text-align: center;
-
-  color: #4e7948;
-  font-size: 2.5rem;
-  font-weight: bold;
-  letter-spacing: 0.3rem;
 }

@@ -16,24 +16,21 @@
 
   // 스크롤 설정
   $fullPageEl.fullpage({
-    // sectionsColor: ["#4BBFC3", "#7BAABE", "whitesmoke", "#000"],
     sectionSelector: ".section",
     anchors: ["first", "second", "third"],
-    navigationTooltips: [
-      "제로웨이스트란",
-      "제로웨이스트챌린지",
-      "제로웨이스트실천방법",
-    ],
-    navigation: true,
-    navigationPosition: "right",
+    navigation: false,
     lockAnchors: true,
-    verticalCentered: true,
+    verticalCentered: false,
+    resize: false,
+    scrollOverflow: false,
     //Scrolling
+    responsiveWidth: 991, // 반응형 전환 값
+    topHeight: convertRemToPixels(4.5),
+    fitToSection: true,
     css3: true,
     scrollBar: true,
-    autoScrolling: false,
-    normalScrollElements: ".app-header",
-    fixedElements: ".app-header, .app-footer",
+    autoScrolling: true,
+    fixedElements: ".app-header",
     afterResize: function () {
       AOS.init(); // AOS initiation
       $(".aos-init").removeClass("aos-animate");
@@ -41,7 +38,7 @@
       const a_table = ["first", "second", "third"]; // duplicated table of anchors name
 
       for (let i = 0; i < a_table.length; i++) {
-        $(".section-" + a_table[i] + ".active .aos-init").addClass(
+        $(".section2-" + a_table[i] + ".active .aos-init").addClass(
           "aos-animate"
         ); // all magic goes here - when page is active, then all elements with AOS will start animate
       }
@@ -56,17 +53,30 @@
       const a_table = ["first", "second", "third"];
 
       for (let i = 0; i < a_table.length; i++) {
-        $(".section-" + a_table[i] + ".active .aos-init").addClass(
+        $(".section2-" + a_table[i] + ".active .aos-init").addClass(
           "aos-animate"
         );
+      }
+      const numSections = document.querySelectorAll(".fp-section").length;
+      if (anchorIndex === numSections) {
+        $(".scroll-down-btn").addClass("d-none");
+        $(".scroll-up-btn").removeClass("d-none");
+      } else {
+        $(".scroll-down-btn").removeClass("d-none");
+        $(".scroll-up-btn").addClass("d-none");
       }
     },
     onLeave: function (origin, destination, direction) {},
   });
 
   //스크롤 다운
-  $(".scroll-down").on("click", function () {
+  $(".scroll-down-btn").on("click", function () {
     $("#fullpage").fullpage.moveSectionDown();
+  });
+
+  //스트롤 업
+  $(".scroll-up-btn").on("click", function () {
+    $("#fullpage").fullpage.moveSectionUp();
   });
 
   $(document).on("click", '.nav a[href!="#"]', function (e) {

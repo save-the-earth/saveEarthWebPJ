@@ -6,25 +6,20 @@
     Create by 지구방위대, 정윤아 on 2021-05-21 05:58:30.
 */
 
-.main {
-  display: flex;
-  align-items: stretch;
-}
-.container-fluid,
-.container-fluid div {
-  display: flex;
-  flex: 1;
-}
-
 /* fullPage */
+
 .scroll-down {
+  display: flex;
+  z-index: 300;
   font-weight: bold;
   color: var(--main-geen);
   text-align: center;
   position: fixed;
-  bottom: 52px;
-  left: 50%;
-  margin-left: -22px;
+  bottom: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
 }
 .scroll-down button {
   display: block;
@@ -32,9 +27,8 @@
   font-weight: 100;
   color: #fff;
 }
-.fp-tableCell {
-  vertical-align: top !important;
-}
+
+/* 툴팁 */
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
   background: var(--scroll-circle);
@@ -43,601 +37,463 @@
   text-indent: -9999px;
 }
 #fp-nav.right {
-  right: 70px;
-  bottom: 70px;
+  z-index: 300;
+  right: 4rem;
+  bottom: 3.5rem;
   top: auto;
   font-weight: bold;
 }
 #fp-nav ul li a.active + .fp-tooltip {
   display: block !important;
 }
-.ft .fp-tableCell {
-  vertical-align: bottom;
+
+.scroll-down .btn-success {
+  background-color: var(--main-geen);
 }
-.last {
-  display: none !important;
+/* main */
+
+.section {
+  z-index: 0;
+  text-align: center;
 }
 
-/* 자원순환 */
-
-.intro {
-  position: relative;
-  width: 100%;
-  padding: 0 80px;
-  overflow: hidden;
-  margin: auto;
-}
-.intro-main {
-  width: 1200px;
-  margin: 0 auto;
-  padding-bottom: 50px;
-}
-/*.recycle-main {*/
-/*  width: 100vw;*/
-/*  height: -moz-calc(100vh - 105px);*/
-/*  height: -webkit-calc(100vh - 105px);*/
-/*  height: calc(100vh - 105px);*/
-/*  text-align: center;*/
-/*  display: flex;*/
-/*  flex-direction: column;*/
-/*  justify-content: center;*/
-/*  padding: 3rem;*/
-/*}*/
-
-/* 자원순환 정의 */
-.recycle-define {
+.main-fixed {
+  width: 100vw;
+  height: -moz-calc(100vh - 4.5rem); /* Firefox */
+  height: -webkit-calc(100vh - 4.5rem); /* Chrome, Safari */
+  height: calc(100vh - 4.5rem);
+  text-align: center;
+  display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.main-auto {
+  width: 100vw;
+  min-height: -moz-calc(100vh - 4.5rem); /* Firefox */
+  min-height: -webkit-calc(100vh - 4.5rem); /* Chrome, Safari */
+  min-height: calc(100vh - 4.5rem);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro-main {
+  padding: 0 10rem 0 5rem;
+}
+
+/* 지구 현재 시간 */
+.section-first {
+  z-index: 200;
+}
+.section-first .intro-title p {
+  text-align: center;
+  color: #3a7a34;
+  font-size: 5rem;
   font-weight: bold;
 }
 
-.recycle-define strong {
-  color: var(--main-geen);
+.main-title {
+  text-align: center;
+  margin: 1.5rem 0;
+  padding: 0 !important;
+  color: var(--text-general);
+  font-size: 2rem;
+  font-weight: bold;
 }
 
-.recycle-step1 {
-  flex: 1;
+.main_title p {
+  margin: 0;
+}
+
+.content_text {
+  margin: 0.3rem 0;
+  line-height: 2rem;
+  font-size: 1.1rem;
+  color: var(--text-bold);
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+
+/* 지구의 시간 */
+.section-second {
+  z-index: 200;
+}
+
+/* 쓰레기 처리 */
+.section-third .main-auto,
+.section-third .main-fixed {
+  background: var(--water-color);
+}
+
+.no-wave {
+  background: var(--body) !important;
+}
+
+#mtt_wrap canvas {
+  z-index: 1;
+}
+.earth-main {
+  width: 100%;
+  position: absolute;
+  margin: 0;
+  height: -moz-calc(100vh - 4.5rem); /* Firefox */
+  height: -webkit-calc(100vh - 4.5rem); /* Chrome, Safari */
+  height: calc(100vh - 4.5rem);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.earth {
+  background: url(../../img/main/earth.png) no-repeat 50%;
+  background-size: 20rem;
+  width: 20rem;
+  height: 20rem;
+  border: 0.1rem solid #ccc;
+  text-align: center;
+  color: #ddd;
+  margin-top: 3rem;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  z-index: 100;
+}
+.wave-animation {
+  content: "";
+  position: absolute;
+  width: calc(100% + 100rem);
+  height: calc(100% + 100rem);
+  background: rgb(247, 242, 230);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-30%);
+  border-radius: 30%;
+  /*animation: fill 10s ease-in-out infinite;*/
+  animation: fill 14s linear infinite;
+  transform-origin: 50% 50%;
+  z-index: 0;
+}
+@keyframes fill {
+  0% {
+    bottom: 0;
+    transform: translateX(-50%) rotate(0deg);
+  }
+  60% {
+    bottom: 100%;
+    transform: translateX(-50%) rotate(360deg);
+  }
+  100% {
+    bottom: 100%;
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+/* 애니메이션 */
+.animation-intro {
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  display: inline-flex;
+  align-items: center;
+}
+
+.animation-intro2 {
+  width: 100%;
+  max-height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  display: inline-flex;
+  align-items: center;
+}
+
+.animation-title {
+  font-weight: bold;
+  flex-direction: column;
+}
+.animation-title .highlight {
+  font-weight: bold;
+  color: var(--text-highlight) !important;
+}
+.animation-title .main-content {
+  font-size: 1.5rem;
+}
+
+.animation-content {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  flex-wrap: wrap;
+  height: 100%;
 }
 
-/* 자원순환 step box 1 */
+.animation-content-inner {
+  margin-top: 1rem;
+}
+.section-forth .animation-content-inner:last-of-type {
+  margin: 3.5rem;
+}
+.animation-content-inner li {
+  list-style: none;
+}
 
-.recycle-step1 .recycle-step-inner1 {
-  flex-basis: 700px;
+/* 자원 순환 */
+.animation-content-inner .recycle-step-box1 {
+  flex-direction: column;
+  display: inline-flex;
+  width: 45rem;
+  border: 0.2rem solid var(--main-geen);
+  border-radius: 2rem;
+  background-color: var(--white);
+  overflow: hidden;
+}
+.recycle-step-box3 {
+  flex-direction: column;
+  display: inline-flex;
+  width: 45rem;
+}
+.animation-content-inner .recycle-step-box1 .tit {
+  width: 100%;
+  background-color: var(--main-geen);
+  font-size: 2rem;
+  color: var(--white);
+  line-height: 1;
+  padding: 2rem;
+  font-weight: 400;
+}
+
+.recycle-step-box1 .recycle-step-list {
+  padding: 1rem;
+  width: 100%;
+  display: inline-flex;
   flex-direction: row;
-  justify-content: center;
-  /* padding: 85px 0 0; */
   flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.recycle-step-box1 .recycle-step-list li {
   display: inline-flex;
 }
 
-.recycle-step-inner1 .recycle-step-box {
-  display: inline-block;
-  width: 600px;
-  /*border: 2px solid var(--main-geen);*/
-  border-radius: 20px;
-  background-color: #fff;
-  overflow: hidden;
-}
-
-.recycle-step-inner1 .recycle-step-box .tit {
-  display: block;
-  width: 100%;
-  background-color: var(--text-main);
-  text-align: center;
-  font-size: 18px;
-  color: #fff;
-  line-height: 1;
-  padding: 15px 15px 18px;
-  font-weight: 400;
-}
-.recycle-step1 .recycle-step-inner1 .recycle-step-box .recycle-step-list li {
-  display: inline-block;
+.recycle-step-box1 .recycle-step-list .list-content {
+  display: inline-flex;
+  width: 8rem;
+  height: 10rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   position: relative;
-  width: 150px;
-  padding: 100px 0 0;
-  text-align: left;
 }
-
-.recycle-step-inner1 .recycle-step-box .recycle-step-list {
-  padding: 40px 0 30px;
-  margin: 1rem;
-  text-align: center;
-}
-
-.recycle-step-inner1 .recycle-step-box .recycle-step-list li .ico {
-  width: 90px;
-  height: 90px;
-  border-radius: 45px;
+.recycle-step-box1 .recycle-step-list .list-content .ico {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
   background-color: #eee;
+  background-size: 5rem;
+}
+.recycle-arrow {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.recycle-arrow .arrow-ico {
+  background: url(../../img/main/recycle_arrow.png) no-repeat 50% 50%;
+  background-size: 2.5rem 1rem;
+  width: 2.5rem;
+  height: 2rem;
+}
+
+.recycle-step-box1 .recycle-step-list li:nth-child(1) .ico {
+  stroke: #fff;
+  background: var(--main-recycle1) url(../../img/main/recycle01.png) no-repeat
+    50% 50%;
+  background-size: 5rem;
+}
+.recycle-step-box1 .recycle-step-list li:nth-child(2) .ico {
+  border: #fff;
+  background: var(--main-recycle2) url(../../img/main/recycle02.png) no-repeat
+    50% 50%;
+  background-size: 5rem;
+}
+.recycle-step-box1 .recycle-step-list li:nth-child(3) .ico {
+  stroke: #fff;
+  background: var(--main-recycle3) url(../../img/main/recycle03.png) no-repeat
+    50% 50%;
+  background-size: 5rem;
+}
+
+.recycle-step-box1 .recycle-step-list li:nth-child(4) .ico {
+  stroke: #fff;
+  background: var(--main-recycle4) url(../../img/main/recycle04.png) no-repeat
+    50% 50%;
+  background-size: 5rem;
+}
+
+.arr-area {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 1rem;
+}
+
+.arr-area .arr {
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 2rem solid #1ba767;
+  border-top: 2rem solid transparent;
+  border-bottom: 2rem solid transparent;
+  border-right: none;
+}
+.arr-area .arr.arr1 {
+  animation: arr1 1s infinite;
+}
+.arr-area .arr.arr2 {
+  animation: arr2 1s 0.15s infinite;
+}
+.arr-area .arr.arr3 {
+  animation: arr3 1s 0.3s infinite;
+}
+
+.recycle-step-box2 {
+  display: inline-flex;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  border: 3rem solid #f2f2f2;
+  background-color: #fff;
+}
+
+.recycle-step-box2 .recycle-arr {
+  display: inline-block;
+  background: url(../../img/main/recycle-step1-arr2.png) no-repeat 50% 50%;
+  width: 30rem;
+  background-size: 28rem;
+  height: 30rem;
   position: absolute;
   top: 0;
   left: 0;
+  animation: recycle 50s infinite;
 }
-
-.recycle-step-inner1 .recycle-step-box .recycle-step-list li:nth-child(1) .ico {
-  stroke: #fff;
-  background: var(--main-recycle1) url(../../img/main/recycle01.png)
-    no-repeat 50% 50%;
-  background-size: 46px 53px;
-}
-.recycle-step-inner1 .recycle-step-box .recycle-step-list li:nth-child(2) .ico {
-  border: #fff;
-  background: var(--main-recycle2) url(../../img/main/recycle02.png)
-    no-repeat 50% 50%;
-  background-size: 46px 53px;
-}
-
-.recycle-step-inner1 .recycle-step-box .recycle-step-list li:nth-child(3) .ico {
-  stroke: #fff;
-  background: var(--main-recycle3) url(../../img/main/recycle03.png)
-    no-repeat 50% 50%;
-  background-size: 46px 53px;
-}
-
-.recycle-step-inner1 .recycle-step-box .recycle-step-list li:nth-child(4) .ico {
-  stroke: #fff;
-  background: var(--main-recycle4) url(../../img/main/recycle04.png) no-repeat 50%
-    50%;
-  background-size: 46px 53px;
-}
-
-/* 텍스트 */
-.recycle-step-inner1 .recycle-step-box .recycle-step-list li .ico-txt {
-  display: inline-block;
-  font-size: 15px;
-  padding-left: 30px;
-}
-
-.recycle-step-inner1 .recycle-step-box .recycle-step-list li:after {
-  content: "";
-  display: inline-block;
-  background: url(../../img/main/recycle_arrow.png) no-repeat 50% 50%;
-  background-size: 30px 15px;
-  width: 30px;
-  height: 15px;
+.recycle-step-box2 .recycle-step-list {
   position: absolute;
-  top: 30px;
-  right: 15px;
-}
-
-.recycle-step-inner1 .recycle-step-box .recycle-step-list li:last-child {
-  width: 90px;
-}
-
-.recycle-step-inner1 .recycle-step-box .recycle-step-list li:last-child:after {
-  display: none;
-}
-
-/* 애니메이션 화살표 */
-
-/* 화살표 */
-.recycle-step-inner1 .arr-area {
-  padding: 0.5rem;
-  flex-basis: 6rem;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-}
-.recycle-step-inner1 .arr-area .arr {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border-left: 22px solid var(--main-geen);
-  border-top: 22px solid transparent;
-  border-bottom: 22px solid transparent;
-}
-
-.recycle-step-inner1 .arr-area .arr.arr1 {
-  animation: arr1 1s infinite;
-}
-.recycle-step-inner1 .arr-area .arr.arr2 {
-  animation: arr2 1s 0.15s infinite;
-}
-.recycle-step-inner1 .arr-area .arr.arr3 {
-  animation: view 1s 0.3s infinite;
-}
-
-/* 자원순환 step box2 */
-.recycle-step1 .recycle-step-inner2 {
-  justify-content: flex-end;
-  position: relative;
-  padding: 45px;
-}
-.recycle-step-inner2 .recycle-step-box {
-  flex-basis: 360px;
-  display: inline-block;
-  width: 360px;
-  height: 360px;
-  border-radius: 50%;
-  border: 32px solid #f2f2f2;
-  background-color: #fff;
-}
-.recycle-step-inner2 .recycle-step-box .recycle-arr {
-  display: inline-block;
-  /* background: url(../images/contents/recycle-step1-arr2.png) no-repeat 50% 50%; */
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -161px 0 0 -159px;
-  animation: cycle1 50s infinite;
-}
-.recycle-step-inner2 .recycle-step-box .recycle-step-list {
-  position: relative;
   width: 100%;
+  display: inline-flex;
   height: 100%;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  /* align-items: center; */
+  /* align-self: center; */
+  justify-content: center;
 }
-.recycle-step-inner2 .recycle-step-box .recycle-step-list li {
+
+.recycle-step-box2 .recycle-step-list li {
   display: inline-block;
-  width: 110px;
-  height: 110px;
+  width: 11rem;
+  height: 11rem;
   border-radius: 50%;
   background-color: #fff;
-  border: 5px solid var(--text-main);
-  box-shadow: 0 5px 5px 0 rgba(50, 50, 50, 0.3);
+  border: 0.5rem solid #1ba767;
+  box-shadow: 0 0.1rem 0.1rem 0 rgba(0, 0, 0, 0.1);
   text-align: center;
-  padding: 70px 0 0;
+  padding: 7rem 0 0;
   position: absolute;
   z-index: 1;
 }
-.recycle-step-inner2 .recycle-step-box .recycle-step-list li:nth-child(1) {
-  background: #fff no-repeat 50% 15px;
-  top: 0;
-  left: 50%;
-  margin: -65px 0 0 -55px;
-  background-size: 32px 46px;
+.recycle-step-box2 .recycle-step-list li:nth-child(1) {
+  background: #fff url(../../img/main/recycle08.png) no-repeat 50% 50%;
+  top: -10%;
+  background-size: 4rem;
+  justify-content: center;
+}
+.recycle-step-box2 .recycle-step-list li:nth-child(2) {
+  justify-self: flex-end;
+  background: #fff url(../../img/main/recycle06.png) no-repeat 50% 50%;
+  right: -10%;
+  top: 30%;
+  background-size: 4rem;
+}
+.recycle-step-box2 .recycle-step-list li:nth-child(3) {
+  background: #fff url(../../img/main/recycle07.png) no-repeat 50% 50%;
+  bottom: -10%;
+  background-size: 4rem;
+}
+.recycle-step-box2 .recycle-step-list li:nth-child(4) {
+  background: #fff url(../../img/main/recycle05.png) no-repeat 50% 50%;
+  top: 30%;
+  left: -10%;
+  background-size: 4rem;
 }
 
-.recycle-step-inner2 .recycle-step-box .recycle-step-list li:nth-child(2) {
-  background: #fff no-repeat 50% 15px;
-  top: 50%;
-  right: 0;
-  margin: -55px -65px 0 0;
-  background-size: 34px 45px;
-}
-
-.recycle-step-inner2 .recycle-step-box .recycle-step-list li:nth-child(3) {
-  background: #fff no-repeat 50% 20px;
-  bottom: 0;
-  left: 50%;
-  margin: 0 0 -65px -55px;
-  background-size: 42px 41px;
-}
-
-.recycle-step-inner2 .recycle-step-box .recycle-step-list li:nth-child(4) {
-  background: #fff no-repeat 50% 20px;
-  top: 50%;
-  left: 0;
-  margin: -55px 0 0 -65px;
-  background-size: 45px 43px;
-}
-
-.recycle-step-inner2 .recycle-step-box .recycle-step-list li .ico-txt {
-  display: inline-block;
-  font-size: 15px;
-  line-height: 1;
-}
-.recycle-step-inner2 .recycle-step-box .txt-area {
-  display: table;
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-}
-.recycle-step1 .recycle-step-inner2 .recycle-step-box .txt-area .txt {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  font-size: 15px;
-  line-height: 1.6;
-  letter-spacing: -0.5px;
-}
-.recycle-step1 .recycle-step-inner2 .recycle-step-box .txt-area .txt strong {
-  display: block;
-  font-size: 19px;
-  font-weight: bold;
-  color: var(--main-geen);/*#018e4e;*/
-}
-/*//애니메이션*/
-@keyframes arr1 {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0.25;
-  }
-}
-@keyframes arr2 {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0.5;
-  }
-}
-@keyframes view {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/* resize */
-
-@media screen and (max-width: 680px) {
-  .recycle-step1 .recycle-step-inner1 {
-    padding: 0 0 54px;
-  }
-  .recycle-step1 .recycle-step-inner1 .recycle-step-box {
-    width: 80vw;
-  }
-  .recycle-step1 .recycle-step-inner1 .recycle-step-box .tit {
-    font-size: 14px;
-    letter-spacing: -0.5px;
-  }
-  .recycle-step1 .recycle-step-inner1 .recycle-step-box .recycle-step-list {
-    padding: 22px 10px 20px;
-  }
-  .recycle-step1 .recycle-step-inner1 .recycle-step-box .recycle-step-list li {
-    width: 125px;
-    padding: 64px 0 0;
-  }
-
-  .recycle-step-inner1 .recycle-step-box .recycle-step-list li:after {
-    top: 23px;
-    right: 17px;
-  }
-
-  .recycle-step-inner1 .recycle-step-box .recycle-step-list li:last-child {
-    width: 60px;
-  }
-  .recycle-step-inner1 .recycle-step-box .recycle-step-list li:nth-child(2) {
-    width: 60px;
-    text-align: center;
-  }
-
-  .recycle-step-inner1 .recycle-step-box .recycle-step-list li:nth-child(3) {
-    margin-top: 15px;
-  }
-
-  .recycle-step-inner1 .recycle-step-box .recycle-step-list li:nth-child(4) {
-    margin-top: 15px;
-  }
-
-  .recycle-step-inner1
-    .recycle-step-box
-    .recycle-step-list
-    li:nth-child(2):after {
-    transform: rotate(135deg);
-    top: 77px;
-    right: 77px;
-  }
-
-  .recycle-step-inner1 .recycle-step-box .recycle-step-list li .ico {
-    width: 60px;
-    height: 60px;
-  }
-
-  .recycle-step-inner1
-    .recycle-step-box
-    .recycle-step-list
-    li:nth-child(1)
-    .ico {
-    background-size: 30px 35px;
-  }
-
-  .recycle-step-inner1
-    .recycle-step-box
-    .recycle-step-list
-    li:nth-child(2)
-    .ico {
-    background-size: 34px 34px;
-  }
-
-  .recycle-step-inner1
-    .recycle-step-box
-    .recycle-step-list
-    li:nth-child(3)
-    .ico {
-    background-size: 27px 34px;
-  }
-
-  .recycle-step-inner1
-    .recycle-step-box
-    .recycle-step-list
-    li:nth-child(4)
-    .ico {
-    background-size: 28px 34px;
-  }
-
-  .recycle-step-inner1 .recycle-step-box .recycle-step-list li .ico-txt {
-    font-size: 12px;
-    padding-left: 20px;
-  }
-  .recycle-step-inner1
-    .recycle-step-box
-    .recycle-step-list
-    li:nth-child(2)
-    .ico-txt {
-    padding-left: 0;
-  }
-  .recycle-step1 .recycle-step-inner1 .arr-area {
-    margin: 0 0 0 -15px;
-  }
-  .recycle-step1 .recycle-step-inner1 .arr-area .arr {
-    border-left: 15px solid transparent;
-    border-top: 15px solid var(--main-geen);
-    border-right: 15px solid transparent;
-  }
-  .recycle-step1 .recycle-step-inner2 {
-    padding: 45px 0;
-  }
-  .recycle-step1 .recycle-step-inner2 .recycle-step-box {
-    width: 260px;
-    height: 260px;
-  }
-  .recycle-step1 .recycle-step-inner2 .recycle-step-box .recycle-arr {
-    width: 214px;
-    height: 214px;
-    background-size: 214px;
-    margin: -109px 0 0 -107px;
-  }
-  .recycle-step1 .recycle-step-inner2 .recycle-step-box .recycle-step-list li {
-    width: 74px;
-    height: 74px;
-    border-width: 3px;
-    padding: 42px 0 0;
-  }
-
-  .recycle-step-inner2 .recycle-step-box .recycle-step-list li:nth-child(1) {
-    background-position: 50% 9px;
-    background-size: 22px 32px;
-    margin: -62px 0 0 -37px;
-  }
-
-  .recycle-step-inner2 .recycle-step-box .recycle-step-list li:nth-child(2) {
-    background-position: 50% 10px;
-    background-size: 24px 32px;
-    margin: -44px -58px 0 0;
-  }
-
-  .recycle-step-inner2 .recycle-step-box .recycle-step-list li:nth-child(3) {
-    background-position: 50% 10px;
-    background-size: 29px 28px;
-    margin: 0 0 -58px -37px;
-  }
-
-  .recycle-step-inner2 .recycle-step-box .recycle-step-list li:nth-child(4) {
-    background-position: 50% 10px;
-    background-size: 32px 30px;
-    margin: -44px 0 0 -58px;
-  }
-
-  .recycle-step-inner2 .recycle-step-box .recycle-step-list li .ico-txt {
-    font-size: 12px;
-  }
-  .recycle-step1 .recycle-step-inner2 .recycle-step-box .txt-area .txt {
-    font-size: 12px;
-    letter-spacing: -0.5px;
-  }
-  .recycle-step1 .recycle-step-inner2 .recycle-step-box .txt-area .txt strong {
-    font-size: 14px;
-  }
-}
-
-/*.recycle-info1-1 {*/
-/*  text-align:center;*/
-/*  display:inline-flex;*/
-/*  flex-direction: column;*/
-/*  justify-content: center;*/
-/*}*/
-/*.recycle-info1-1 .recycle-info-inner{*/
-/*  display:inline-flex;*/
-/*  align-items:center;*/
-/*  justify-content: center;*/
-/*}*/
-.label-year {
-  display: inline-block;
-  color: var(--main-geen);
-  height: 30px;
-  font-size: 14px;
-  line-height: 28px;
-  padding: 0 5px;
-}
-.recycle-info1-1 .recycle-info-inner {
-  padding: 20px 20px 0;
-}
-.recycle-info1-1 .recycle-info-inner::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-.recycle-info1-1 .recycle-info-inner .graph-area {
-  float: left;
-  padding: 2rem 1rem 0;
-}
-.recycle-info1-1 .recycle-info-inner .graph-area .graph-box {
-  background: url(../../img/main/recycle-info1-1-graph.png) no-repeat 50% 50%;
-  width: 484px;
-  height: 303px;
-  padding: 0 0 24px 95px;
-}
-.recycle-info1-1 .recycle-info-inner .graph-area .graph-box .graph-line {
-  display: block;
+.recycle-step-box2 .txt-area {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
 }
-.recycle-info1-1 .recycle-info-inner .graph-area .txt {
+.recycle-step-box2 .txt-area .txt p {
+  font-size: 1.3rem;
+}
+
+.recycle-step-box2 .txt-area .txt strong {
   display: block;
-  font-size: 18px;
-  padding: 30px 0 0;
-  color: var(--text-general);
-}
-.recycle-info1-1 .recycle-info-inner .obj-area {
-  float: right;
-  padding: 0 1rem 0;
-}
-.recycle-info1-1 .recycle-info-inner .obj-area .total-num-box {
-  display: inline-block;
-  padding: 0 1rem;
-}
-.recycle-info1-1 .recycle-info-inner .obj-area .total-num-box.box2 {
-}
-.recycle-info1-1 .recycle-info-inner .obj-area .total-num-box .label {
-  display: block;
-  width: 180px;
-  /*height: 40px;*/
+  font-size: 1.5rem;
   color: var(--text-highlight);
-  border-radius: 20px;
-  background-color: #BFD873;
-  font-size: 1.4rem;
-  font-weight: bold;
-  line-height: 36px;
-  margin-bottom: 10px;
 }
-.recycle-info1-1 .recycle-info-inner .obj-area .total-num-box .num {
-  display: inline-block;
-  padding-left: 20px;
-  letter-spacing: -0.5px;
-  color: var(--text-general);
-}
-.recycle-info1-1 .recycle-info-inner .obj-area .total-num-box .num strong {
-  font-size: 75px;
-  font-weight: 500;
-  line-height: 1;
-}
-.recycle-info1-1 .recycle-info-inner .obj-area .total-num-box .num .txt {
-  display: inline-block;
-  font-size: 20px;
+
+/* 늘어나는 폐기물 */
+.section-fifth .animation-content-inner {
+  display: inline-flex;
+  justify-content: center;
+  animation: center;
   position: relative;
-  top: -3px;
 }
-.recycle-info1-1 .recycle-info-inner .obj-area .obj-box {
-  padding: 20px 0 0;
+.label-year {
+  display: inline-flex;
+  height: 3rem;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  width: 8rem;
+  text-align: center;
+  justify-content: center;
 }
-.recycle-info1-1 .recycle-info-inner .obj-area .obj {
-  display: inline-block;
-  background: url(../../img/main/trashtruck.png) no-repeat;
-  background-size: 400px 200px;
-  width: 400px;
-  height: 200px;
+
+.recycle-step-box3 .graph-area .graph-box {
+  background: url(../../img/main/recycle-info1-1-graph.png) no-repeat 50% 50%;
+  width: 100%;
+  height: 30rem;
+  background-size: 100% 30rem;
+  padding: 0 0 2.5rem 9rem;
 }
-.recycle-info1-1 .recycle-info-inner .obj-area .txt {
+
+.recycle-step-box3 .graph-area .graph-box .graph-line {
   display: block;
-  font-size: 18px;
-  padding: 20px 0 0;
-  color: var(--text-general);
+  width: 100%;
+  height: 100%;
 }
+
+/*.recycle-step-box3 .graph-box {*/
+/*  background: url(../../img/main/recycle-info1-1-graph.png) no-repeat 50% 50%;*/
+/*  width: 30rem;*/
+/*  height: 20rem;*/
+/*  background-size: 30rem 20rem;*/
+/*  padding: 0 0 2.5rem 7rem;*/
+/*}*/
+
+/*.recycle-step-box3 .graph-box .graph-line {*/
+/*  display: block;*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*}*/
 
 /* graph */
 .st0 {
@@ -701,1276 +557,702 @@
 @keyframes lineAni {
   0% {
     stroke-dashoffset: 500;
-    stroke: #BFD873;
+    stroke: #bfd873;
   }
   100% {
     stroke-dashoffset: 0;
-    stroke: #BFD873;
+    stroke: #bfd873;
   }
 }
 
-/* 빠르고 간편한 일회용품 */
-.recycle-info2-1 {
-}
-.recycle-info2-1 .recycle-info-inner {
-}
-.recycle-info2-1 .recycle-info-inner .graph-obj-area {
-  text-align: center;
-}
-.recycle-info2-1 .recycle-info-inner .graph-obj-area .graph-obj-box {
+/* 전국 쓰레기산 */
+.recycle-step-box4 .obj-area .total-num-box {
   display: inline-block;
-  width: 540px;
-  height: 330px;
+  padding: 0 4rem;
+}
+
+.recycle-step-box4 .obj-area .total-num-box .label {
+  display: block;
+  width: 15rem;
+  height: 4rem;
+  border-radius: 2rem;
+  background-color: #c4e663;
+  font-size: 22px;
+  line-height: 3.6rem;
+  margin-bottom: 0.1rem;
+}
+.recycle-step-box4 .obj-area .total-num-box .num {
+  display: inline-block;
+  letter-spacing: -0.5px;
+}
+.obj-area .total-num-box .num strong {
+  font-size: 4.5rem;
+  font-weight: 500;
+  line-height: 1;
+}
+.obj-area .txt,
+.graph-area .txt {
+  display: block;
+  font-size: 1.8rem;
+  padding: 2rem 0 0;
+}
+
+.obj-area .total-num-box .num .txt {
+  display: inline-block;
+  font-size: 2rem;
+  position: relative;
+  top: -0.3rem;
+}
+
+.obj-area .obj-box {
+  padding: 2rem 0 0;
+}
+
+.obj-area .obj {
+  display: inline-block;
+  background: url(../../img/main/trashtruck.png) no-repeat 50% 50%;
+  background-size: 100% 20rem;
+  width: 100%;
+  height: 20rem;
+}
+
+/* 빠르고 간편한 일회용품 */
+.graph-obj-area .graph-obj-box {
+  display: inline-flex;
+  width: 30rem;
+  height: 25rem;
   border-bottom: 1px solid #7f7f7f;
   text-align: center;
   position: relative;
   overflow: hidden;
-  margin-left: 80px;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 3rem;
 }
-.recycle-info2-1
-  .recycle-info-inner
-  .graph-obj-area
-  .graph-obj-box:first-child {
-  margin-left: 0;
+
+.graph-obj-area .graph-obj-box .graph-line-set {
 }
-.recycle-info2-1
-  .recycle-info-inner
-  .graph-obj-area
-  .graph-obj-box
-  .graph-line-set {
-  position: absolute;
-  bottom: -4px;
-  left: 72px;
+
+.graph-obj-area .graph-obj-box .graph-obj {
+  background: url(../../img/main/cup.png) no-repeat 50% 50%;
+  background-size: 8rem 15rem;
+  width: 10rem;
+  height: 15rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
-.recycle-info2-1
-  .recycle-info-inner
-  .graph-obj-area
-  .graph-obj-box
-  .graph-line-set.set2 {
-  left: auto;
-  right: 72px;
-}
-.recycle-info2-1
-  .recycle-info-inner
-  .graph-obj-area
-  .graph-obj-box
-  .graph-line-set
-  .graph-line {
-  display: inline-block;
-  width: 64px;
-  height: 96px;
-  background-color: #a1d4ec;
-  border-radius: 32px 32px 0 0;
-  position: relative;
-}
-.recycle-info2-1
-  .graph-obj-area
-  .graph-obj-box
-  .graph-line-set
-  .graph-line
-  .txt-year {
-  display: inline-block;
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  color: #fff;
-  font-size: 20px;
-  line-height: 50px;
-  position: absolute;
-  top: 5px;
-  left: 50%;
-  margin-left: -27px;
-}
-.recycle-info2-1
-  .recycle-info-inner
-  .graph-obj-area
-  .graph-obj-box
-  .graph-line-set.set2
-  .graph-line {
-  height: 190px;
-  background-color: #41b0e2;
-}
-.recycle-info2-1
-  .recycle-info-inner
-  .graph-obj-area
-  .graph-obj-box
-  .graph-line-set
-  .num {
-  display: block;
-  position: absolute;
-  top: -60px;
-  left: -25px;
-  min-width: 140px;
-  letter-spacing: -1px;
-  color: var(--text-general);
-}
-.recycle-info2-1
-  .recycle-info-inner
-  .graph-obj-area
-  .graph-obj-box
-  .graph-line-set
-  .num
-  strong {
-  font-size: 55px;
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: -1.5px;
-}
-.recycle-info2-1
-  .recycle-info-inner
-  .graph-obj-area
-  .graph-obj-box
-  .graph-line-set
-  .num
-  .txt {
-  display: inline-block;
-  font-size: 17px;
-  position: relative;
-  top: -3px;
-}
-.recycle-info2-1 .recycle-info-inner .graph-obj-area .graph-obj-box .graph-obj {
-  display: inline-block;
-  background: url(../../img/main/cup.png) no-repeat;
-  background-size: 180px 280px;
-  width: 180px;
-  height: 280px;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  margin-left: -75px;
-  padding: 156px 0 0 0;
-}
-.recycle-info2-1
-  .recycle-info-inner
-  .graph-obj-area
-  .graph-obj-box.box2
-  .graph-obj {
-  background-image: url(../../img/main/bag.png);
-  /*width: 162px;*/
-  /*padding-right: 8px;*/
-}
-.recycle-info2-1
-  .recycle-info-inner
-  .graph-obj-area
-  .graph-obj-box
-  .graph-obj
-  .graph-obj-txt {
-  font-size: 26px;
+
+.graph-obj-area .graph-obj-box .graph-obj .graph-obj-txt {
+  font-size: 2rem;
   letter-spacing: -0.5px;
   line-height: 1;
-  color: var(--text-highlight);
 }
-.recycle-info2-1
-  .recycle-info-inner
-  .graph-obj-area
-  .graph-obj-box
-  .graph-obj
-  .graph-obj-txt
-  strong {
+.graph-obj-area .graph-obj-box .graph-obj .graph-obj-txt strong {
   display: block;
 }
 
-.recycle-info2-2 {
+.graph-obj-area .graph-obj-box .graph-line-set.set2 {
+  left: auto;
+  right: 0;
 }
-.recycle-info2-2 .recycle-info-inner {
-  text-align: center;
+
+.graph-obj-area .graph-obj-box .graph-line-set.set2 .graph-line {
+  height: 19rem;
+  background-color: #00a0e9;
 }
-.recycle-info2-2 .recycle-info-inner .recycle-info-box {
+.graph-obj-area .graph-obj-box .graph-line-set .graph-line {
   display: inline-block;
-  width: 300px;
-  height: 420px;
-  border: 1px solid #ccc;
-  background-color: #fff;
-  text-align: center;
+  width: 5rem;
+  height: 8rem;
+  background-color: #7fcff4;
+  border-radius: 3.5rem 3.5rem 0 0;
   position: relative;
-  margin-left: 57px;
 }
-.recycle-info2-2 .recycle-info-inner .recycle-info-box:first-child {
-  margin-left: 0;
-}
-.recycle-info2-2 .recycle-info-inner .recycle-info-box .graph-top-set {
+
+.graph-obj-area .graph-obj-box .graph-line-set .graph-line .txt-year {
+  width: 5rem;
   display: inline-block;
-  width: 100%;
-  padding-top: 80px;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  font-size: 1.5rem;
   position: absolute;
   top: 0;
   left: 0;
 }
-.recycle-info2-2
-  .recycle-info-inner
-  .recycle-info-box
-  .graph-top-set
-  .graph-line {
+
+.graph-obj-area .graph-obj-box .graph-line-set .num {
+  min-width: 10rem;
+}
+
+.graph-obj-area .graph-obj-box .graph-line-set .num strong {
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.graph-obj-area .graph-obj-box .graph-line-set .num .txt {
   display: inline-block;
-  background: url(../../img/main/arrow.png) no-repeat;
-  width: 190px;
-  height: 100px;
-  background-size: 190px 100px;
+  font-size: 1.7rem;
+  position: relative;
+  top: -3px;
 }
-.recycle-info2-2 .recycle-info-inner .recycle-info-box .graph-top-set .num {
-  display: block;
-  position: absolute;
+
+.graph-obj-area .graph-obj-box.box2 .graph-obj {
+  background-image: url(../../img/main/bag.png);
+  width: 10rem;
+}
+
+/* 일회용품 OUT */
+.section-seventh .animation-content-inner {
+  width: 100% !important;
+}
+
+.recycle-step-box6 {
+  display: flex;
   width: 100%;
-  top: 25px;
-  color: var(--text-general);
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
-.recycle-info2-2
-  .recycle-info-inner
-  .recycle-info-box
-  .graph-top-set
-  .num
-  strong {
-  font-size: 50px;
+
+.recycle-step-box6 .recycle-info-box {
+  display: flex;
+  width: 36rem;
+  height: 36rem;
+  border: 0.1rem solid #ccc;
+  background-color: #fff;
+  text-align: center;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.recycle-step-box6 .recycle-info-box .graph-top-set {
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+}
+.recycle-info-box .graph-top-set .graph-line {
+  display: inline-block;
+  background: url(../../img/main/arrow.png) no-repeat 50% 50%;
+  background-size: 19rem 9rem;
+  width: 19rem;
+  height: 8rem;
+  align-self: center;
+  justify-self: flex-start;
+}
+
+.recycle-info-box .graph-top-set .num strong {
+  font-size: 4rem;
   font-weight: 400;
   line-height: 1;
   letter-spacing: -1px;
 }
-.recycle-info2-2
-  .recycle-info-inner
-  .recycle-info-box
-  .graph-top-set
-  .num
-  .txt {
+
+.recycle-info-box .graph-top-set .num .txt {
   display: inline-block;
-  font-size: 20px;
+  font-size: 2rem;
   position: relative;
   top: -3px;
 }
-.recycle-info2-2 .recycle-info-inner .recycle-info-box .graph-obj-box {
-  display: inline-block;
-  width: 270px;
-  height: 335px;
+
+.recycle-info-box .graph-obj-box {
+  display: inline-flex;
+  width: 27rem;
+  height: 28rem;
   border-bottom: 1px solid #7f7f7f;
   text-align: center;
   position: relative;
   overflow: hidden;
+  justify-content: space-around;
+  align-items: flex-end;
 }
-.recycle-info2-2 .recycle-info-inner .recycle-info-box .graph-line-set {
-  position: absolute;
-  bottom: -4px;
-  left: 17px;
+
+.recycle-info-box .graph-obj-box .graph-line-set {
+  display: flex;
+  flex-direction: column;
 }
-.recycle-info2-2 .recycle-info-inner .recycle-info-box .graph-line-set.set2 {
-  left: auto;
-  right: 17px;
-}
-.recycle-info2-2
-  .recycle-info-inner
-  .recycle-info-box
-  .graph-line-set
-  .graph-line {
-  display: inline-block;
-  width: 48px;
-  height: 180px;
-  background-color: #a1d4ec;
-  border-radius: 24px 24px 0 0;
+
+.recycle-info-box .graph-line-set .graph-line {
+  display: inline-flex;
+  width: 4.8rem;
+  height: 18rem;
+  background-color: #7fcff4;
+  border-radius: 2.4rem 2.4rem 0 0;
   position: relative;
+  justify-content: center;
 }
-.recycle-info2-2
-  .recycle-info-inner
-  .recycle-info-box
-  .graph-line-set
-  .graph-line
-  .txt-year {
+
+.recycle-info-box .graph-line-set .graph-line .txt-year {
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
-  color: #fff;
-  font-size: 15px;
-  line-height: 40px;
-  position: absolute;
-  top: 5px;
-  left: 50%;
-  margin-left: -20px;
+  background-color: #fff;
+  font-size: 1.2rem;
+  line-height: 4rem;
+  margin-top: 0.5rem;
 }
-.recycle-info2-2
-  .recycle-info-inner
-  .recycle-info-box
-  .graph-line-set.set2
-  .graph-line {
-  height: 90px;
-  background-color: #41b0e2;
-}
-.recycle-info2-2 .recycle-info-inner .recycle-info-box .graph-line-set .num {
-  display: block;
-  position: absolute;
-  top: -33px;
-  left: -20px;
-  min-width: 100px;
-  letter-spacing: -1px;
-  color: var(--text-general);
-}
-.recycle-info2-2
-  .recycle-info-inner
-  .recycle-info-box
-  .graph-line-set
-  .num
-  strong {
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: -1px;
-}
-.recycle-info2-2
-  .recycle-info-inner
-  .recycle-info-box
-  .graph-line-set
-  .num
-  .txt {
-  display: inline-block;
-  font-size: 12px;
-  position: relative;
-  top: -3px;
-}
-.recycle-info2-2 .recycle-info-inner .recycle-info-box .graph-obj {
-  display: inline-block;
-  background: url(../../img/main/cup.png) no-repeat;
-  background-size: 90px 150px;
-  width: 90px;
-  height: 150px;
+
+/*.recycle-info-box .graph-line-set .num {*/
+/*  display: block;*/
+/*  position: absolute;*/
+/*  top: -33px;*/
+/*  left: -20px;*/
+/*  min-width: 100px;*/
+/*  letter-spacing: -1px;*/
+/*}*/
+
+.recycle-info-box .graph-obj {
+  display: inline-flex;
+  background: url(../../img/main/cup.png) no-repeat 50% 100%;
+  width: 10rem;
+  height: 15rem;
+  background-size: 10rem 15rem;
   position: absolute;
   bottom: 0;
-  left: 50%;
-  margin-left: -43px;
-  padding: 80px 0 0 0;
+  justify-content: center;
+  align-items: center;
 }
-.recycle-info2-2 .recycle-info-inner .recycle-info-box.box2 .graph-obj {
+
+.recycle-info-box.box2 .graph-obj {
   background-image: url(../../img/main/bag.png);
   /*width: 98px;
   background-size: 98px;*/
   padding-right: 0;
 }
-.recycle-info2-2
-  .recycle-info-inner
-  .recycle-info-box
-  .graph-obj
-  .graph-obj-txt {
+
+.recycle-info-box .graph-obj .graph-obj-txt {
   display: inline-block;
-  width: 42px;
-  height: 42px;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
-  background-color: #5b9955;
-  font-size: 16px;
+  background-color: #ff4e00;
+  font-size: 1.6rem;
   font-weight: 700;
-  line-height: 40px;
-  letter-spacing: -0.5px;
+  line-height: 4rem;
   color: #fff;
 }
-.recycle-info2-2 .recycle-info-inner .recycle-info-box .txt-box {
-  padding: 8px 0 0;
+.recycle-info-box .graph-line-set.set2 {
+  left: auto;
+  right: 17px;
 }
-.recycle-info2-2 .recycle-info-inner .recycle-info-box .txt-box .txt {
-  color: var(--text-general);
+.graph-line {
+  align-self: flex-start;
 }
-.recycle-info2-2 .recycle-info-inner .recycle-info-box .txt-box .txt strong {
+.set2 .graph-line {
+  align-self: flex-end;
+}
+
+.recycle-info-box .txt-box {
+  padding: 0.8rem 0 0;
+}
+
+.recycle-info-box .txt-box .txt strong {
   display: block;
-  font-size: 17px;
+  font-size: 1.7rem;
   font-weight: 500;
   line-height: 1;
 }
-.recycle-info2-2 .recycle-info-inner .recycle-info-box .txt-box .txt .label {
+
+.recycle-info-box .txt-box .txt .label {
   display: inline-block;
-  font-size: 15px;
-  padding: 0 10px;
-  background-color: var(--text-main);
-  color: white;
-  border-radius: 20px;
-  margin-top: 7px;
+  font-size: 1.5rem;
+  padding: 0 1rem;
+  background-color: #ffdfb1;
+  border-radius: 2rem;
+  margin-top: 0.7rem;
 }
-.recycle-info2-2 .recycle-info-inner .recycle-info-box .txt-top-box {
+
+.recycle-info-box .graph-line-set.set2 .graph-line {
+  height: 9rem;
+  background-color: #00a0e9;
+}
+
+/* 깔끔함 포장 박스*/
+.recycle-info-box .txt-top-box {
   display: block;
   width: 100%;
-  letter-spacing: -0.5px;
   position: absolute;
   top: 0;
   left: 0;
-  padding: 37px 0 0;
-  color: var(--text-general);
+  padding-top: 1rem;
 }
-.recycle-info2-2 .recycle-info-inner .recycle-info-box .txt-top-box .txt {
-  font-size: 22px;
+
+.recycle-info-box .txt-top-box .txt {
+  font-size: 2rem;
   line-height: 1;
 }
-.recycle-info2-2 .recycle-info-inner .recycle-info-box .txt-top-box .txt-em {
+
+.recycle-info-box .txt-top-box .txt-em {
   display: block;
-  font-size: 38px;
+  font-size: 3rem;
   line-height: 1;
-  padding: 10px 0 0;
+  padding: 0.1rem 0 0;
 }
-.recycle-info2-2
-  .recycle-info-inner
-  .recycle-info-box
-  .txt-top-box
-  .txt-em
-  strong {
+
+.recycle-info-box .txt-top-box .txt-em strong {
   font-weight: 700;
 }
-.recycle-info2-2 .recycle-info-inner .recycle-info-box .obj-box {
-  display: inline-block;
-  width: 270px;
-  height: 335px;
+
+.recycle-info-box .obj-box {
+  display: inline-flex;
+  width: 27rem;
+  height: 28rem;
   text-align: center;
   position: relative;
   overflow: hidden;
+  justify-content: center;
+  align-items: center;
 }
-.recycle-info2-2 .recycle-info-inner .recycle-info-box .obj {
-  display: inline-block;
-  background: url(../../img/main/trashbox.png) no-repeat 50% 100%;
-  background-size: 200px 184px;
-  width: 200px;
-  height: 184px;
+
+.recycle-info-box .obj {
+  display: inline-flex;
+  background: url(../../img/main/recyclebox.png) no-repeat 50% 100%;
+  background-size: 20rem 18rem;
+  width: 20rem;
+  height: 18rem;
   position: absolute;
   bottom: 2px;
-  left: 50%;
-  margin-left: -100px;
-  padding: 105px 0 0;
+  justify-content: center;
+  align-items: center;
 }
-.recycle-info2-2 .recycle-info-inner .recycle-info-box .obj .obj-txt {
+.recycle-info-box .obj .obj-txt {
   display: inline-block;
-  width: 42px;
-  height: 42px;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
-  background-color: #5b9955;
-  font-size: 16px;
+  background-color: #ff4e00;
+  font-size: 1.6rem;
   font-weight: 700;
-  line-height: 40px;
-  letter-spacing: -0.5px;
+  line-height: 4rem;
   color: #fff;
 }
 
+/* 문의하기 */
+.question-intro {
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+}
+
+.question-card {
+  width: 70rem;
+  height: 70rem;
+  font-size: 1.2rem;
+  border-radius: 2rem;
+  border: none !important;
+}
+
+.question-card .card-title {
+  text-align: center;
+  margin: 1.5rem 0;
+  color: #4e7948;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 0.3rem;
+}
+.question-card .form-group {
+  justify-content: start;
+  display: flex;
+  flex-direction: column;
+}
+.question-card .form-group label {
+  text-align: left;
+}
+
+.question-card .card-title {
+  text-align: center;
+  margin: 1.5rem 0;
+  color: #4e7948;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 0.3rem;
+}
+
 /* resize */
-@media screen and (max-width: 1200px) {
-  .intro {
-    padding: 0 50px;
+@media (min-width: 991px) and (max-width: 1070px) {
+  /* 늘어나는 폐기물물*/
+  .recycle-step-box3 {
+    width: 40rem;
   }
 
-  .intro-main {
-    width: 100%;
-    padding: 0 30px;
+  .recycle-step-box4 .obj-area .total-num-box {
+    padding: 0 2rem;
   }
 
-  .intro .main_content {
-    padding: 0 30px;
+  .obj-area .obj {
+    background-size: 40rem 20rem;
+    width: 40rem;
+    height: 20rem;
   }
-  .recycle-info1-1 .label-year {
-    font-size: 13px;
-    height: 26px;
-    line-height: 24px;
-  }
-
-  .recycle-info1-1 .recycle-info-inner {
-    padding: 20px 60px 0;
-  }
-
-  .recycle-info1-1 .recycle-info-inner .graph-area .graph-box {
-    display: inline-block;
-    width: 338px;
-    height: 212px;
-    background-size: 338px 212px;
-    padding: 0 0 17px 65px;
+}
+@media screen and (max-width: 1070px) {
+  /* 일회용품 out */
+  .recycle-step-box6 .recycle-info-box {
+    width: 27rem;
+    height: 27rem;
   }
 
-  .recycle-info1-1 .recycle-info-inner .graph-area .txt {
-    font-size: 15px;
-    padding: 17px 0 0;
-    color: var(--text-general);
+  .recycle-info-box .graph-obj-box {
+    width: 23rem;
+    height: 19rem;
   }
 
-  .recycle-info1-1 .recycle-info-inner .obj-area .total-num-box {
-    padding: 10px 10px 0;
+  .recycle-info-box .graph-line-set .graph-line {
+    height: 12rem;
   }
 
-  .recycle-info1-1 .recycle-info-inner .obj-area .total-num-box .label {
-    width: 120px;
-    height: 28px;
-    line-height: 26px;
-    font-size: 16px;
+  .recycle-info-box .graph-line-set.set2 .graph-line {
+    height: 7rem;
   }
 
-  .recycle-info1-1 .recycle-info-inner .obj-area .total-num-box .num strong {
-    font-size: 46px;
+  .recycle-info-box .graph-obj {
+    width: 6rem;
+    height: 8rem;
+    background-size: 6rem 8rem;
   }
 
-  .recycle-info1-1 .recycle-info-inner .obj-area .total-num-box .num .txt {
-    font-size: 15px;
+  .recycle-info-box .graph-top-set .num strong {
+    font-size: 3.2rem;
+    font-weight: 500;
+  }
+  .recycle-info-box .graph-top-set .num .txt {
+    font-size: 1.5rem;
+  }
+  .recycle-info-box .graph-top-set .graph-line {
+    background-size: 18rem 5.8rem;
+    width: 18rem;
+    height: 4rem;
+  }
+  .recycle-info-box .graph-line-set .num strong {
+    font-size: 2rem !important;
+    font-weight: 500 !important;
+  }
+  .recycle-info-box .obj-box {
+    height: 19rem;
+  }
+  .recycle-info-box .obj {
+    background-size: 20rem 13rem;
+    width: 20rem;
+    height: 13rem;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  /* 자원순환*/
+  .recycle-step-box2 {
+    width: 27rem;
+    height: 27rem;
+  }
+  .recycle-step-box2 .recycle-arr {
+    width: 27rem;
+    height: 27rem;
+    background-size: 25rem;
+  }
+  .recycle-step-box2 .recycle-step-list li {
+    width: 10rem;
+    height: 10rem;
   }
 
-  .recycle-info1-1 .recycle-info-inner .obj-area .obj {
-    width: 292px;
-    height: 113px;
-    background-size: 292px 113px;
+  .recycle-step-box2 .recycle-step-list li:nth-child(2) {
+    right: -15%;
   }
+  .recycle-step-box2 .recycle-step-list li:nth-child(4) {
+    left: -15%;
+  }
+  .animation-content-inner .recycle-step-box1 {
+    width: 41rem;
+  }
+  .recycle-step-box1 .recycle-step-list .list-content {
+    height: 8rem;
+  }
+  .recycle-step-box1 .recycle-step-list .list-content .ico {
+    width: 6rem;
+    height: 6rem;
+  }
+  .recycle-step-box1 .recycle-step-list li:nth-child(1) .ico {
+    background-size: 4rem;
+  }
+  .recycle-step-box1 .recycle-step-list li:nth-child(2) .ico {
+    background-size: 4rem;
+  }
+  .recycle-step-box1 .recycle-step-list li:nth-child(3) .ico {
+    background-size: 4rem;
+  }
+  .recycle-step-box1 .recycle-step-list li:nth-child(4) .ico {
+    background-size: 4rem;
+  }
+  .recycle-arrow .arrow-ico {
+    background-size: 2rem 1rem;
+    width: 2rem;
+    height: 2rem;
+  }
+}
 
-  .recycle-info1-1 .recycle-info-inner .obj-area .txt {
-    font-size: 15px;
-    padding: 5px 0 0;
+@media screen and (max-width: 991px) {
+  .main-auto {
+    height: auto !important;
   }
-
-  .recycle-info2-1 .recycle-info-inner .graph-obj-area .graph-obj-box {
-    width: 320px;
-    height: 250px;
-    margin-left: 30px;
-  }
-
-  .recycle-info2-1
-    .recycle-info-inner
-    .graph-obj-area
-    .graph-obj-box
-    .graph-line-set {
-    left: 30px;
-    bottom: -5px;
-  }
-
-  .recycle-info2-1
-    .recycle-info-inner
-    .graph-obj-area
-    .graph-obj-box
-    .graph-line-set.set2 {
-    right: 30px;
-  }
-
-  .recycle-info2-1
-    .recycle-info-inner
-    .graph-obj-area
-    .graph-obj-box
-    .graph-line-set
-    .graph-line {
-    width: 45px;
-    height: 67px;
-  }
-
-  .recycle-info2-1
-    .recycle-info-inner
-    .graph-obj-area
-    .graph-obj-box
-    .graph-line-set.set2
-    .graph-line {
-    height: 133px;
-  }
-
-  .recycle-info2-1
-    .recycle-info-inner
-    .graph-obj-area
-    .graph-obj-box
-    .graph-line-set
-    .graph-line
-    .txt-year {
-    width: 38px;
-    height: 38px;
-    margin-left: -19px;
-    font-size: 14px;
-    line-height: 34px;
-  }
-
-  .recycle-info2-1
-    .recycle-info-inner
-    .graph-obj-area
-    .graph-obj-box
-    .graph-line-set
-    .num {
-    min-width: 110px;
-    top: -41px;
-    color: var(--text-general);
-  }
-
-  .recycle-info2-1
-    .recycle-info-inner
-    .graph-obj-area
-    .graph-obj-box
-    .graph-line-set
-    .num
-    strong {
-    font-size: 35px;
-  }
-
-  .recycle-info2-1
-    .recycle-info-inner
-    .graph-obj-area
-    .graph-obj-box
-    .graph-line-set
-    .num
-    .txt {
-    font-size: 14px;
-  }
-
-  .recycle-info2-1
-    .recycle-info-inner
-    .graph-obj-area
-    .graph-obj-box
-    .graph-obj {
-    width: 128px;
-    height: 193px;
-    background-size: 128px 193px;
-    padding: 110px 20px 0 0;
-    margin-left: -54px;
-  }
-
-  .recycle-info2-1
-    .recycle-info-inner
-    .graph-obj-area
-    .graph-obj-box.box2
-    .graph-obj {
-    width: 120px;
-    background-size: 120px auto;
-    padding-right: 2px;
-    margin-left: -57px;
-  }
-
-  .recycle-info2-1
-    .recycle-info-inner
-    .graph-obj-area
-    .graph-obj-box
-    .graph-obj
-    .graph-obj-txt {
-    font-size: 18px;
-  }
-
-  .recycle-info2-2 .recycle-info-inner .recycle-info-box {
-    width: 220px;
-    height: 290px;
-    margin-left: 10px;
-  }
-
-  .recycle-info2-2 .recycle-info-inner .recycle-info-box .graph-top-set .num {
-    color: var(--text-general);
-    top: 15px;
-  }
-
-  .recycle-info2-2
-    .recycle-info-inner
-    .recycle-info-box
-    .graph-top-set
-    .num
-    strong {
-    font-size: 30px;
-  }
-
-  .recycle-info2-2
-    .recycle-info-inner
-    .recycle-info-box
-    .graph-top-set
-    .num
-    .txt {
-    font-size: 14px;
-  }
-
-  .recycle-info2-2 .recycle-info-inner .recycle-info-box .graph-top-set {
-    padding-top: 50px;
-  }
-
-  .recycle-info2-2
-    .recycle-info-inner
-    .recycle-info-box
-    .graph-top-set
-    .graph-line {
-    width: 117px;
-    height: 60px;
-    background-size: 117px 60px;
-  }
-
-  .recycle-info2-2 .recycle-info-inner .recycle-info-box .graph-obj-box {
-    width: 165px;
-    height: 215px;
-  }
-
-  .recycle-info2-2 .recycle-info-inner .recycle-info-box .graph-line-set {
-    bottom: -5px;
-    left: 12px;
-  }
-
-  .recycle-info2-2
-    .recycle-info-inner
-    .recycle-info-box
-    .graph-line-set
-    .graph-line {
-    width: 29px;
-    height: 110px;
-  }
-
-  .recycle-info2-2 .recycle-info-inner .recycle-info-box .graph-line-set.set2 {
-    right: 12px;
-  }
-
-  .recycle-info2-2
-    .recycle-info-inner
-    .recycle-info-box
-    .graph-line-set.set2
-    .graph-line {
-    height: 55px;
-  }
-
-  .recycle-info2-2
-    .recycle-info-inner
-    .recycle-info-box
-    .graph-line-set
-    .graph-line
-    .txt-year {
-    width: 24px;
-    height: 24px;
-    font-size: 9px;
-    line-height: 23px;
-    margin-left: -12px;
-    top: 3px;
-  }
-
-  .recycle-info2-2 .recycle-info-inner .recycle-info-box .graph-line-set .num {
-    color: var(--text-general);
-    min-width: 75px;
-    top: -20px;
-  }
-
-  .recycle-info2-2
-    .recycle-info-inner
-    .recycle-info-box
-    .graph-line-set
-    .num
-    strong {
-    font-size: 18px;
-  }
-
-  .recycle-info2-2
-    .recycle-info-inner
-    .recycle-info-box
-    .graph-line-set
-    .num
-    .txt {
-    font-size: 8px;
-  }
-
-  .recycle-info2-2 .recycle-info-inner .recycle-info-box .graph-obj {
-    width: 64px;
-    height: 92px;
-    background-size: 64px 92px;
-    margin-left: -27px;
-    padding: 50px 10px 0 0;
-  }
-
-  .recycle-info2-2 .recycle-info-inner .recycle-info-box.box2 .graph-obj {
-    width: 60px;
-    background-size: 60px auto;
-    margin-left: -30px;
-  }
-
-  .recycle-info2-2
-    .recycle-info-inner
-    .recycle-info-box
-    .graph-obj
-    .graph-obj-txt {
-    width: 26px;
-    height: 26px;
-    line-height: 24px;
-    font-size: 10px;
-  }
-
-  .recycle-info2-2 .recycle-info-inner .recycle-info-box .txt-box {
-    padding: 6px 0 0;
-  }
-
-  .recycle-info2-2 .recycle-info-inner .recycle-info-box .txt-box .txt strong {
-    font-size: 15px;
-  }
-
-  .recycle-info2-2 .recycle-info-inner .recycle-info-box .txt-box .txt .label {
-    font-size: 13px;
-  }
-
-  .recycle-info2-2 .recycle-info-inner .recycle-info-box .txt-top-box {
-    padding: 20px 0 0;
-  }
-
-  .recycle-info2-2 .recycle-info-inner .recycle-info-box .txt-top-box .txt {
-    font-size: 14px;
-  }
-
-  .recycle-info2-2 .recycle-info-inner .recycle-info-box .txt-top-box .txt-em {
-    font-size: 25px;
-    padding: 5px 0 0;
-  }
-
-  .recycle-info2-2 .recycle-info-inner .recycle-info-box .obj-box {
-    width: 100%;
-    height: 215px;
-  }
-
-  .recycle-info2-2 .recycle-info-inner .recycle-info-box .obj {
-    width: 148px;
-    background-size: 100px auto;
-    margin-left: -72px;
-    padding: 142px 0 0;
-  }
-
-  .recycle-info2-2 .recycle-info-inner .recycle-info-box .obj .obj-txt {
-    width: 26px;
-    height: 26px;
-    line-height: 24px;
-    font-size: 10px;
-  }
-  .recycle-step1 {
+}
+@media screen and (max-width: 979px) {
+  .animation-content {
     flex-direction: column;
-    text-align: center;
   }
-  .recycle-step1 .recycle-step-inner1 {
-    flex-basis: auto;
+  .arr-area {
     flex-direction: column;
-    flex-wrap: wrap;
-    float: none;
+    justify-content: center;
+    margin: 1rem 0;
   }
-  .recycle-step1 .recycle-step-inner1 .arr-area {
-    flex-direction: column;
-    margin: 0 0 0 -22px;
-  }
-  .recycle-step1 .recycle-step-inner1 .arr-area .arr {
-    display: block;
-    width: 0;
-    height: 0;
-    border-left: 20px solid transparent;
-    border-top: 20px solid var(--main-geen);
-    border-right: 20px solid transparent;
+
+  .arr-area .arr {
+    border-left: 2rem solid transparent;
+    border-top: 2rem solid #1ba767;
+    border-right: 2rem solid transparent;
     border-bottom: none;
   }
-  .recycle-step1 .recycle-step-inner1 .recycle-step-box {
-    width: auto;
-  }
-  .recycle-step1 .recycle-step-inner1 .recycle-step-box .tit {
-    font-size: 15px;
-    padding: 10px 15px 12px;
-  }
-  .recycle-step1 .recycle-step-inner1 .recycle-step-box .recycle-step-list {
-    padding: 22px 30px 16px;
-  }
-  .recycle-step1 .recycle-step-inner1 .recycle-step-box .recycle-step-list li {
-    width: 110px;
-    padding: 75px 0 0;
-  }
-  .recycle-step-inner1 .recycle-step-box .recycle-step-list li:after {
-    top: 30px;
-    right: 4px;
-  }
-  .recycle-step-inner1 .recycle-step-box .recycle-step-list li:last-child {
-    width: 70px;
-  }
-  .recycle-step-inner1 .recycle-step-box .recycle-step-list li .ico {
-    width: 70px;
-    height: 70px;
-  }
-  .recycle-step1
-    .recycle-step-inner1
-    .recycle-step-box
-    .recycle-step-list
-    li:nth-child(1)
-    .ico {
-    background-size: 36px 42px;
-  }
-  .recycle-step-inner1
-    .recycle-step-box
-    .recycle-step-list
-    li:nth-child(2)
-    .ico {
-    background-size: 40px 40px;
-  }
-  .recycle-step-inner1
-    .recycle-step-box
-    .recycle-step-list
-    li:nth-child(3)
-    .ico {
-    background-size: 32px 41px;
-  }
-
-  .recycle-step-inner1
-    .recycle-step-box
-    .recycle-step-list
-    li:nth-child(4)
-    .ico {
-    background-size: 33px 40px;
-  }
-
-  .recycle-step-inner1 .recycle-step-box .recycle-step-list li .ico-txt {
-    font-size: 13px;
-    padding-left: 24px;
-  }
-  .recycle-step1 .recycle-step-inner2 {
-    float: none;
-  }
-  .recycle-step1 .recycle-step-inner2 {
-    padding: 45px 0;
-  }
-  .recycle-step1 .recycle-step-inner2 .recycle-step-box {
-    width: 300px;
-    height: 300px;
-  }
-  .recycle-step1 .recycle-step-inner2 .recycle-step-box .recycle-arr {
-    width: 230px;
-    height: 230px;
-    background-size: 230px;
-    margin: -116px 0 0 -115px;
-  }
-  .recycle-step1 .recycle-step-inner2 .recycle-step-box .recycle-step-list li {
-    width: 84px;
-    height: 84px;
-    border-width: 4px;
-    padding: 50px 0 0;
-  }
-
-  .recycle-step-inner2 .recycle-step-box .recycle-step-list li:nth-child(1) {
-    background-position: 50% 10px;
-    background-size: 25px 36px;
-    margin-left: -42px;
-  }
-
-  .recycle-step-inner2 .recycle-step-box .recycle-step-list li:nth-child(2) {
-    background-position: 50% 10px;
-    background-size: 27px 36px;
-  }
-
-  .recycle-step-inner2 .recycle-step-box .recycle-step-list li:nth-child(3) {
-    background-position: 50% 13px;
-    background-size: 33px 32px;
-    margin-left: -42px;
-  }
-
-  .recycle-step-inner2 .recycle-step-box .recycle-step-list li:nth-child(4) {
-    background-position: 50% 13px;
-    background-size: 36px 34px;
-  }
-
-  .recycle-step-inner2 .recycle-step-box .recycle-step-list li .ico-txt {
-    font-size: 13px;
-  }
-  .recycle-step1 .recycle-step-inner2 .recycle-step-box .txt-area .txt {
-    font-size: 13px;
-    letter-spacing: -0.5px;
-  }
-  .recycle-step1 .recycle-step-inner2 .recycle-step-box .txt-area .txt strong {
-    font-size: 16px;
-  }
 }
 
-@media screen and (max-width: 767px) {
-  .recycle-info1-1 .recycle-info-inner .graph-area .graph-box {
-    width: 270px;
-    height: 169px;
-    background-size: 270px 169px;
-    padding: 0 0 15px 50px;
-  }
-  .recycle-info1-1 .recycle-info-inner .graph-area .txt {
-    padding: 16px 0 0;
-  }
-  .recycle-info1-1 .recycle-info-inner .obj-area .obj {
-    width: 233px;
-    height: 90px;
-    background-size: 233px 90px;
-  }
-  .recycle-info1-1 .recycle-info-inner .obj-area .total-num-box {
-    padding: 5px 10px 0;
-  }
-  .recycle-info1-1 .recycle-info-inner .obj-area .total-num-box .label {
-    width: 110px;
-    height: 25px;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: -0.5px;
-    margin-left: 5px;
-  }
-  .recycle-info1-1 .recycle-info-inner .obj-area .total-num-box .num strong {
-    font-size: 40px;
-  }
-  .recycle-info1-1 .recycle-info-inner .obj-area .obj-box {
-    padding: 15px 0 0;
-  }
-  .recycle-info2-1 .recycle-info-inner .graph-obj-area .graph-obj-box {
-    width: 270px;
-    height: 200px;
-  }
-  .recycle-info2-1
-    .recycle-info-inner
-    .graph-obj-area
-    .graph-obj-box
-    .graph-line-set {
-    left: 24px;
-  }
-  .recycle-info2-1
-    .recycle-info-inner
-    .graph-obj-area
-    .graph-obj-box
-    .graph-line-set.set2 {
-    right: 24px;
-  }
-  .recycle-info2-1
-    .recycle-info-inner
-    .graph-obj-area
-    .graph-obj-box
-    .graph-line-set
-    .graph-line {
-    width: 40px;
-  }
-  .recycle-info2-1
-    .recycle-info-inner
-    .graph-obj-area
-    .graph-obj-box
-    .graph-line-set
-    .graph-line
-    .txt-year {
-    width: 34px;
-    height: 34px;
-    font-size: 12px;
-    line-height: 32px;
-    margin-left: -17px;
-    letter-spacing: -0.5px;
-    top: 3px;
-  }
-  .recycle-info2-1
-    .recycle-info-inner
-    .graph-obj-area
-    .graph-obj-box
-    .graph-line-set
-    .num {
-    color: var(--text-general);
-    width: 100px;
-    top: -32px;
-  }
-  .recycle-info2-1
-    .recycle-info-inner
-    .graph-obj-area
-    .graph-obj-box
-    .graph-line-set
-    .num
-    strong {
-    font-size: 28px;
-  }
-  .recycle-info2-1
-    .recycle-info-inner
-    .graph-obj-area
-    .graph-obj-box
-    .graph-line-set
-    .num
-    .txt {
-    font-size: 12px;
-  }
-  .recycle-info2-1
-    .recycle-info-inner
-    .graph-obj-area
-    .graph-obj-box
-    .graph-obj {
-    width: 115px;
-    height: 175px;
-    background-size: 115px 175px;
-    margin-left: -46px;
-  }
-  .recycle-info2-1
-    .recycle-info-inner
-    .graph-obj-area
-    .graph-obj-box.box2
-    .graph-obj {
-    width: 107px;
-    background-size: 107px auto;
-    margin-left: -54px;
-  }
-  .recycle-info2-1
-    .recycle-info-inner
-    .graph-obj-area
-    .graph-obj-box
-    .graph-obj
-    .graph-obj-txt {
-    font-size: 16px;
-  }
-  .recycle-info2-2 .recycle-info-inner .recycle-info-box {
-    width: 200px;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  .intro {
-    padding: 0 30px;
-  }
-  .recycle-info1-1 .label-year {
-    font-size: 12px;
-    height: 23px;
-    line-height: 21px;
-  }
-
-  .recycle-info1-1 .recycle-info-inner .graph-area {
-    float: none;
-  }
-
-  .recycle-info1-1 .recycle-info-inner .graph-area .txt {
-    font-size: 14px;
-    letter-spacing: -0.5px;
-    padding: 10px 0 20px;
-  }
-
-  .recycle-info1-1 .recycle-info-inner .obj-area {
-    float: none;
-  }
-
-  .recycle-info1-1 .recycle-info-inner .obj-area .txt {
-    font-size: 14px;
-    letter-spacing: -0.5px;
-  }
-
-  .recycle-info2-1 .recycle-info-inner .graph-obj-area .graph-obj-box {
-    width: 240px;
-    height: 180px;
-    margin-left: 0;
-  }
-
-  .recycle-info2-1 .recycle-info-inner .graph-obj-area .graph-obj-box.box2 {
-    height: 190px;
-  }
-
-  .recycle-info2-1
-    .recycle-info-inner
-    .graph-obj-area
-    .graph-obj-box
-    .graph-line-set {
-    left: 25px;
-  }
-
-  .recycle-info2-1
-    .recycle-info-inner
-    .graph-obj-area
-    .graph-obj-box
-    .graph-line-set.set2 {
-    right: 25px;
-  }
-
-  .recycle-info2-1
-    .recycle-info-inner
-    .graph-obj-area
-    .graph-obj-box
-    .graph-line-set
-    .graph-line {
-    width: 32px;
-  }
-
-  .recycle-info2-1
-    .recycle-info-inner
-    .graph-obj-area
-    .graph-obj-box
-    .graph-line-set
-    .graph-line
-    .txt-year {
-    width: 28px;
-    height: 28px;
-    font-size: 11px;
-    line-height: 26px;
-    margin-left: -14px;
-  }
-
-  .recycle-info2-1
-    .recycle-info-inner
-    .graph-obj-area
-    .graph-obj-box
-    .graph-line-set
-    .num {
-    color: var(--text-general);
-    min-width: 95px;
-  }
-
-  .recycle-info2-1
-    .recycle-info-inner
-    .graph-obj-area
-    .graph-obj-box
-    .graph-line-set
-    .num
-    strong {
-    font-size: 26px;
-  }
-
-  .recycle-info2-1
-    .recycle-info-inner
-    .graph-obj-area
-    .graph-obj-box
-    .graph-line-set
-    .num
-    .txt {
-    font-size: 12px;
-  }
-
-  .recycle-info2-1
-    .recycle-info-inner
-    .graph-obj-area
-    .graph-obj-box
-    .graph-obj {
-    width: 92px;
-    height: 140px;
-    background-size: 92px 140px;
-    margin-left: -38px;
-    padding: 80px 17px 0 0;
-  }
-
-  .recycle-info2-1
-    .recycle-info-inner
-    .graph-obj-area
-    .graph-obj-box.box2
-    .graph-obj {
-    width: 85px;
-    background-size: 85px auto;
-    margin-left: -41px;
-  }
-
-  .recycle-info2-1
-    .recycle-info-inner
-    .graph-obj-area
-    .graph-obj-box
-    .graph-obj
-    .graph-obj-txt {
-    font-size: 15px;
-  }
-
-  .recycle-info2-2 .recycle-info-inner .recycle-info-box {
-    width: 220px;
-    height: 258px;
-    margin: 2px 0;
-  }
-
-  .recycle-info2-2 .recycle-info-inner .recycle-info-box .graph-top-set {
-    padding-top: 40px;
-  }
-
-  .recycle-info2-2 .recycle-info-inner .recycle-info-box .graph-top-set .num {
-    color: var(--text-general);
-    top: 12px;
-  }
-
-  .recycle-info2-2 .recycle-info-inner .recycle-info-box .graph-obj-box,
-  .recycle-info2-2 .recycle-info-inner .recycle-info-box .obj-box {
-    height: 192px;
-  }
-
-  .recycle-info2-2 .recycle-info-inner .recycle-info-box .txt-top-box {
-    padding: 15px 0 0;
-  }
-
-  .recycle-info2-2 .recycle-info-inner .recycle-info-box .txt-top-box .txt-em {
-    font-size: 22px;
-  }
-
-  .recycle-info2-2 .recycle-info-inner .recycle-info-box .txt-box .txt .label {
-    margin-top: 5px;
-    font-size: 12px;
-    letter-spacing: -0.5px;
-  }
-
-  .recycle-info2-2 .recycle-info-inner .recycle-info-box:nth-child(3) .txt-box {
-    padding: 0;
-  }
-}
-
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 680px) {
   #fp-nav {
     display: none;
   }
-}
+  .intro-main {
+    padding: 1rem;
+  }
 
-@media screen and (max-width: 1023px) {
-  .recycle-info1-1 .recycle-info-inner {
-    padding: 20px 20px 0;
+  img.content-img {
+    width: 80vw !important;
+  }
+  img.content-img2 {
+    width: 80% !important;
+    height: 70% !important;
+  }
+  .animation-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .question-card {
+    width: 80vw !important;
+    min-height: 50% !important;
+  }
+
+  .recycle-step-box1,
+  .recycle-step-box3 {
+    width: 80vw !important;
+  }
+
+  .recycle-step-box1 .recycle-step-list .list-content {
+    width: 8rem;
+    height: 8rem;
+  }
+  .recycle-step-box1 .recycle-step-list .list-content .ico {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  /*.arr-area {*/
+  /*  flex-direction: column;*/
+  /*  justify-content: center;*/
+  /*  margin: 1rem 0;*/
+  /*}*/
+
+  /*.arr-area .arr {*/
+  /*  border-left: 2rem solid transparent;*/
+  /*  border-top: 2rem solid #1ba767;*/
+  /*  border-right: 2rem solid transparent;*/
+  /*  border-bottom: none;*/
+  /*}*/
+
+  .recycle-step-box1 .recycle-step-list li:nth-child(1) .ico {
+    background-size: 4rem;
+  }
+  .recycle-step-box1 .recycle-step-list li:nth-child(2) .ico {
+    background-size: 4rem;
+  }
+  .recycle-step-box1 .recycle-step-list li:nth-child(3) .ico {
+    background-size: 4rem;
+  }
+
+  .recycle-step-box1 .recycle-step-list li:nth-child(4) .ico {
+    background-size: 4rem;
   }
 }
-@media screen and (max-width: 767px) {
-  .intro-main,
-  .intro .main_content {
-    padding: 0 15px;
+
+.recycle-info-box .graph-line-set .num strong {
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.recycle-info-box .graph-line-set .num .txt {
+  display: inline-block;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+@media (min-width: 361px) and (max-width: 450px) {
+  /* 지구 현재 시간 */
+  .section-first .intro-title p {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 279px) and (max-width: 360px) {
+  /* 지구 현재 시간 */
+  .section-first .intro-title p {
+    font-size: 3rem;
+  }
+
+  /* 지구의 시간 */
+  .ClassyCountdown-wrapper > div {
+    min-width: 7rem;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  /* 지구의 시간 */
+  .ClassyCountdown-wrapper > div {
+    min-width: 6rem;
+  }
+}
+
+/* animation */
+@keyframes arr1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.25;
+  }
+}
+@keyframes arr2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+@keyframes arr3 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes recycle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
