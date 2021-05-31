@@ -111,3 +111,9 @@ function isOnlyNum(_str) {
     return /^[0-9|]+$/.test(String(_str));
   }
 }
+
+function aosActiveSection(_arr, className) {
+  for (let i = 0; i < _arr.length; i++) {
+    $("." + className + _arr[i] + ".active .aos-init").addClass("aos-animate");
+  }
+}

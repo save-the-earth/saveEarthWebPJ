@@ -10,10 +10,19 @@
 (function ($) {
   const $appBodyEl = $(".app-body");
   const $fullPageEl = $("#fullPage");
-  AOS.init({
-    easing: "ease-out-back",
-    duration: 1500,
-  });
+  const a_anchors = [
+    "first",
+    "second",
+    "third",
+    "forth",
+    "fifth",
+    "sixth",
+    "seventh",
+    "eighth",
+    "last",
+  ];
+  const aosInit = { easing: "ease-out-back", duration: 1500 };
+  AOS.init(aosInit);
 
   $appBodyEl.css("overflow", "hidden");
 
@@ -21,17 +30,7 @@
   $fullPageEl.fullpage({
     // sectionsColor: ["#4BBFC3", "#7BAABE", "whitesmoke", "#000"],
     sectionSelector: ".section",
-    anchors: [
-      "first",
-      "second",
-      "third",
-      "forth",
-      "fifth",
-      "sixth",
-      "seventh",
-      "eighth",
-      "last",
-    ],
+    anchors: a_anchors,
     navigation: false,
     lockAnchors: true,
     verticalCentered: false,
@@ -47,61 +46,19 @@
     autoScrolling: true,
     fixedElements: ".app-header",
     afterResize: function () {
-      AOS.init({
-        easing: "ease-out-back",
-        duration: 1500,
-      });
+      AOS.init(aosInit);
       $(".aos-init").removeClass("aos-animate");
-
-      const a_table = [
-        "first",
-        "second",
-        "third",
-        "forth",
-        "fifth",
-        "sixth",
-        "seventh",
-        "eighth",
-        "last",
-      ]; // duplicated table of anchors name
-
-      for (let i = 0; i < a_table.length; i++) {
-        $(".section3-" + a_table[i] + ".active .aos-init").addClass(
-          "aos-animate"
-        ); // all magic goes here - when page is active, then all elements with AOS will start animate
-      }
+      aosActiveSection(a_anchors, "section3-");
     },
 
     afterRender: function (index, anchorIndex) {
-      AOS.init({
-        easing: "ease-out-back",
-        duration: 1500,
-      }); // AOS initiation
+      AOS.init(aosInit); // AOS initiation
     },
     afterLoad: function (index, anchorIndex) {
-      AOS.init({
-        easing: "ease-out-back",
-        duration: 1500,
-      }); // AOS initiation
+      AOS.init(aosInit);
       $(".aos-init").removeClass("aos-animate");
+      aosActiveSection(a_anchors, "section3-");
 
-      const a_table = [
-        "first",
-        "second",
-        "third",
-        "forth",
-        "fifth",
-        "sixth",
-        "seventh",
-        "eighth",
-        "last",
-      ];
-
-      for (let i = 0; i < a_table.length; i++) {
-        $(".section3-" + a_table[i] + ".active .aos-init").addClass(
-          "aos-animate"
-        );
-      }
       const numSections = document.querySelectorAll(".fp-section").length;
       if (anchorIndex === numSections) {
         $(".scroll-down-btn").addClass("d-none");
@@ -131,7 +88,7 @@
 
   const swiper = new Swiper(".swiper-container", {
     slidesPerView: 1,
-    spaceBetween: 10, //위 slidesPerview 여백
+    spaceBetween: 30, //위 slidesPerview 여백
     loop: true, // 슬라이드 반복 여부
     loopAdditionalSlides: 1, // 슬라이드 반복 시 마지막 슬라이드에서 다음 슬라이드가 보여지지 않는 현상 수정
     centeredSlides: true,
@@ -139,11 +96,9 @@
       delay: 5000, // 시간 설정
       disableOnInteraction: false, // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
     },
-    navigation: {
-      // 버튼 사용자 지정
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+    paginationClickable: true,
+    nextButton: ".swiper-button-next",
+    prevButton: ".swiper-button-prev",
     pagination: {
       el: ".swiper-pagination",
     },

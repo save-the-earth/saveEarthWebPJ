@@ -9,15 +9,16 @@
 (function ($) {
   const $appBodyEl = $(".app-body");
   const $fullPageEl = $("#fullPage");
-  AOS.init({ easing: "ease-out-back", duration: 1500 });
-
+  const a_anchors = ["first", "second", "third", "forth"];
+  const aosInit = { easing: "ease-out-back", duration: 1500 };
+  AOS.init(aosInit);
   $appBodyEl.css("overflow", "hidden");
 
   // 스크롤 설정
   $fullPageEl.fullpage({
     // sectionsColor: ["#4BBFC3", "#7BAABE", "whitesmoke", "#000"],
     sectionSelector: ".section",
-    anchors: ["first", "second", "third", "forth"],
+    anchors: a_anchors,
     navigation: false,
     lockAnchors: true,
     verticalCentered: false,
@@ -32,32 +33,18 @@
     autoScrolling: true,
     fixedElements: ".app-header",
     afterResize: function () {
-      AOS.init({ easing: "ease-out-back", duration: 1500 }); // AOS initiation
+      AOS.init(aosInit); // AOS initiation
       $(".aos-init").removeClass("aos-animate");
-
-      const a_table = ["first", "second", "third", "forth"]; // duplicated table of anchors name
-
-      for (let i = 0; i < a_table.length; i++) {
-        $(".section4-" + a_table[i] + ".active .aos-init").addClass(
-          "aos-animate"
-        ); // all magic goes here - when page is active, then all elements with AOS will start animate
-      }
+      aosActiveSection(a_anchors, "section4-");
     },
 
     afterRender: function (index, anchorIndex) {
-      AOS.init({ easing: "ease-out-back", duration: 1500 }); // AOS initiation
+      AOS.init(aosInit);
     },
     afterLoad: function (index, anchorIndex) {
-      AOS.init({ easing: "ease-out-back", duration: 1500 }); // AOS initiation
+      AOS.init(aosInit); // AOS initiation
       $(".aos-init").removeClass("aos-animate");
-
-      const a_table = ["first", "second", "third", "forth"];
-
-      for (let i = 0; i < a_table.length; i++) {
-        $(".section4-" + a_table[i] + ".active .aos-init").addClass(
-          "aos-animate"
-        );
-      }
+      aosActiveSection(a_anchors, ".section4-");
       const numSections = document.querySelectorAll(".fp-section").length;
       if (anchorIndex === numSections) {
         $(".scroll-down-btn").addClass("d-none");
