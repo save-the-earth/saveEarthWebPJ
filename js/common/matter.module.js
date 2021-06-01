@@ -219,13 +219,12 @@ const removeGroundOnObject = () => {
   // console.log("removeGroundOnObject");
   isDropCreated = false; //떨어지는 객체 중단.
   World.remove(engine.world, ground); //바닥에 있는 객체 모두 clear
-
+  stopAnimation();
   //4초 후 clear 후 재생성
   clearTimeout(reStartTimer);
   reStartTimer = setTimeout(function () {
-    stopAnimation();
     reStartMatter();
-  }, 3000);
+  }, 4000);
 };
 
 const reStartMatter = () => {
@@ -245,7 +244,6 @@ const startMatter = (getStartWave) => {
   getWindowSize();
   initMatter();
   initScreen();
-  //Auto Drop reStart
   isDropCreated = true;
   startAnimation();
 };

@@ -91,8 +91,8 @@
       currentIndex = nextIndex;
 
       if (nextIndex === 3) {
-        $("#mtt_wrap").removeClass("no-wave");
         startMatter("#mtt_wrap");
+        $("#mtt_wrap").removeClass("no-wave");
       }
 
       if (leaveIndex === 3) {
