@@ -9413,8 +9413,11 @@ base-chart.chart {
 
 @media all and (-ms-high-contrast: none) {
   html {
+    /* bug fix */
+    height: -webkit-fill-available;
     display: flex;
     flex-direction: column;
+    height: 100%;
   }
 }
 
@@ -9424,6 +9427,8 @@ app-root {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
 }
 
 .app-header {

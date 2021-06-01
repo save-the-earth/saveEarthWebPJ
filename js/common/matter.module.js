@@ -63,9 +63,6 @@ const initScreen = () => {
   Engine.run(engine); // 렌더 실행
   Render.run(render); // 이벤트 추가
 
-  //animation 실행
-  startAnimation();
-
   //Canvas 클릭 시 객체 생성 이벤트
   render.canvas.addEventListener("click", clickRandomEvent, false);
 };
@@ -226,14 +223,16 @@ const removeGroundOnObject = () => {
   //4초 후 clear 후 재생성
   clearTimeout(reStartTimer);
   reStartTimer = setTimeout(function () {
+    stopAnimation();
     reStartMatter();
-  }, 4000);
+  }, 3000);
 };
 
 const reStartMatter = () => {
   World.clear(engine.world); //클리어
   createWall(); //벽 생성
   isDropCreated = true; //떨어지는 객체 중단.
+  startAnimation();
 };
 
 const clearTimeoutAll = () => {
@@ -242,12 +241,13 @@ const clearTimeoutAll = () => {
   clearTimeout(reStartTimer);
 };
 
-const startMatter = () => {
+const startMatter = (getStartWave) => {
   getWindowSize();
   initMatter();
   initScreen();
   //Auto Drop reStart
   isDropCreated = true;
+  startAnimation();
 };
 
 const startAnimation = () => {
@@ -293,5 +293,6 @@ const reSizeWindow = () => {
     initScreen();
     //Auto Drop reStart
     isDropCreated = true;
+    startAnimation();
   }
 };
