@@ -92,16 +92,23 @@
     loop: true, // 슬라이드 반복 여부
     loopAdditionalSlides: 1, // 슬라이드 반복 시 마지막 슬라이드에서 다음 슬라이드가 보여지지 않는 현상 수정
     centeredSlides: true,
+    observer: true,
+    observeParents: true,
+    parallax: true,
     autoplay: {
       delay: 5000, // 시간 설정
       disableOnInteraction: false, // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
     },
-    paginationClickable: true,
-    nextButton: ".swiper-button-next",
-    prevButton: ".swiper-button-prev",
-    pagination: {
-      el: ".swiper-pagination",
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
+    pagination: {
+      el: ".swiper-pagination-clickable",
+      clickable: true,
+    },
+    preventClicks: false,
+    preventClicksPropagation: false,
     mousewheel: false,
     keyboard: false,
   });
