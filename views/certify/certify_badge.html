@@ -1,0 +1,865 @@
+<script>
+  (function () {
+    // 동적 CSS 저의 - 라이브러리 및 개발자 별 CSS
+    const requireCss = [
+      // 개인별 CSS
+      "css/personal/style.song.css",
+    ];
+
+    // 동적 스크립트 정의 - 라이브러리 및 화면별 JS
+    const requireJs = [
+      // 화면 별 JS
+      "js/views/certify/certify_badge.js",
+    ];
+
+    loadCSS(requireCss);
+    loadJS(requireJs);
+  })();
+</script>
+
+<div class="container">
+  <div class="certify_header">
+    <p class="certify_title">인증뱃지</p>
+    <div class="certify_text">
+      <p>제로웨이스트 실천사항을 7번 인증하고 뱃지를 획득하세요!</p>
+      <p>인증사진을 채울수록 뱃지의 선명도가 증가합니다.</p>
+      <p class="certify_text_mobile">
+        모바일 모드는 각 뱃지의 상세모드를 지원하지 않습니다.
+      </p>
+    </div>
+  </div>
+
+  <div class="row certify_content">
+    <div
+      class="btn col-md-4"
+      data-toggle="collapse"
+      href="#badge_detail01"
+      aria-expanded="false"
+      aria-controls="badge_detail01"
+    >
+      <div class="badge_round certify_badge">
+        <img
+          class="rounded-circle badge_all opacity_2"
+          src="././img/certify/badge/badge01.jpg"
+        />
+      </div>
+      <p>텀블러 사용하기</p>
+    </div>
+    <div
+      class="btn col-md-4"
+      data-toggle="collapse"
+      href="#badge_detail02"
+      aria-expanded="false"
+      aria-controls="badge_detail02"
+    >
+      <div class="badge_round certify_badge">
+        <img
+          class="rounded-circle badge_all"
+          src="././img/certify/badge/badge02_un.jpg"
+        />
+      </div>
+      <p>장바구니 이용하기</p>
+    </div>
+    <div
+      class="btn col-md-4"
+      data-toggle="collapse"
+      href="#badge_detail03"
+      aria-expanded="false"
+      aria-controls="badge_detail03"
+    >
+      <div class="badge_round certify_badge">
+        <img
+          class="rounded-circle badge_all"
+          src="././img/certify/badge/badge03.jpg"
+        />
+      </div>
+      <p>일회용품 거절하기</p>
+    </div>
+  </div>
+
+  <div id="subcategories" class="sub_detail">
+    <div class="collapse" id="badge_detail01">
+      <div class="card card-body_badge">
+        <div class="badge_area">
+          <p class="badge_title">텀블러 사용하기</p>
+          <div class="badge_text">
+            <p>
+              일회용컵 사용이 잦아진 요즘. 집에 숨어있는 텀블러를 찾아서
+              사용하는 건 어떨까요?
+            </p>
+            <p>텀블러를 사용하는 습관 만들기에 도전해보세요!</p>
+          </div>
+        </div>
+
+        <div class="badge_area">
+          <p class="badge_subtitle">단계별 뱃지</p>
+          <div class="row badge_level">
+            <div class="col-md-2">
+              <div class="badge_round">
+                <img
+                  class="badge_all opacity_1"
+                  src="././img/certify/badge/badge01.jpg"
+                />
+              </div>
+              <p>1/6</p>
+            </div>
+            <div class="col-md-2">
+              <div class="badge_round badge_get">
+                <img
+                  class="badge_all opacity_2"
+                  src="././img/certify/badge/badge01.jpg"
+                />
+              </div>
+              <p>2/6</p>
+            </div>
+            <div class="col-md-2">
+              <div class="badge_round">
+                <img
+                  class="badge_all opacity_3"
+                  src="././img/certify/badge/badge01.jpg"
+                />
+              </div>
+              <p>3/6</p>
+            </div>
+            <div class="col-md-2">
+              <div class="badge_round">
+                <img
+                  class="badge_all opacity_4"
+                  src="././img/certify/badge/badge01.jpg"
+                />
+              </div>
+              <p>4/6</p>
+            </div>
+            <div class="col-md-2">
+              <div class="badge_round">
+                <img
+                  class="badge_all opacity_5"
+                  src="././img/certify/badge/badge01.jpg"
+                />
+              </div>
+              <p>5/6</p>
+            </div>
+            <div class="col-md-2">
+              <div class="badge_round">
+                <img
+                  class="badge_all"
+                  src="././img/certify/badge/badge01.jpg"
+                />
+              </div>
+              <p>6/6</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="badge_area">
+          <p class="badge_subtitle">인증 현황</p>
+          <div class="row badge_level">
+            <div class="col-md-2">
+              <img
+                class="card-img photo_modal"
+                src="././img/certify/photo/certify_01.jpg"
+              />
+            </div>
+            <div class="col-md-2">
+              <img
+                class="card-img photo_modal"
+                src="././img/certify/photo/certify_02.jpg"
+              />
+            </div>
+            <div class="col-md-2">
+              <img
+                class="card-img upload_active"
+                src="././img/certify/upload_image_dashed.png"
+              />
+            </div>
+            <div class="col-md-2">
+              <img
+                class="card-img opacity_2"
+                src="././img/certify/upload_image_dashed.png"
+              />
+            </div>
+            <div class="col-md-2">
+              <img
+                class="card-img opacity_2"
+                src="././img/certify/upload_image_dashed.png"
+              />
+            </div>
+            <div class="col-md-2">
+              <img
+                class="card-img opacity_2"
+                src="././img/certify/upload_image_dashed.png"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="collapse" id="badge_detail02">
+      <div class="card card-body_badge">
+        <div class="badge_area">
+          <p class="badge_title">장바구니 이용하기</p>
+          <div class="badge_text">
+            <p>
+              온라인 마켓이 활성화되면서 불필요한 포장지의 사용이 증가했다는
+              사실, 알고 계셨나요?
+            </p>
+            <p>배송비 맞추느라 억지로 물건을 하지 않아도 되는 직접 장보기!</p>
+            <p>장바구니를 이용하면서 일회용 포장을 줄여보는 건 어떠세요?</p>
+          </div>
+        </div>
+
+        <div class="badge_area">
+          <p class="badge_subtitle">단계별 뱃지</p>
+          <div class="row badge_level">
+            <div class="col-md-2">
+              <div class="badge_round">
+                <img
+                  class="badge_all opacity_1"
+                  src="././img/certify/badge/badge02.jpg"
+                />
+              </div>
+              <p>1/6</p>
+            </div>
+            <div class="col-md-2">
+              <div class="badge_round">
+                <img
+                  class="badge_all opacity_2"
+                  src="././img/certify/badge/badge02.jpg"
+                />
+              </div>
+              <p>2/6</p>
+            </div>
+            <div class="col-md-2">
+              <div class="badge_round">
+                <img
+                  class="badge_all opacity_3"
+                  src="././img/certify/badge/badge02.jpg"
+                />
+              </div>
+              <p>3/6</p>
+            </div>
+            <div class="col-md-2">
+              <div class="badge_round">
+                <img
+                  class="badge_all opacity_4"
+                  src="././img/certify/badge/badge02.jpg"
+                />
+              </div>
+              <p>4/6</p>
+            </div>
+            <div class="col-md-2">
+              <div class="badge_round">
+                <img
+                  class="badge_all opacity_5"
+                  src="././img/certify/badge/badge02.jpg"
+                />
+              </div>
+              <p>5/6</p>
+            </div>
+            <div class="col-md-2">
+              <div class="badge_round">
+                <img
+                  class="badge_all"
+                  src="././img/certify/badge/badge02.jpg"
+                />
+              </div>
+              <p>6/6</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="badge_area">
+          <p class="badge_subtitle">인증 현황</p>
+          <div class="row badge_level">
+            <div class="col-md-2">
+              <img
+                class="card-img upload_active"
+                src="././img/certify/upload_image_dashed.png"
+              />
+            </div>
+            <div class="col-md-2">
+              <img
+                class="card-img opacity_2"
+                src="././img/certify/upload_image_dashed.png"
+              />
+            </div>
+            <div class="col-md-2">
+              <img
+                class="card-img opacity_2"
+                src="././img/certify/upload_image_dashed.png"
+              />
+            </div>
+            <div class="col-md-2">
+              <img
+                class="card-img opacity_2"
+                src="././img/certify/upload_image_dashed.png"
+              />
+            </div>
+            <div class="col-md-2">
+              <img
+                class="card-img opacity_2"
+                src="././img/certify/upload_image_dashed.png"
+              />
+            </div>
+            <div class="col-md-2">
+              <img
+                class="card-img opacity_2"
+                src="././img/certify/upload_image_dashed.png"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="collapse" id="badge_detail03">
+      <div class="card card-body_badge">
+        <div class="badge_area">
+          <p class="badge_title">일회용품 거절하기</p>
+          <div class="badge_text">
+            <p>
+              참을 수 없는 배달 음식의 유혹, 그러나 원치 않는 일회용품까지
+              딸려오기 마련이죠.
+            </p>
+            <p>
+              배달어플에 있는 '일회용품 안받기' 기능을 이용해서, 사용하지 않는
+              일회용품을 거절해보아요!
+            </p>
+          </div>
+        </div>
+
+        <div class="badge_area">
+          <p class="badge_subtitle">단계별 뱃지</p>
+          <div class="row badge_level">
+            <div class="col-md-2">
+              <div class="badge_round">
+                <img
+                  class="badge_all opacity_1"
+                  src="././img/certify/badge/badge03.jpg"
+                />
+              </div>
+              <p>1/6</p>
+            </div>
+            <div class="col-md-2">
+              <div class="badge_round">
+                <img
+                  class="badge_all opacity_2"
+                  src="././img/certify/badge/badge03.jpg"
+                />
+              </div>
+              <p>2/6</p>
+            </div>
+            <div class="col-md-2">
+              <div class="badge_round">
+                <img
+                  class="badge_all opacity_3"
+                  src="././img/certify/badge/badge03.jpg"
+                />
+              </div>
+              <p>3/6</p>
+            </div>
+            <div class="col-md-2">
+              <div class="badge_round">
+                <img
+                  class="badge_all opacity_4"
+                  src="././img/certify/badge/badge03.jpg"
+                />
+              </div>
+              <p>4/6</p>
+            </div>
+            <div class="col-md-2">
+              <div class="badge_round">
+                <img
+                  class="badge_all opacity_5"
+                  src="././img/certify/badge/badge03.jpg"
+                />
+              </div>
+              <p>5/6</p>
+            </div>
+            <div class="col-md-2">
+              <div class="badge_round badge_get">
+                <img
+                  class="badge_all"
+                  src="././img/certify/badge/badge03.jpg"
+                />
+              </div>
+              <p>6/6</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="badge_area">
+          <p class="badge_subtitle">인증 현황</p>
+          <div class="row badge_level">
+            <div class="col-md-2">
+              <img
+                class="card-img photo_modal"
+                src="././img/certify/photo/certify_03.jpg"
+              />
+            </div>
+            <div class="col-md-2">
+              <img
+                class="card-img photo_modal"
+                src="././img/certify/photo/certify_04.jpg"
+              />
+            </div>
+            <div class="col-md-2">
+              <img
+                class="card-img photo_modal"
+                src="././img/certify/photo/certify_05.jpg"
+              />
+            </div>
+            <div class="col-md-2">
+              <img
+                class="card-img photo_modal"
+                src="././img/certify/photo/certify_06.jpg"
+              />
+            </div>
+            <div class="col-md-2">
+              <img
+                class="card-img photo_modal"
+                src="././img/certify/photo/certify_07.jpg"
+              />
+            </div>
+            <div class="col-md-2">
+              <img
+                class="card-img photo_modal"
+                src="././img/certify/photo/certify_08.jpg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row certify_content">
+    <div
+      class="btn col-md-4"
+      data-toggle="collapse"
+      href="#badge_detail04"
+      aria-expanded="false"
+      aria-controls="badge_detail04"
+    >
+      <div class="badge_round certify_badge">
+        <img
+          class="rounded-circle badge_all"
+          src="././img/certify/badge/badge04_un.jpg"
+        />
+      </div>
+      <p>빈그릇 인증하기</p>
+    </div>
+    <div
+      class="btn col-md-4"
+      data-toggle="collapse"
+      href="#badge_detail05"
+      aria-expanded="false"
+      aria-controls="badge_detail05"
+    >
+      <div class="badge_round certify_badge">
+        <img
+          class="rounded-circle badge_all"
+          src="././img/certify/badge/badge05_un.jpg"
+        />
+      </div>
+      <p>채식하기</p>
+    </div>
+    <div
+      class="btn col-md-4"
+      data-toggle="collapse"
+      href="#badge_detail06"
+      aria-expanded="false"
+      aria-controls="badge_detail06"
+    >
+      <div class="badge_round certify_badge">
+        <img
+          class="rounded-circle badge_all"
+          src="././img/certify/badge/badge06.jpg"
+        />
+      </div>
+      <p>준비중</p>
+    </div>
+  </div>
+
+  <div id="subcategories02" class="sub_detail">
+    <div class="collapse" id="badge_detail04">
+      <div class="card card-body_badge">
+        <div class="badge_area">
+          <p class="badge_title">빈그릇 인증하기</p>
+          <div class="badge_text">
+            <p>
+              악취나는 음식물 쓰레기, 폐수 뿐만 아니라 온실가스까지 배출된다는
+              사실, 알고 계셨나요?
+            </p>
+            <p>
+              빈그릇 인증을 통해서 음식물 쓰레기를 최소화하는 일에 동참해보세요!
+            </p>
+          </div>
+        </div>
+
+        <div class="badge_area">
+          <p class="badge_subtitle">단계별 뱃지</p>
+          <div class="row badge_level">
+            <div class="col-md-2">
+              <div class="badge_round">
+                <img
+                  class="badge_all opacity_1"
+                  src="././img/certify/badge/badge04.jpg"
+                />
+              </div>
+              <p>1/6</p>
+            </div>
+            <div class="col-md-2">
+              <div class="badge_round">
+                <img
+                  class="badge_all opacity_2"
+                  src="././img/certify/badge/badge04.jpg"
+                />
+              </div>
+              <p>2/6</p>
+            </div>
+            <div class="col-md-2">
+              <div class="badge_round">
+                <img
+                  class="badge_all opacity_3"
+                  src="././img/certify/badge/badge04.jpg"
+                />
+              </div>
+              <p>3/6</p>
+            </div>
+            <div class="col-md-2">
+              <div class="badge_round">
+                <img
+                  class="badge_all opacity_4"
+                  src="././img/certify/badge/badge04.jpg"
+                />
+              </div>
+              <p>4/6</p>
+            </div>
+            <div class="col-md-2">
+              <div class="badge_round">
+                <img
+                  class="badge_all opacity_5"
+                  src="././img/certify/badge/badge04.jpg"
+                />
+              </div>
+              <p>5/6</p>
+            </div>
+            <div class="col-md-2">
+              <div class="badge_round">
+                <img
+                  class="badge_all"
+                  src="././img/certify/badge/badge04.jpg"
+                />
+              </div>
+              <p>6/6</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="badge_area">
+          <p class="badge_subtitle">인증 현황</p>
+          <div class="row badge_level">
+            <div class="col-md-2">
+              <img
+                class="card-img upload_active"
+                src="././img/certify/upload_image_dashed.png"
+              />
+            </div>
+            <div class="col-md-2">
+              <img
+                class="card-img opacity_2"
+                src="././img/certify/upload_image_dashed.png"
+              />
+            </div>
+            <div class="col-md-2">
+              <img
+                class="card-img opacity_2"
+                src="././img/certify/upload_image_dashed.png"
+              />
+            </div>
+            <div class="col-md-2">
+              <img
+                class="card-img opacity_2"
+                src="././img/certify/upload_image_dashed.png"
+              />
+            </div>
+            <div class="col-md-2">
+              <img
+                class="card-img opacity_2"
+                src="././img/certify/upload_image_dashed.png"
+              />
+            </div>
+            <div class="col-md-2">
+              <img
+                class="card-img opacity_2"
+                src="././img/certify/upload_image_dashed.png"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="collapse" id="badge_detail05">
+      <div class="card card-body_badge">
+        <div class="badge_area">
+          <p class="badge_title">채식하기</p>
+          <div class="badge_text">
+            <p>육류의 탄소발자국을 아시나요?</p>
+            <p>
+              1kg당 소고기 60kgCO2-eq. 돼지고기 7kgCO2-eq. 닭고기 6kgCO2-eq라고
+              해요.
+            </p>
+            <p>
+              토마토가 1.4kgCO2-eq, 두부가 3kgCO2-eq인 것에 비해 현저히 높은
+              수치에요.
+            </p>
+            <p>
+              지구방위대와 함께 일주일에 1번씩 채식을 도전해보는 것은 어떨까요?
+            </p>
+          </div>
+        </div>
+
+        <div class="badge_area">
+          <p class="badge_subtitle">단계별 뱃지</p>
+          <div class="row badge_level">
+            <div class="col-md-2">
+              <div class="badge_round">
+                <img
+                  class="badge_all opacity_1"
+                  src="././img/certify/badge/badge05.jpg"
+                />
+              </div>
+              <p>1/6</p>
+            </div>
+            <div class="col-md-2">
+              <div class="badge_round">
+                <img
+                  class="badge_all opacity_2"
+                  src="././img/certify/badge/badge05.jpg"
+                />
+              </div>
+              <p>2/6</p>
+            </div>
+            <div class="col-md-2">
+              <div class="badge_round">
+                <img
+                  class="badge_all opacity_3"
+                  src="././img/certify/badge/badge05.jpg"
+                />
+              </div>
+              <p>3/6</p>
+            </div>
+            <div class="col-md-2">
+              <div class="badge_round">
+                <img
+                  class="badge_all opacity_4"
+                  src="././img/certify/badge/badge05.jpg"
+                />
+              </div>
+              <p>4/6</p>
+            </div>
+            <div class="col-md-2">
+              <div class="badge_round">
+                <img
+                  class="badge_all opacity_5"
+                  src="././img/certify/badge/badge05.jpg"
+                />
+              </div>
+              <p>5/6</p>
+            </div>
+            <div class="col-md-2">
+              <div class="badge_round">
+                <img
+                  class="badge_all"
+                  src="././img/certify/badge/badge05.jpg"
+                />
+              </div>
+              <p>6/6</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="badge_area">
+          <p class="badge_subtitle">인증 현황</p>
+          <div class="row badge_level">
+            <div class="col-md-2">
+              <img
+                class="card-img upload_active"
+                src="././img/certify/upload_image_dashed.png"
+              />
+            </div>
+            <div class="col-md-2">
+              <img
+                class="card-img opacity_2"
+                src="././img/certify/upload_image_dashed.png"
+              />
+            </div>
+            <div class="col-md-2">
+              <img
+                class="card-img opacity_2"
+                src="././img/certify/upload_image_dashed.png"
+              />
+            </div>
+            <div class="col-md-2">
+              <img
+                class="card-img opacity_2"
+                src="././img/certify/upload_image_dashed.png"
+              />
+            </div>
+            <div class="col-md-2">
+              <img
+                class="card-img opacity_2"
+                src="././img/certify/upload_image_dashed.png"
+              />
+            </div>
+            <div class="col-md-2">
+              <img
+                class="card-img opacity_2"
+                src="././img/certify/upload_image_dashed.png"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="collapse" id="badge_detail06">
+      <div class="card card-body_badge">
+        <div class="badge_area">
+          <p class="badge_title">준비중</p>
+          <div class="badge_text">
+            <p>새로운 뱃지를 준비중입니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="certify_footer">
+    <button type="button" class="btn btn-success" id="upload_btn">
+      사진 등록하기
+    </button>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="upload_modal"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal_certify-content">
+      <div class="mx-auto modal_certify_header">
+        <p class="certify_title">인증하기</p>
+      </div>
+      <div class="modal_certify_body">
+        <form>
+          <div class="form-group">
+            <label for="upload_item">항목</label>
+            <select class="form-control" id="upload_item">
+              <option>텀블러 사용하기</option>
+              <option>장바구니 이용하기</option>
+              <option>일회용품 거절하기</option>
+              <option>빈그릇 인증하기</option>
+              <option>채식하기</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="upload_title" class="form-control-label">제목</label>
+            <input type="text" class="form-control" id="upload_title" />
+          </div>
+          <div class="form-group">
+            <label for="upload_content" class="form-control-label">내용</label>
+            <textarea class="form-control" id="upload_content"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="upload_file">사진 첨부</label>
+            <input
+              type="file"
+              class="form-control-file"
+              id="upload_file"
+              accept="image/*"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="modal_certify-footer">
+        <div class="mx-auto">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            취소
+          </button>
+          <button type="button" class="btn btn-success">등록</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="photo_modal"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal_photo_content">
+      <div class="modal_photo_header"></div>
+      <div class="modal_photo_body row">
+        <div class="col-md-6">
+          <img src="" style="max-width: 100%" />
+        </div>
+        <div class="col-md-6" style="margin: auto">
+          <div class="form-group">
+            <label for="photo_item">항목</label>
+            <select class="form-control" id="photo_item" disabled>
+              <option>텀블러 사용하기</option>
+              <option>장바구니 이용하기</option>
+              <option>일회용품 거절하기</option>
+              <option>빈그릇 인증하기</option>
+              <option>채식하기</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="photo_title" class="form-control-label">제목</label>
+            <input
+              type="text"
+              class="form-control"
+              id="photo_title"
+              value="사진 인증"
+              readonly
+            />
+          </div>
+          <div class="form-group">
+            <label for="photo_content" class="form-control-label">내용</label>
+            <textarea class="form-control" id="photo_content" readonly>
+사진 인증합니다.</textarea
+            >
+          </div>
+          <div class="form-group">
+            <label for="photo_date" class="form-control-label">게시일</label>
+            <input
+              type="text"
+              class="form-control"
+              id="photo_date"
+              value="2021년 05월 21일"
+              readonly
+            />
+          </div>
+        </div>
+      </div>
+      <div class="modal_photo_footer">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

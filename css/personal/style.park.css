@@ -1,0 +1,140 @@
+@charset "utf-8";
+/*
+    Copyright © 2021 지구방위대.
+    ProjectName: saveEarthWebPJ
+    FilePath: css/personal/style.park.css
+    Create by 지구방위대, 박천송 and 정윤아 2021-05-21 05:56:37.
+*/
+
+/* 지구방위대 2021-05-31 12:27:07, 정윤아 Front-end Dev */
+
+/* 대체품 소개하기 */
+img.content-img {
+  width: 30%;
+  height: 20%;
+  flex: 0 0 83.33333%;
+  max-width: 83.33333%;
+  border-radius: 3rem;
+  min-width: 40%;
+  overflow: hidden;
+}
+img.content-img2 {
+  width: 80%;
+  height: 80%;
+  flex: 0 0 83.33333%;
+  max-width: 83.33333%;
+  border-radius: 3rem;
+  min-width: 40%;
+  overflow: hidden;
+}
+.replace-step-img1,
+.replace-step-img2 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.replace-step-img1 img {
+  border-radius: 20%;
+  overflow: hidden;
+  margin: 2rem;
+}
+
+.replace-step-img1 .replace-img-content {
+  font-size: 1.8rem;
+}
+
+.replace-step-img2 h1 {
+  color: var(--text-general);
+}
+
+.replace-step-img2 .col-md-8 img.content-img {
+  flex: 0 0 50%;
+  max-width: 50%;
+  border-radius: 6rem;
+  overflow: hidden;
+}
+
+.pollution-color p {
+  color: var(--redbrown) !important;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: inline-flex;
+  text-align: center;
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-title {
+  margin: 1rem;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: var(--orange-swiper);
+}
+
+.swiper-img {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 50%;
+  margin-top: 2rem;
+}
+
+.swiper-pagination-bullet {
+  width: 1rem;
+  height: 1rem;
+  background: transparent;
+  border: 0.5rem solid var(--orange-swiper);
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  width: 4rem;
+  transition: width 0.5s;
+  border-radius: 0.5rem;
+  background: var(--orange-swiper);
+  border: 0.1rem solid transparent;
+}
+.swiper-container-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  display: inline-flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
+  right: 2rem;
+}
+
+/* resize */
+@media screen and (max-width: 680px) {
+  .swiper-img {
+    width: 60%;
+    height: 50%;
+  }
+
+  .swiper-title {
+    font-size: 2rem;
+  }
+  img.content-img {
+    width: 80vw;
+  }
+
+  img.content-img2 {
+    width: 80%;
+    height: 70%;
+  }
+  .replace-img-content {
+    font-size: 1.5rem;
+  }
+}

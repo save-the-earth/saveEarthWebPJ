@@ -1,0 +1,40 @@
+@charset "utf-8";
+/*
+    Copyright © 2021 지구방위대.
+    ProjectName: saveEarthWebPJ
+    FilePath: css/personal/style.yang.css
+    Create by 지구방위대, 양송희 and 정윤아 on 2021-05-21 05:56:56.
+*/
+
+/* 지구방위대 2021-05-31 12:24:54, 정윤아 Front-end Dev */
+img.profile {
+  width: 5.5rem;
+  height: 5.5rem;
+  float: left;
+}
+h3.youtuber-name {
+  margin: 2rem 0 1rem 0;
+  padding: 0 0 0 1rem;
+  float: left;
+}
+div.separation {
+  color: #fff;
+  width: auto;
+  height: auto;
+  align-content: center;
+  margin: 2rem 0 2rem 0;
+  padding: 3rem;
+  background-color: var(--scroll-circle);
+  border-radius: 2rem;
+}
+
+.target {
+  border: 0;
+}
+p.youtuber-content {
+  align-content: center;
+  padding: 3rem 2rem 3rem 2rem;
+  text-align: center;
+  clear: both;
+  font-size: 1.5rem;
+}

@@ -1,0 +1,54 @@
+@charset "utf-8";
+/*
+    Copyright © 2021 지구방위대.
+    ProjectName: saveEarthWebPJ
+    FileName: style.const.css
+    Date : 2021-05-21 03:18:38
+    Create by 지구방위대, 정윤아 and 송예지 on 2021-05-21 03:18:38.
+*/
+
+/* color, size 변수 정의 */
+:root {
+  /*
+    --window-size:57rem;
+    --main-color:red;
+     */
+  --white: #fff;
+  --body: #f7f2e6;
+  --main-geen: #3a7a34;
+  --main-recycle1: #e1eada;
+  --main-recycle2: #abc6ac;
+  --main-recycle3: #7eafa7;
+  --main-recycle4: #4d8493;
+  --text-general: #686154;
+  --text-highlight: #46674b;
+  --text-main: #4f8158; /*#3A7A34;*/
+  --text-bold: #635040;
+  --scroll-circle: #d8bc8b; /*4D8C44;*/
+  --scroll-text: #947954; /*4D8C44;*/
+  --blue: #71d2ff;
+  --sub-background: #e4d9c0;
+  --water-color: #c5f2f9;
+  --redbrown: #8b0000;
+  --orange-swiper: #f8a488;
+}
+
+/* 사이즈 별 폰트 크기 변환 */
+html {
+  font-size: 62.5%; /* 10px */
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+@media (min-width: 414px) {
+  h1 {
+    font-size: calc(2.25rem + ((100vw - 20rem) / (90 - 20)) * (4.75 - 2.25));
+  }
+}
+
+@media (min-width: 1440px) {
+  h1 {
+    font-size: 4.75rem;
+  }
+}
